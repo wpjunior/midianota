@@ -27,7 +27,7 @@ if(!(isset($_SESSION["logado"])))
 {?>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>SEP-ISS</title>
 <link href="css/padrao.css" rel="stylesheet" type="text/css" >
 <script src="scripts/padrao.js" type="text/javascript"></script>
