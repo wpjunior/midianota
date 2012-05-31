@@ -76,8 +76,8 @@ WHERE
 				?>
 				<tr>
 					<td width="5%" align="center">N&ordm;</td>
-					<td width="13%" align="center">CÛd Verif</td>
-					<td width="19%" align="center">D/H Emiss„o</td>
+					<td width="13%" align="center">C√≥d Verif</td>
+					<td width="19%" align="center">D/H Emiss√£o</td>
 					<td width="36%" align="center">Tomador Nome </td>
 					<td width="15%" align="center">Estado</td>
 					<td width="5%" align="center"></td>
@@ -133,7 +133,7 @@ WHERE
 			}else{
 				echo "
 						<tr>
-							<td>N„o h· nenhuma nota!</td>
+							<td>N√£o h√° nenhuma nota!</td>
 						</tr>
 					";
 			}
