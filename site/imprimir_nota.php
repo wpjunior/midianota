@@ -89,7 +89,7 @@ $empresa_cnpjcpf = $empresa_cnpj.$empresa_cpf;
 
 //nao tem soh endereco agora tem logradouro e numero com complemento
 $tomador_endereco="$tomador_logradouro, $tomador_numero";
-//se tiver complemento, adiciona para a string de endereço
+//se tiver complemento, adiciona para a string de endereÃ§o
 if($tomador_complemento){
 	$tomador_endereco.=", $tomador_complemento";
 }
@@ -115,7 +115,7 @@ list($lei,$decreto) = mysql_fetch_array($sql_leidecreto);
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>e-Nota [Imprimir Nota]</title>
 <link href="../css/imprimir_emissor.css" rel="stylesheet" type="text/css" />
 <style type="text/css" >
@@ -150,13 +150,13 @@ table.gridview tr th {
 		<?php }//fim if para mostrar a imagem somente se existir ?>
 		<br />
 	</td>
-    <td width="80%" class="cab01"><?php print "Prefeitura Municipal de ".strtoupper($CONF_CIDADE); ?></td>
+    <td width="80%" class="cab01"><?php print "Prefeitura Municipal de ".$CONF_CIDADE; ?></td>
   </tr>
   <tr>
     <td class="cab03"><?php print strtoupper($CONF_SECRETARIA); ?></td>
   </tr>
   <tr>
-    <td class="cab02">NOTA FISCAL ELETRÔNICA DE SERVIÇOS - NF-e</td>
+    <td class="cab02">NOTA FISCAL ELETRÃ”NICA DE SERVIÃ‡OS - NF-e</td>
   </tr>
   <?php if($rps_numero){ ?>
   <tr>
@@ -166,13 +166,13 @@ table.gridview tr th {
 </table>
 
 <!-- tabela prefeitura fim -->	</td>
-    <td width="25%" align="left" style="border:#000000 1px solid">Número da Nota<br /><div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><strong><?php print $numero; ?></strong></font></div></td>
+    <td width="25%" align="left" style="border:#000000 1px solid">NÃºmero da Nota<br /><div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><strong><?php print $numero; ?></strong></font></div></td>
   </tr>
   <tr>
-    <td align="left" style="border:#000000 1px solid">Data e Hora de Emissão<br /><div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><strong><?php print (substr($datahoraemissao,8,2)."/".substr($datahoraemissao,5,2)."/".substr($datahoraemissao,0,4)." ".substr($datahoraemissao,11,2).":".substr($datahoraemissao,14,2)); ?></strong></font></div></td>
+    <td align="left" style="border:#000000 1px solid">Data e Hora de EmissÃ£o<br /><div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><strong><?php print (substr($datahoraemissao,8,2)."/".substr($datahoraemissao,5,2)."/".substr($datahoraemissao,0,4)." ".substr($datahoraemissao,11,2).":".substr($datahoraemissao,14,2)); ?></strong></font></div></td>
   </tr>
   <tr>
-    <td align="left" style="border:#000000 1px solid">Código de Verificação<br /><div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><strong><?php print $codverificacao; ?></strong></font></div></td>
+    <td align="left" style="border:#000000 1px solid">CÃ³digo de VerificaÃ§Ã£o<br /><div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><strong><?php print $codverificacao; ?></strong></font></div></td>
   </tr>
   <tr>
     <td colspan="5" align="center" style="border:#000000 1px solid">
@@ -219,17 +219,17 @@ table.gridview tr th {
 
 <table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
   <tr>
-    <td colspan="3" class="cab03" align="center">TOMADOR DE SERVIÇOS</td>
+    <td colspan="3" class="cab03" align="center">TOMADOR DE SERVIÃ‡OS</td>
     </tr>
   <tr>
-    <td colspan="3" align="left">&nbsp;&nbsp;Nome/Razão Social: <strong><?php print verificaCampo($tomador_nome); ?></strong></td>
+    <td colspan="3" align="left">&nbsp;&nbsp;Nome/RazÃ£o Social: <strong><?php print verificaCampo($tomador_nome); ?></strong></td>
     </tr>
   <tr>
     <td align="left" width="450">&nbsp;&nbsp;CPF/CNPJ: <strong><?php print verificaCampo($tomador_cnpjcpf); ?></strong></td>
     <td colspan="2" align="left">&nbsp;&nbsp;Inscri&ccedil;&atilde;o Municipal: <strong><?php print verificaCampo($tomador_inscrmunicipal); ?></strong></td>
     </tr>
   <tr>
-    <td align="left">&nbsp;&nbsp;Endereço: <strong><?php print verificaCampo($tomador_endereco);?></strong></td>
+    <td align="left">&nbsp;&nbsp;EndereÃ§o: <strong><?php print verificaCampo($tomador_endereco);?></strong></td>
     <td colspan="2" align="left">&nbsp;&nbsp;CEP: <strong><?php print verificaCampo($tomador_cep)?></strong></td>
   </tr>
   <tr>
@@ -250,7 +250,7 @@ table.gridview tr th {
 	
 <table width="100%" border="0" cellspacing="0" cellpadding="2">
   <tr>
-    <td class="cab03" align="center">DISCRIMINAÇÃO DE SERVIÇOS E DEDUÇÕES</td>
+    <td class="cab03" align="center">DISCRIMINAÃ‡ÃƒO DE SERVIÃ‡OS E DEDUÃ‡Ã•ES</td>
   </tr>
   <tr>
     <td height="400" align="left" valign="top">
@@ -288,7 +288,7 @@ table.gridview tr th {
 			while ($servicos_dados = mysql_fetch_assoc($servicos_sql)) {
 			?>
 			<tr>
-				<td align="center" <?php if(!$servicos_dados['codservico']){ echo "title='Não possui codigo de serviço'"; }?>>
+				<td align="center" <?php if(!$servicos_dados['codservico']){ echo "title='NÃ£o possui codigo de serviÃ§o'"; }?>>
 					<?php if($servicos_dados['codservico']){ echo $servicos_dados['codservico']; }else{ echo "N/P"; }?>
 				</td>
 				<td align="left"><?php echo $servicos_dados['descricao']; ?></td>
@@ -311,7 +311,7 @@ table.gridview tr th {
 		<?php	
 		// verifica o estado da nfe
 		if($estado == "C") {
-			echo "<div align=center><font size=7 color=#FF0000><b>ATENÇÃO!!<BR>NFE CANCELADA</B></font></div>";
+			echo "<div align=center><font size=7 color=#FF0000><b>ATENÃ‡ÃƒO!!<BR>NFE CANCELADA</B></font></div>";
 		} // fim if
 		
 		?>
@@ -330,7 +330,7 @@ table.gridview tr th {
 	    <td colspan="5" align="center" style="border:#000000 1px solid">
 			<table width="100%">
 				<tr>
-					<td class="cab03" align="center">OBSERVAÇÕES DA NOTA</td>
+					<td class="cab03" align="center">OBSERVAÃ‡Ã•ES DA NOTA</td>
 				</tr>	
 				<tr>
 					<td align="left">
@@ -352,13 +352,13 @@ table.gridview tr th {
     <td colspan="5" class="cab03" align="center" style="border:#000000 1px solid">VALOR TOTAL DA NOTA = R$ <?php print DecToMoeda($valortotal); ?></td>
     </tr>
   <!--<tr>
-    <td colspan="5" align="left" style="border:#000000 1px solid">Código do Serviço<br /><strong><?php print $servico_codservico." - ". $servico_descricao; ?></strong></td>
+    <td colspan="5" align="left" style="border:#000000 1px solid">CÃ³digo do ServiÃ§o<br /><strong><?php print $servico_codservico." - ". $servico_descricao; ?></strong></td>
     </tr>-->
   <tr>
-    <td style="border:#000000 1px solid">Valor Total das Deduções (R$)<br /><div align="right"><strong><?php print DecToMoeda($valordeducoes); ?></strong></div></td>
-    <td style="border:#000000 1px solid">Base de Cálculo (R$)<br /><div align="right"><strong><?php print DecToMoeda($basecalculo); ?></strong></div></td>
+    <td style="border:#000000 1px solid">Valor Total das DeduÃ§Ãµes (R$)<br /><div align="right"><strong><?php print DecToMoeda($valordeducoes); ?></strong></div></td>
+    <td style="border:#000000 1px solid">Base de CÃ¡lculo (R$)<br /><div align="right"><strong><?php print DecToMoeda($basecalculo); ?></strong></div></td>
     <td style="border:#000000 1px solid">
-	 Alíquota (%)
+	 AlÃ­quota (%)
 	 <br />
 	 <div align="right">
 	  <strong>
@@ -393,7 +393,7 @@ table.gridview tr th {
 	</td>  
 
     <td style="border:#000000 1px solid; <?php echo $display;?>">
-	 Crédito p/ Abatimento do IPTU
+	 CrÃ©dito p/ Abatimento do IPTU
 	 <br />
 	 <div align="right">
 	 <strong>
@@ -410,7 +410,7 @@ table.gridview tr th {
 	</td>
   </tr>
   <tr>
-    <td colspan="5" style="border:#000000 1px solid" class="cab03">OUTRAS INFORMAÇÕES</td>
+    <td colspan="5" style="border:#000000 1px solid" class="cab03">OUTRAS INFORMAÃ‡Ã•ES</td>
   </tr>
   <tr>
     <td colspan="5" style="border:#000000 1px solid" align="left">
@@ -418,17 +418,17 @@ table.gridview tr th {
 	<?php
 	if ($codtipodec == $codtipoSN)
 	{
-	  echo "- Esta NF-e não gera créditos, pois a empresa prestadora de serviços é optante pelo Simples Nacional<br> ";
+	  echo "- Esta NF-e nÃ£o gera crÃ©ditos, pois a empresa prestadora de serviÃ§os Ã© optante pelo Simples Nacional<br> ";
 	}
 	if($issretido != 0)
 	{
-	  echo "- Esta NF-e possui retenção de ISS no valor de R$ ".DecToMoeda($issretido)."<br> ";
+	  echo "- Esta NF-e possui retenÃ§Ã£o de ISS no valor de R$ ".DecToMoeda($issretido)."<br> ";
 	
 	}
 	// verifica o estado do tomador
 	if(($CONF_CIDADE != $tomador_municipio) && ($codtipodec != $codtipoSN)) {
 		if($ativar_creditos == "s"){
-			echo "- Esta NF-e não gera crédito, pois o Tomador de Serviços está localizado fora do município de $CONF_CIDADE<br>";
+			echo "- Esta NF-e nÃ£o gera crÃ©dito, pois o Tomador de ServiÃ§os estÃ¡ localizado fora do municÃ­pio de $CONF_CIDADE<br>";
 		}
 	} // fim if	
 	if($rps_numero){
@@ -438,14 +438,14 @@ table.gridview tr th {
 	}//fim if rps
 	//$valorinss,$aliqinss,$valorirrf,$aliqinss
 	if($valorinss > 0){//soh mostra se tiver valor
-		echo "- Retenção de INSS ".DecToMoeda($aliqinss)."% com valor de R$ ".DecToMoeda($valorinss)." <br>";
+		echo "- RetenÃ§Ã£o de INSS ".DecToMoeda($aliqinss)."% com valor de R$ ".DecToMoeda($valorinss)." <br>";
 	}
 	if($valorirrf > 0){//soh mostra se tiver valor
-		echo "- Retenção de IRRF ".DecToMoeda($aliqirrf)."% com valor de R$ ".DecToMoeda($valorirrf).""; if($deducao_irrf > 0){ echo ". Dedução de R$ ".DecToMoeda($deducao_irrf); }
+		echo "- RetenÃ§Ã£o de IRRF ".DecToMoeda($aliqirrf)."% com valor de R$ ".DecToMoeda($valorirrf).""; if($deducao_irrf > 0){ echo ". DeduÃ§Ã£o de R$ ".DecToMoeda($deducao_irrf); }
 		echo "<br>";
 	}
 	if($total_retencao > 0){
-		echo "- Total de retenções da nota R$ ".DecToMoeda($total_retencao)." <br>";
+		echo "- Total de retenÃ§Ãµes da nota R$ ".DecToMoeda($total_retencao)." <br>";
 	}
 	?>
 	</td>
