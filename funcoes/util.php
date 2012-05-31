@@ -172,7 +172,7 @@ function diasDecorridos($dataInicio,$dataFim){
 	return $dias_diferenca; 
 }
 
-//GERA O C”DIGO DE VERIFICA«√O
+//GERA O C√ìDIGO DE VERIFICA√á√ÉO
 function gera_codverificacao(){
 	$CaracteresAceitos = 'ABCDEFGHIJKLMNOPQRXTUVWXYZ';
 	$max = strlen($CaracteresAceitos)-1;
@@ -266,9 +266,9 @@ function DataPtExt(){
 	$dia = date("d"); //pega dia do mes
 	$m = date("n");   //pega o mes em numero
 	$ano = date("Y"); //pega o ano atual
-	$semana = array("Sun" => "Domingo", "Mon" => "Segunda-feira", "Tue" => "TerÁa-feira", "Wed" => "Quarta-feira", "Thu" => "Quinta-feira", "Fri" => "Sexta-feira", "Sat" => "S·bado"); 
+	$semana = array("Sun" => "Domingo", "Mon" => "Segunda-feira", "Tue" => "Ter√ßa-feira", "Wed" => "Quarta-feira", "Thu" => "Quinta-feira", "Fri" => "Sexta-feira", "Sat" => "S√°bado"); 
 	/* Dias da Semana.  troca o valor da semana em ingles para portugues*/
-	$mes = array(1 =>"Janeiro", "Fevereiro", "MarÁo", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"); 
+	$mes = array(1 =>"Janeiro", "Fevereiro", "Mar√ßo", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"); 
 	/* Meses troca o valor de numero pelo seu valor por extenso*/
 	return $semana[$s].", ".$dia." de ".$mes[$m]." de ".$ano; //imprime na tela a data concatenada por extenso  
 }//by lucas.
@@ -295,9 +295,9 @@ function coddeclaracao($dec){
 }//pega o codigo do tipo solicitado de acordo com o banco
 
 function verificacampo($campo){
-	if($campo == ""){$campo = "<b>N„o Informado</b>";}
+	if($campo == ""){$campo = "<b>N√£o Informado</b>";}
 return $campo;
-}//verifica o resultado do banco se esta vazio, se estiver, acrescenta informaÁ„o
+}//verifica o resultado do banco se esta vazio, se estiver, acrescenta informa√ß√£o
 
 //redireciona para o link indicado sem os parametros de get adicionais
 //e criando um form com hiddens baseado nos parametros de get
@@ -332,7 +332,7 @@ function Uploadimagem($campo,$destino,$cod=NULL,$redimensionar=NULL){
 		$imagem['extensao'] = strtolower(end(explode('.', $_FILES[$campo]['name'])));
 		//varre o array verificando se a variavel extensao entra na condicional
 		if(array_search($imagem['extensao'], $extpermitidas) === false){
-			Mensagem("Por favor, envie arquivos com as seguintes extensıes: jpeg, jpg, gif");
+			Mensagem("Por favor, envie arquivos com as seguintes extens√µes: jpeg, jpg, gif");
 		}else{
 			//Verifica qual metodo de upload veio pelo parametro
 			if($cod == "rand"){
@@ -376,15 +376,15 @@ function UploadGenerico($destino,$campo,$extensoes=NULL){
 	}//fim if
 	 
 	// Array com os tipos de erros de upload do PHP
-	$array_upload['erros'][0] = 'N„o houve erro';
-	$array_upload['erros'][1] = 'O arquivo no upload È maior do que o limite do PHP';
+	$array_upload['erros'][0] = 'N√£o houve erro';
+	$array_upload['erros'][1] = 'O arquivo no upload √© maior do que o limite do PHP';
 	$array_upload['erros'][2] = 'O arquivo ultrapassa o limite de tamanho especifiado no HTML';
 	$array_upload['erros'][3] = 'O upload do arquivo foi feito parcialmente';
-	$array_upload['erros'][4] = 'N„o foi feito o upload do arquivo';
+	$array_upload['erros'][4] = 'N√£o foi feito o upload do arquivo';
 	 
 	// Verifica se houve algum erro com o upload. Se sim, exibe a mensagem do erro
 	if($_FILES[$campo]['error'] != 0) {
-		Mensagem("N„o foi possÌvel fazer o upload, erro: ". $array_upload['erros'][$_FILES[$campo]['error']]);
+		Mensagem("N√£o foi poss√≠vel fazer o upload, erro: ". $array_upload['erros'][$_FILES[$campo]['error']]);
 		exit; // Para a execucao do script
 	}//fim if
 	
@@ -393,33 +393,33 @@ function UploadGenerico($destino,$campo,$extensoes=NULL){
 		$extensao = strtolower(end(explode('.', $_FILES[$campo]['name'])));
 		//varre o array verificando se a variavel extensao entra na condicional
 		if(array_search($extensao, $array_upload['extensoes']) === false){
-			Mensagem("Por favor, envie arquivos com as seguintes extensıes: ". str_replace("|",", ",$extensoes));
+			Mensagem("Por favor, envie arquivos com as seguintes extens√µes: ". str_replace("|",", ",$extensoes));
 		}//fim if
 	
 	 
 		// Faz a verificacao do tamanho do arquivo
 		elseif($array_upload['tamanho'] < $_FILES[$campo]['size']){
-			Mensagem("O arquivo enviado È muito grande, envie arquivos de atÈ 2Mb.");
+			Mensagem("O arquivo enviado √© muito grande, envie arquivos de at√© 2Mb.");
 		}else{ 
-			// O arquivo passou em todas as verificaÁıes, agora tenta movelo para a pasta
+			// O arquivo passou em todas as verifica√ß√µes, agora tenta movelo para a pasta
 			//acrescenta numeros randomicos ao nome do arquivo
 			$rand = rand(00000,99999);
 			$ext = explode(".",$_FILES[$campo]['name']);
 			$nome_final = $rand.".".$ext[1];
 			
-			// Depois verifica se e possÌvel mover o arquivo para a pasta escolhida
+			// Depois verifica se e poss√≠vel mover o arquivo para a pasta escolhida
 			if(move_uploaded_file($_FILES[$campo]['tmp_name'], $array_upload['pasta'] .$nome_final)){
 				//se tudo der certo retorna o nome do arquivo que foi salvo no diretorio informado
 				return $nome_final;
 			}else{
-			// N„o foi possÌvel fazer o upload, provavelmente a pasta est· incorreta
-			Mensagem("N„o foi possÌvel enviar o arquivo, tente novamente");
+			// N√£o foi poss√≠vel fazer o upload, provavelmente a pasta est√° incorreta
+			Mensagem("N√£o foi poss√≠vel enviar o arquivo, tente novamente");
 			}//fim else
 		}//fim else
 	}//fim if
 }
 
-function Paginacao($query,$form,$retorno,$quant=NULL,$test=false){// $test È para os botoes
+function Paginacao($query,$form,$retorno,$quant=NULL,$test=false){// $test √© para os botoes
 	if($_GET["hdPagina"]&&$_GET["hdPrimeiro"]){
 		$pagina = $_GET["hdPagina"];
 	}else{
@@ -435,7 +435,7 @@ function Paginacao($query,$form,$retorno,$quant=NULL,$test=false){// $test È par
 	$sql_pesquisa = mysql_query("$query");
 	
 
-	//Verifica se h· erros de sintaxe
+	//Verifica se h√° erros de sintaxe
 	if(!$sql_pesquisa){ 
 		return $sql_pesquisa;
 	}
@@ -444,7 +444,7 @@ function Paginacao($query,$form,$retorno,$quant=NULL,$test=false){// $test È par
 	$total_sql      = mysql_num_rows($sql_pesquisa);    //Recebe o total de resultados gerados pelo sql
 	$total_paginas  = ceil($total_sql/$quantporpagina); //Usa o total para calcular quantas paginas de resultado tera a pesquisa sql
 	
-	//Verifica se n„o tem a variavel pagina, ou se ela È menor que o total ou se ela È menor que 1
+	//Verifica se n√£o tem a variavel pagina, ou se ela √© menor que o total ou se ela √© menor que 1
 	if((!isset($pagina)) || ($pagina > $total_paginas) || ($pagina < 1)){
 		$pagina = 1;
 	}
@@ -452,27 +452,27 @@ function Paginacao($query,$form,$retorno,$quant=NULL,$test=false){// $test È par
 	$pagina_sql = ($pagina-1)*$quantporpagina;          //Calcula a variavel que vai ter o incio do limit
 	$pagina_sql .= ",$quantporpagina";                  //Concatena a quantidade de paginas escolhida com o inicio do limit do sql
 	
-	//Sql buscando as informaÁıes e o limit estipulado pela funÁ„o
+	//Sql buscando as informa√ß√µes e o limit estipulado pela fun√ß√£o
 	$sql_pesquisa = mysql_query("$query LIMIT $pagina_sql");
 	if(!$sql_pesquisa){ 
 		return $sql_pesquisa;
 	}
 	
-	//Aqui identifica em qual arquivo est· localizado para que o ajax possa voltar para o mesmo
+	//Aqui identifica em qual arquivo est√° localizado para que o ajax possa voltar para o mesmo
 	$arquivo = $_SERVER['PHP_SELF'];
 	
 	$GLOBALS['pagina']=$pagina;
-	//Monta a table com os botoes onde chamou a funÁ„o
+	//Monta a table com os botoes onde chamou a fun√ß√£o
 	if(mysql_num_rows($sql_pesquisa)>0){
 		$botoes= "
 		<table width=\"100%\">
 			<tr>
 				<td align=\"center\">
-					<b>";if($total_sql == 1){ $botoes.= "1 Resultado";}else{ $botoes.= "$total_sql Resultados";} $botoes.= ", p·gina: $pagina de $total_paginas</b>
+					<b>";if($total_sql == 1){ $botoes.= "1 Resultado";}else{ $botoes.= "$total_sql Resultados";} $botoes.= ", p√°gina: $pagina de $total_paginas</b>
 					<input type=\"button\" name=\"btAnterior\" value=\"Anterior\" class=\"botao\" 
 					onclick=\"document.getElementById('hdPrimeiro').value=1;
 					mudarpagina('a','hdPagina','$arquivo','$form','$retorno');\" "; if($pagina == 1){ $botoes.= "disabled = disabled";} $botoes.= " />
-					<input type=\"button\" name=\"btProximo\" value=\"PrÛximo\" class=\"botao\" 
+					<input type=\"button\" name=\"btProximo\" value=\"Pr√≥ximo\" class=\"botao\" 
 					onclick=\"document.getElementById('hdPrimeiro').value=1;
 					mudarpagina('p','hdPagina','$arquivo','$form','$retorno');\" "; if($pagina == $total_paginas){ $botoes.= "disabled = disabled";} $botoes.= " />
 					<input type=\"hidden\" name=\"hdPagina\" id=\"hdPagina\" value=\"$pagina\" />
@@ -514,8 +514,8 @@ function UltDiaUtil($mes,$ano){
   	$dia_semana = date("w", $ultimo);
   
   	// domingo = 0;
-  	// s√°bado = 6;
-  	// verifica s√°bado e domingo
+  	// s√É¬°bado = 6;
+  	// verifica s√É¬°bado e domingo
   
   	if($dia_semana == 0){
     	$dia--;
@@ -531,11 +531,11 @@ function UltDiaUtil($mes,$ano){
 	switch($dia_semana){  
 		case"0": $dia_semana = "Domingo";       break;  
 		case"1": $dia_semana = "Segunda-Feira"; break;  
-		case"2": $dia_semana = "Ter√ßa-Feira";   break;  
+		case"2": $dia_semana = "Ter√É¬ßa-Feira";   break;  
 		case"3": $dia_semana = "Quarta-Feira";  break;  
 		case"4": $dia_semana = "Quinta-Feira";  break;  
 		case"5": $dia_semana = "Sexta-Feira";   break;  
-		case"6": $dia_semana = "S√°bado";        break;  
+		case"6": $dia_semana = "S√É¬°bado";        break;  
 	}
 	*/
 
@@ -603,18 +603,18 @@ function notificaTomador($codigo_empresa,$ultimanota){
 	
 	$imagemTratada = $_SERVER['HTTP_HOST']."/img/brasoes/".rawurlencode($CONF_BRASAO);
 	$msg = ("
-	<a href=\"$LINK_ACESSO\" style=\"text-decoration:none\" ><img src=\"$imagemTratada\" alt=\"Bras„o Prefeitura\" title=\"Bras„o\" border=\"0\" width=\"100\" height=\"100\" /></a><br><br>
+	<a href=\"$LINK_ACESSO\" style=\"text-decoration:none\" ><img src=\"$imagemTratada\" alt=\"Bras√£o Prefeitura\" title=\"Bras√£o\" border=\"0\" width=\"100\" height=\"100\" /></a><br><br>
 	Este e-mail foi enviado, para notificar que a empresa ". strtoupper($empresa_razaosocial) .",<br>
 	emitiu uma NF-e com ". strtoupper($tomador_nome) .", como tomador.<br>
 	Abaixo segue o link para visualizar esta NF-e:<br>
 	<br>
 	<a href=\"$link\" target=\"blank\">$link</a><br><br>
-	Caso o link n„o funcione copie e cole no navegador.<br>
+	Caso o link n√£o funcione copie e cole no navegador.<br>
 	<br>
 	$CONF_SECRETARIA de $CONF_CIDADE.
 	");
 	
-	$assunto = "NotificaÁ„o de emiss„o de NF-e.";
+	$assunto = "Notifica√ß√£o de emiss√£o de NF-e.";
 
 	$headers  = "MIME-Version: 1.0\r\n";
 
