@@ -20,6 +20,6 @@ Fith Floor, Boston, MA 02110-1301, USA
 ?>
 <?php 
   $Link = $_SERVER['HTTP_HOST'];
- print("<script language=\"javascript\">parent.location='login.php';</script>");
+ print("<script language=\"text/javascript\">parent.location='login.php';</script>");
 
 ?>

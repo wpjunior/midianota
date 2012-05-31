@@ -27,7 +27,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 	<div style="width:100%" id="retornoDivLinha">
 	<table width="100%">
 		<tr align="center" bgcolor="#999999">
-			<td width="33%" align="center"><b>Seleciona o Serviço</b></td>
+			<td width="33%" align="center"><b>Seleciona o ServiÃ§o</b></td>
 			<td width="23%" align="center"><b>Base Calc.(R$)</b></td>
 			<td width="15%" align="center"><b>Aliquota(%)</b></td>
 			<td width="13%" align="center"><b>ISS(R$)</b></td>
@@ -37,7 +37,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 			<td>
 				<select name="cmbCodServico1" style="width:200px;" id="cmbCodServico1" 
 					onchange="MostraAliquota('txtAliqServico1','txtISSRetidoManual1','1');calculaISSNfe('hdInputs','1');">
-						<option value="0">Selecione o Serviço</option>	   	        
+						<option value="0">Selecione o ServiÃ§o</option>	   	        
 						<?php 
 							while(list($codigo_empresas_servicos,$codigo,$codservico,$descricao,$aliquota,$issretido,$basecalculorpa)=mysql_fetch_array($sql_servicos))
 								{
@@ -71,7 +71,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 		</td>
 	</tr>
 	<tr>
-		<td align="left"><b>Observações da nota: </b></td>
+		<td align="left"><b>ObservaÃ§Ãµes da nota: </b></td>
 	</tr>
 	<tr>
 		<td align="center"><textarea name="txtObsNota" rows="3" cols="50"></textarea></td>
@@ -81,7 +81,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 <table width="100%">
  <!-- busca a relacao dos servicos por empresa -->
   <tr>
-    <td align="left">Valor Total das Deduções <?php //print ("$codigo"); ?></td>
+    <td align="left">Valor Total das DeduÃ§Ãµes <?php //print ("$codigo"); ?></td>
     <td align="left">R$ 
 	    <input name="txtValorDeducoes" type="text" size="12" class="texto" id="txtValorDeducoes"  style="text-align:right;" value="0,00"
     	 onkeydown="MaskMoeda(this); return NumbersOnly(event);" onblur="<?php print ("ValorIss('$regras_credito')");?>">
@@ -90,7 +90,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 
 
   <tr>
-    <td align="left">Total Base de Cálculo</td>
+    <td align="left">Total Base de CÃ¡lculo</td>
     <td align="left">R$<?php print("
 	<input name=\"txtBaseCalculo\" type=\"text\" size=\"10\" class=\"texto\" id=\"txtBaseCalculo\" style=\"text-align:right;\" onkeyup=\"MaskMoeda(this);\" onkeydown=\"return NumbersOnly(event);\"
 	onblur=\"ValorIss('$regras_credito')\" readonly=\"readonly\">");?><em>exemplo: 1912.55</em>
@@ -105,7 +105,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 			<table width="100%">
 				<tr>
 					<td width="31%" align="left">
-						Alíquota					
+						AlÃ­quota					
 					</td>
 					<td width="69%" align="left">	
 						<input  id="txtAliquota" name="txtAliquota" type="text" size="5" class="texto" readonly="yes" style="text-align:right;" value="0.00"> %
@@ -186,7 +186,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 					</tr>
 					<tr>
 						<td width="31%" align="left">
-							Alíquota de IRRF
+							AlÃ­quota de IRRF
 						</td>
 						<td width="69%" align="left">	
 							<input name="txtIRRF" id="txtIRRF" type="text" size="4" class="texto" style="text-align:right;" onkeyup="MaskPercent(this)" 
@@ -199,7 +199,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 					</tr>
 					<tr>
 						<td width="31%" align="left">
-							Dedução de 
+							DeduÃ§Ã£o de 
 						</td>
 						<td width="69%" align="left">	
 							R$
@@ -239,22 +239,22 @@ Fith Floor, Boston, MA 02110-1301, USA
 	}
   ?>
   <tr <?php echo $display;?>>
-    <td align="left">Crédito p/ Abatimento</td>
+    <td align="left">CrÃ©dito p/ Abatimento</td>
     <td align="left">R$ <input name="txtCredito" id="txtCredito" type="text" size="10" class="texto" readonly="yes" style="text-align:right" ></td>
   </tr>
   
   <tr>
     <td align="left"><b>Valor Total da Nota</b></td>
     <td align="left">R$ <input name="txtValTotal" id="txtValTotal" type="text" size="10" class="texto" readonly="yes" style="text-align:right;" >
-	Valor total da retenção R$ <input name="txtValTotalRetencao" id="txtValTotalRetencao" type="text" class="texto" size="10" readonly="readonly" style="text-align:right" />
+	Valor total da retenÃ§Ã£o R$ <input name="txtValTotalRetencao" id="txtValTotalRetencao" type="text" class="texto" size="10" readonly="readonly" style="text-align:right" />
 	</td>
   </tr>
   
   <tr>
     <td  align="left"><input name="btInserirNota" type="submit" value="Emitir" class="botao" onclick="return ValidaFormulario('txtBaseCalculo|txtTomadorCNPJ|txtTomadorNome')" ></td>
 	<td align="right" colspan="8">
-		<font color="#FF0000">*</font>Campos obrigatórios<br />
-		<font color="#FF0000">***</font>Percentual da base de calculo a qual será afetada pelo imposto
+		<font color="#FF0000">*</font>Campos obrigatÃ³rios<br />
+		<font color="#FF0000">***</font>Percentual da base de calculo a qual serÃ¡ afetada pelo imposto
 	</td>
   </tr>  
 </table>

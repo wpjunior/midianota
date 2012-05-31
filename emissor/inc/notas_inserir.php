@@ -17,7 +17,7 @@ if($notalimite == 0){
 	$notalimite = "Liberado";
 }
 
-//GERA O C�DIGO DE VERIFICA��O
+//GERA O CÓDIGO DE VERIFIÇÃO
 $CaracteresAceitos = 'ABCDEFGHIJKLMNOPQRXTUVWXYZ';
 $max = strlen($CaracteresAceitos)-1;
 $password = null;
@@ -54,7 +54,7 @@ while(list($nfe_cred,$nfe_tipo_pessoa,$nfe_issretido,$nfe_valor) = mysql_fetch_a
 
 $regras_credito = implode("-",$array_regras_credito);
 
-//Verifica se o prestador pode ou n�o emitir notas
+//Verifica se o prestador pode ou não emitir notas
 if(($ultimanota > $notalimite) && ($notalimite != 0)){ 
   echo "<center><font color=\"#000000\"><b>Voc&ecirc; excedeu o limite de AIDFe, por favor, solicite um limite maior!</b></font></center>";
 ?>

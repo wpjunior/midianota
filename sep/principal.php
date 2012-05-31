@@ -26,7 +26,7 @@ if(isset($_SESSION["logado"]))
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>SEP - Sistema Eletr&ocirc;nico de Prefeitura v1.0</title>
 <link href="css/padrao.css" rel="stylesheet" type="text/css">
 <link href="css/menu.css" rel="stylesheet" type="text/css">
@@ -81,7 +81,7 @@ if(isset($_SESSION["logado"]))
 }
 else
 {
- print("<script language=JavaScript>alert('Sem permiss�o de acesso!!!');parent.location='login.php';</script>"); 
+ print("<script language=JavaScript>alert('Sem permissão de acesso!!!');parent.location='login.php';</script>"); 
 }
 
 ?>
