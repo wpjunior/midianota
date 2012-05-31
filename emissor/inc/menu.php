@@ -26,11 +26,11 @@ $codtipodec = coddeclaracao('Simples Nacional');
 
 if($codtipodeclaracao == $codtipodec){
 	// itens de menu
-	$menu = array("Notas Eletr鬾icas","Cadastro","Contador","Livro Digital","AIDF Eletr鬾ico","Importar RPS","Exportar Notas","Ouvidoria","Utilit醨ios","Sair");
+	$menu = array("Notas Eletr么nicas","Cadastro","Contador","Livro Digital","AIDF Eletr么nico","Importar RPS","Exportar Notas","Ouvidoria","Utilit谩rios","Sair");
 	$links = array("notas.php","empresas.php","definir_contador.php","livro.php","aidf.php","importar.php","exportar.php","reclamacoes.php","utilitarios.php","logout.php");
 }else{
 	// itens de menu
-	$menu = array("Notas Eletr鬾icas","Cadastro","Contador","Guia de Pagamento","Livro Digital","AIDF Eletr鬾ico","Importar RPS","Exportar Notas","Ouvidoria","Utilit醨ios","Sair");
+	$menu = array("Notas Eletr么nicas","Cadastro","Contador","Guia de Pagamento","Livro Digital","AIDF Eletr么nico","Importar RPS","Exportar Notas","Ouvidoria","Utilit谩rios","Sair");
 	$links = array("notas.php","empresas.php","definir_contador.php","pagamento.php","livro.php","aidf.php","importar.php","exportar.php","reclamacoes.php","utilitarios.php","logout.php");
 }
 // contador do vetor
