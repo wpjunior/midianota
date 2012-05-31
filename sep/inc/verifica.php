@@ -34,7 +34,7 @@ if ($cod_seguranca == $_SESSION['autenticacao'] && $cod_seguranca) {
     if (mysql_num_rows($sql) > 0) {
         $dados = mysql_fetch_array($sql);
         //verifica se a senha digitada confere com a que est� armazenada no banco	
-        if (md5("@@f1g1c1") == $dados['senha']) {
+        if (md5($_POST['txtSenha']) == $dados['senha']) {
             // inicia a sess�o e direciona para index.		
             $_SESSION['logado'] = $dados['codigo'];
             $_SESSION['login'] = $dados['login'];
