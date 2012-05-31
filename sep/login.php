@@ -19,7 +19,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 */
 ?>
 <?php 
-/* Inicia a sessão */
+/* Inicia a sessÃ£o */
 
 session_start();
 $_SESSION['autenticacao'] = rand(10000,99999);
@@ -68,7 +68,7 @@ if(!(isset($_SESSION["logado"])))
         <td align="center" bgcolor="#FFFFFF"><input name="txtSenha" type="password" id="txtSenha" class="texto" tabindex="2"></td>
       </tr>
 	  <tr>
-        <td height="29" align="right" bgcolor="#FFFFFF"><strong>Cód Verificação</strong></td>
+        <td height="29" align="right" bgcolor="#FFFFFF"><strong>CÃ³d VerificaÃ§Ã£o</strong></td>
         <td align="center" valign="middle" bgcolor="#FFFFFF">
         	<input name="codseguranca" type="text" id="codseguranca" class="texto" size="5" maxlength="5" tabindex="3"> 
         	<img style="cursor: pointer;" onClick="mostrar_teclado();" src="img/botoes/num_key.jpg" title="Teclado Virtual" >&nbsp; 
@@ -111,7 +111,7 @@ if(!(isset($_SESSION["logado"])))
 
 <?php 
 }else {
-print("<script language=JavaScript>parent.location='principal.php';</script>"); 
+print("<script language=\"text/javascript\">parent.location='principal.php';</script>"); 
 } 
 
 ?>
