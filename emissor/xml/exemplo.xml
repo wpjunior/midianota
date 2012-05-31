@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<importacao>
+  <nota>
+    <rps_numero>Numero RPS</rps_numero> 
+    <rps_data>0000-00-00</rps_data> 
+    <tomador_nome>Nome do tomador</tomador_nome> 
+	<tomador_cnpjcpf>00.000.000/0000-00</tomador_cnpjcpf> 
+	<tomador_inscrmunicipal>Inscrição municipal do tomador</tomador_inscrmunicipal> 
+	<tomador_logradouro>Logradouro do tomador</tomador_logradouro> 
+	<tomador_numero>Número do tomador</tomador_numero> 
+	<tomador_complemento>Complemento do tomador</tomador_complemento> 
+	<tomador_bairro>Bairro do tomador</tomador_bairro> 
+	<tomador_cep>00000-000</tomador_cep> 
+	<tomador_municipio>Municipio do tomador</tomador_municipio>
+	<tomador_uf>Unidade federal</tomador_uf>
+	<tomador_email>mail@mail.com</tomador_email>
+	<discriminacao>Discriminação</discriminacao>
+	<valortotal>Valor total da nota</valortotal>
+	<valordeducoes>Valor das deduções</valordeducoes>
+	<basecalculo>Base para calculo</basecalculo>
+	<valoriss>ISS</valoriss>
+	<issretido>ISS Retido</issretido>
+	<credito>Credito gerado pela nota</credito>
+	<estado>Estado da nota</estado>	
+	<codservico>A001</codservico>
+  </nota>
+</importacao> 
+

@@ -1,0 +1,121 @@
+/* CSS Document */
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+	width: auto;
+}
+
+ul li {
+	position: relative;
+	float:left;	
+}	
+	
+li ul {
+	position: absolute;
+	left: 0px;
+	top: 24px;
+	display: none;	
+}
+	
+ul li a {
+	display: block;
+	text-decoration: none;
+	color: #FFFFFF;
+	background: #3c5c72;
+	padding: 5px;
+	border: 1px solid #FFFFFF;
+	border-bottom: 0;
+}
+
+li:hover ul { display: block; }
+
+.menua {
+	display: block;
+	text-decoration: none;
+	color: #fff !important;
+	//background: black;
+	padding: 5px;
+	//border: 1px solid #d4d0c7;
+	border-bottom: 0;
+	float:left;
+}	
+
+
+.submenua { 	     
+	display: block;	
+	text-decoration: none;
+	color: #000000;
+	background: #d4d0c7;
+	padding: 5px;	
+	border: 0px;
+	width:150px;
+	height: 10px;
+	cursor:pointer;
+}
+.menua:hover{
+	color: #000 !important;
+	background-color:#fff;
+}
+
+#submenua:hover{
+	color:#FFFFFF;
+	background-color:#000066;
+}
+.submenua:hover{
+	color:#FFFFFF;
+	background-color:#000066;
+}
+
+/* Fix IE. Hide from IE Mac \*/
+
+* html ul li { 
+	float: left; 
+}
+* html ul li a { 
+	height: 1%;
+}
+/* End */	
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: auto;	
+
+}
+
+li:hover ul {
+	display: block;
+	color:#0033CC;
+	background-color:#0033CC
+}
+
+li:hover ul, li.over ul { 
+	display: block;
+	color:#0033CC;
+	float:left;
+	height:1%;
+	width:1%;
+	background-color:#d4d0c7;
+}
+/*
+ul.submenu li sup{
+font-weight:bold;
+font-size:7px;
+color: red;
+}*/
+
+.menu-hv {
+	position: absolute;
+	margin: 0; 
+	padding: 0; 	
+	background-color: #0000FF;
+	color: #FFFFFF;
+	width:99%;
+}
+
+
+
+	
+

@@ -1,0 +1,91 @@
+Manual E-NOTA
+
+1 - Pré-requisitos
+
+1.1 - PHP
+1.2 - Apache
+1.3 - Mysql
+1.4 - Sistemas Operacionais
+1.5 - Browsers
+1.6 - Bibliotecas
+
+2 - Instruções de Instalação
+
+2.1 - Estrutura
+2.2 - Instalações Necessárias
+2.3 - Configurações Connect
+
+
+=====================================================
+
+
+1.1 - PHP
+
+	Versão PHP: 5.1.6
+	Configurações do arquivo php.ini
+		short_open_tag:	On
+		register_globals: On 
+		upload_max_filesize: 8M
+		Default timezone: America/Sao_Paulo
+		magic_quotes_gpc: ON
+		output_buffering: 4096
+		error_reporting  =  E_ALL & ~E_NOTICE
+		display_errors = On
+
+1.2 - Apache
+
+	Versão Apache: 2.2.3
+	Apache API Version: 20051115
+	HTTP_ACCEPT_CHARSET: ISO-8859-1
+
+1.3 - Mysql
+
+	Mysql versão 5.0.77
+
+1.4 - Sistemas Operacionais
+
+	Linux
+	Microsoft Windows(R)
+
+1.5 - Browsers
+
+	Recomendações:
+		Firefox v 3.5 ou superior
+		Chrome v 5.0 ou superior
+		Internet Explorer v 7 ou superior
+
+1.6 - Bibliotecas
+
+	Lib GD for PHP5 bundled (2.0.28 compatible)
+
+==================================================================
+
+2 - Instruções de Instalação
+
+
+2.1 - Estrutura de pastas
+
+	Linux:
+		/enota/site	- interface website para prestador e tomador de serviços
+		/enota/sep	- interface para gestão da informação pelo fiscal tributário
+
+	Windows:
+		C:\enota\site	- interface website para prestador e tomador de serviços
+		C:\enota\sep	- interface para gestão da informação pelo fiscal tributário		
+
+2.2 - Instalações Necessárias
+
+	a) Instale o Apache (apache.org), PHP (php.net) e MySQL (mysql.com) de acordo com as versões exigidas acima.
+	b) Importar arquivo *.sql da base modelo, recomendamos que utilize o PhpMyAdmin (www.phpmyadmin.net)
+	c) Após a instalação do MySQL e importação da base modelo, criar usuário e senha para acesso a base criada.
+
+2.3 - Configurações config.php
+
+	Localização do arquivo: eiss/include/config.php
+	Necessária adaptação das seguintes variáveis:
+		- $Host : é o endereço da máquina servidor;
+		- $Usuario : usuário de conexão ao banco MySQL;
+		- $Senha : senha do usuário de conexão ao banco MySQL;
+		- $Base : base selecionado na conexão.
+
+www.portalpublico.com.br

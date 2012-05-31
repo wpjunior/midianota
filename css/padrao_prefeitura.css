@@ -1,0 +1,140 @@
+
+/*
+COPYRIGHT 2008 - 2010 DO PORTAL PUBLICO INFORMATICA LTDA
+
+Este arquivo e parte do programa E-ISS / SEP-ISS
+
+O E-ISS / SEP-ISS e um software livre; voce pode redistribui-lo e/ou modifica-lo
+dentro dos termos da Licenca Publica Geral GNU como publicada pela Fundacao do
+Software Livre - FSF; na versao 2 da Licenca
+
+Este sistema e distribuido na esperanca de ser util, mas SEM NENHUMA GARANTIA,
+sem uma garantia implicita de ADEQUACAO a qualquer MERCADO ou APLICACAO EM PARTICULAR
+Veja a Licenca Publica Geral GNU/GPL em portugues para maiores detalhes
+
+Voce deve ter recebido uma copia da Licenca Publica Geral GNU, sob o titulo LICENCA.txt,
+junto com este sistema, se nao, acesse o Portal do Software Publico Brasileiro no endereco
+www.softwarepublico.gov.br, ou escreva para a Fundacao do Software Livre Inc., 51 Franklin St,
+Fith Floor, Boston, MA 02110-1301, USA
+*/
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #333333;
+	background-image: url(../img/fundos/padrao.jpg);
+	margin: 0px;
+	padding: 0px;
+	background-repeat: repeat-x;
+	background-color: #FFFFFF;
+}
+.menu {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+img {
+	border: 0px;
+}
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #333333;
+}
+a.menu:link, a.menu:visited {
+	display: block;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:8pt;
+	padding: 5px;
+	text-align:left;
+	text-decoration:none;
+	color: #FFFFFF;
+	background-image: url(../img//menus/menu_link.jpg);
+}
+
+a.menu:hover {
+	text-decoration:none;
+	background-color: #003366;
+	color: #FFFFFF;
+	background-image: url(../img/menus/menu_hover.jpg);
+}
+input.texto {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-style:normal;
+	color: #333333;
+	height: 15px;
+	border:solid #999999 1px;
+	
+		
+}
+
+input.email {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-style:normal;
+	color: #333333;
+	height: 15px;
+	border:solid #999999 1px;
+	
+		
+}
+textarea.texto {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-style:normal;
+	color: #333333;
+	border:solid #999999 1px;		
+}
+input.botao {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:8pt;
+	border:solid #666666 1px;
+	
+}
+.txtbranco {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #FFFFFF;
+}
+select {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-style:normal;
+	color: #333333;
+	height: 20px;
+	border:solid #999999 1px;		
+}
+fieldset {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-style: normal;
+	color: #333333;
+	background-image:url(../img/fieldset_fundo.jpg);
+	background-repeat:repeat-x;
+	background-color:#CCCCCC;
+	margin-left:10 px;
+	margin-right:10 px;
+	padding-top:20 px; 
+}
+a:link, a:visited {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:8pt;
+	text-decoration: none;
+	color: #333333;
+	font-weight: bold;
+}
+
+a:hover {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:8pt;
+	text-decoration: underline;
+	color: #666666;
+	font-weight: bold;
+}
+imprimir {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+}

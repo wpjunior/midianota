@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<importacao>
+	<nota>
+		<rps_numero>40</rps_numero> 
+		<rps_data>2010-01-10</rps_data> 
+		<tomador_nome>Charles de Menezes</tomador_nome> 
+		<tomador_cnpjcpf>000.000.000-10</tomador_cnpjcpf> 
+		<tomador_inscrmunicipal>ISENTO</tomador_inscrmunicipal> 
+		<tomador_logradouro>Rua do tomador</tomador_logradouro> 
+		<tomador_numero>1</tomador_numero> 
+		<tomador_complemento>---</tomador_complemento> 
+		<tomador_bairro>Bairro do tomador</tomador_bairro> 
+		<tomador_cep>00000-001</tomador_cep> 
+		<tomador_municipio>MUNICIPIO</tomador_municipio>
+		<tomador_uf>UF</tomador_uf>
+		<tomador_email>tomador@mail.com</tomador_email>
+		<discriminacao>Discriminação da nota</discriminacao>
+		<observacao>Observação da nota</observacao>
+		<aliqinss>1.00</aliqinss>
+		<aliqirrf>2.00</aliqirrf>
+		<deducaoirrf>1.50</deducaoirrf>
+		<valordeducoes>100.00</valordeducoes>
+		<estado>Normal</estado>
+		<codservico>
+			<codservico>1.01</codservico>
+			<basecalculo>120.32</basecalculo>
+			<issretido>1.00</issretido>
+		</codservico>
+		<codservico>
+			<codservico>1.02</codservico>
+			<basecalculo>300.50</basecalculo>
+			<issretido>2.50</issretido>
+		</codservico>
+		<codservico>
+			<codservico>1.05</codservico>
+			<basecalculo>600.10</basecalculo>
+			<issretido>8.50</issretido>
+		</codservico>
+	</nota>
+</importacao> 

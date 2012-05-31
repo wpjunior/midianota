@@ -1,0 +1,28 @@
+
+*** These modified files were found in JOE when it aborted on Tue May 15 13:06:07 2012
+*** JOE was aborted by UNIX signal 15
+
+*** File '(Unnamed)'
+mail
+safe
+upload
+include_path
+upload
+include_path
+upload
+safe
+safe_mode
+safe
+
+*** File '(Unnamed)'
+util.php
+util.php
+../inc/utilitarios/configuracoes_editar.php
+../inc/utilitarios/configuracoes_editar.php
+../inc/utilitarios/configuracoes_editar.php
+util.php
+util.php
+util.php
+util.php
+../inc/utilitarios/configuracoes_editar.php
+../inc/utilitarios/configuracoes_editar.php

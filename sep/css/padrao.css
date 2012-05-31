@@ -1,0 +1,186 @@
+.principal {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+	background-image: url(../img/wallpaper/03.jpg);
+	margin: 0px;
+	padding: 0px;
+}
+.relatorio {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px; 
+	color: #000000;
+	background-color:#FFFFFF;	
+	margin: 0px;
+	padding: 0px;
+}
+.formulario {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+	background-color:#CCCCCC;
+	margin: 0px;
+	padding: 0px;
+}
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+}
+input.texto {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-style:normal;
+	color: #333333;
+	height: 20px;
+	border:solid #000000 1px;
+}
+input.botao {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:8pt;
+	border:solid #666666 1px;
+	
+}
+textarea {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-style:normal;
+	color: #333333;
+	border:solid #000000 1px;		
+}
+fieldset {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+	background-color:#CCCCCC;
+}
+legend {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #000000;
+
+}
+select {
+	font-family: Verdana, Arial, Helvetica, sans-serif normal;
+	font-size: 8pt;
+	border:#000000 solid 1pt;
+}
+input#btContatoSalvar{
+	border:0;
+	width:46;
+	height:41;
+	background: #fff url("../img/botao_salvar.jpg");
+}
+input#btBuscarCliente{
+	border:0;
+	width:25;
+	height:20;
+	background: #fff url("../img/lupa.jpg");
+}
+input#btContatoInserir{
+	border:0;
+	width:31;
+	height:100;
+	background: #fff url("../img/contato_inserir.jpg");
+}
+input#btConfRede{
+	border:0;
+	width:30;
+	height:50;
+	background: #fff url("../img/confrede.jpg");
+}
+input#btHistorico{
+	border:0;
+	width:30;
+	height:95;
+	background: #fff url("../img/historico.jpg");
+}
+input#btInserirContato{
+	border:0;
+	width:44;
+	height:40;
+	background: #fff url("../img/contato_salvar.jpg");
+}
+input#btGestao{
+	border:0;
+	widows:26;
+	height:21;
+	background: #fff url("../img/gestao.jpg");
+}
+.formCabecalho{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:8pt;
+	color:#FFFFFF;
+	font-weight:bold;
+
+}
+table.form{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:8pt;
+	color: #CCCCCC;
+	font-weight:normal;
+	background-color:#CCCCCC;
+
+}
+img {
+	border:0px;
+}
+a:link {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+	text-decoration: none;
+}
+input#btLupa{
+	border:0;
+	widows:26;
+	width:23px; 
+	cursor:pointer;
+	height:21;
+	background: #fff url("../img/1ver2.jpg");
+}
+input#btX{
+	border:0;
+	widows:26;
+	width:29px; 
+	cursor:pointer;
+	height:21;
+	background: #fff url("../img/botoes/botao_cancelar.jpg");
+}
+input#btImp{
+	border:0;
+	widows:26;
+	width:29px; 
+	cursor:pointer;
+	height:21;
+	background: #fff url("../img/botoes/botao_imprimir.jpg");
+}
+input#btEdit{
+	border:0;
+	widows:26;
+	width:27px; 
+	cursor:pointer;
+	height:21px;
+	background: #fff url("../img/botoes/editar.jpg");
+}
+input#btDescer{
+	border:0;
+	width:22px; 
+	cursor:pointer;
+	height:21px;
+	background: #fff url("../img/botoes/desce.jpg");
+}
+input#btMenos{
+	border:0;
+	widows:26;
+	width:27px; 
+	cursor:pointer;
+	height:21px;
+	background: #fff url("../img/botoes/botaomenos.jpg");
+}
