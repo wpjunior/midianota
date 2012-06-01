@@ -111,7 +111,7 @@ if(!(isset($_SESSION["logado"])))
 
 <?php 
 }else {
-print("<script language=\"text/javascript\">parent.location='principal.php';</script>"); 
+header('Location: principal.php') ;
 } 
 
 ?>
