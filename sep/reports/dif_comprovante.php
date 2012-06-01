@@ -20,7 +20,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 ?>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Comprovante de DES</title>
 <link href="../css/imprimir_descomprovantes.css" rel="stylesheet" type="text/css"></head>
 <?php 

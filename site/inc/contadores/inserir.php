@@ -45,10 +45,10 @@ $simplesnacional    = $_POST['txtSimplesNacional'];
 $CODCAT             = $_POST['txtMAXCODIGOCAT'];
 $nfe                = $_POST['txtNfe'];
 
-// define se È ou nao contador
+// define se √© ou nao contador
 $sql=mysql_query("SELECT MAX(codigo) FROM servicos_categorias");
 list($maxcodigo)=mysql_fetch_array($sql);
-$sql_categoria=mysql_query("SELECT codigo FROM servicos_categorias WHERE nome ='Cont·bil'");	
+$sql_categoria=mysql_query("SELECT codigo FROM servicos_categorias WHERE nome ='Cont√°bil'");	
 list($codigocategoria)=mysql_fetch_array($sql_categoria);
 $categoria=1;
 $servico=1;
@@ -80,13 +80,13 @@ list($codtipodeclaracao)=mysql_fetch_array($sql);
 if((strlen($cpfcnpj)!=14)&&(strlen($cpfcnpj)!=18)){
 	echo "
 		<script>
-			alert('O CPF/CNPJ informado n„o È v·lido');
+			alert('O CPF/CNPJ informado n√£o √© v√°lido');
 			window.location='../../contadores.php';
 		</script>
 	";
 }
 
-    //Verifica se n„o h· nenhuma empresa cadastrada com o mesmo nome e/ou cnpj
+    //Verifica se n√£o h√° nenhuma empresa cadastrada com o mesmo nome e/ou cnpj
     $campo = tipoPessoa($cpfcnpj);
 	$teste_nome        = mysql_query("SELECT codigo FROM cadastro WHERE nome = '$nome'");
 	$teste_razaosocial = mysql_query("SELECT codigo FROM cadastro WHERE razaosocial = '$razaosocial'");
@@ -97,13 +97,13 @@ if((strlen($cpfcnpj)!=14)&&(strlen($cpfcnpj)!=18)){
 	$codtipo_tomador = codtipo('tomador');
 	
 	if(mysql_num_rows($teste_cnpj)>0){
-		$msg = "J· existe um contador com este CPF/CNPJ";
+		$msg = "J√° existe um contador com este CPF/CNPJ";
 		$erro = 2;
 	}elseif(mysql_num_rows($teste_razaosocial)>0){
-		$msg = "J· existe um contador com esta raz„o social";
+		$msg = "J√° existe um contador com esta raz√£o social";
 		$erro = 1;
 	}elseif(mysql_num_rows($teste_nome)>0){
-		$msg = "J· existe um contador com este nome";
+		$msg = "J√° existe um contador com este nome";
 		$erro = 1;
 	}
 		//
@@ -190,12 +190,12 @@ if((strlen($cpfcnpj)!=14)&&(strlen($cpfcnpj)!=18)){
 
 		$imagemTratada = $_SERVER['HTTP_HOST']."/img/brasoes/".rawurlencode($CONF_BRASAO);
 		$msg = "
-		<a href=\"$LINK_ACESSO\" style=\"text-decoration:none\" ><img src=\"$imagemTratada\" alt=\"Bras„o Prefeitura\" title=\"Bras„o\" border=\"0\" width=\"100\" height=\"100\" /></a><br><br>
+		<a href=\"$LINK_ACESSO\" style=\"text-decoration:none\" ><img src=\"$imagemTratada\" alt=\"Bras√£o Prefeitura\" title=\"Bras√£o\" border=\"0\" width=\"100\" height=\"100\" /></a><br><br>
 		O cadastro da empresa $nome foi efetuado com sucesso.<br>
 		Dados da empresa:<br><br>
-		Raz„o Social: $razaosocial<br>
+		Raz√£o Social: $razaosocial<br>
 		CPF/CNPJ: $cpfcnpj<br>
-		MunicÌpio: $municipio<br>
+		Munic√≠pio: $municipio<br>
 		Endereco: $logradouro, $numero<br><br>
 		  
 		Veja passo a passo como acessar o sistema:	<br><br>
@@ -204,14 +204,14 @@ if((strlen($cpfcnpj)!=14)&&(strlen($cpfcnpj)!=18)){
 		3- Clique no link Contador<br>
 		4- Entre em acessar o sistema<br>
 		5- Em login insira o cpf/cnpf da empresa<br>
-		6- Sua senha È <b><font color=\"RED\">$senha</font></b><br>
-		7- Insira o cÛdigo de verificaÁ„o que aparece ao lado<br>";
+		6- Sua senha √© <b><font color=\"RED\">$senha</font></b><br>
+		7- Insira o c√≥digo de verifica√ß√£o que aparece ao lado<br>";
 		
 		$assunto = "Acesso ao Sistema NF-e ($CONF_CIDADE).";
 	
 		$headers  = "MIME-Version: 1.0\r\n";
 	
-		$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+		$headers .= "Content-type: text/html; charset=UTF-8\r\n";
 	
 		$headers .= "From: $CONF_SECRETARIA de $CONF_CIDADE <$CONF_EMAIL>  \r\n";
 	
@@ -265,9 +265,9 @@ if((strlen($cpfcnpj)!=14)&&(strlen($cpfcnpj)!=18)){
 	while($contsocios < $nrosocios) {   
 		if($vetor_sociosnomes[$contsocios] != "") {
 			if($contsocios==0){
-				$sql_cargo=mysql_query("SELECT codigo FROM cargos WHERE cargo='Respons·vel'");
+				$sql_cargo=mysql_query("SELECT codigo FROM cargos WHERE cargo='Respons√°vel'");
 			}else{
-				$sql_cargo=mysql_query("SELECT codigo FROM cargos WHERE cargo='SÛcio'");
+				$sql_cargo=mysql_query("SELECT codigo FROM cargos WHERE cargo='S√≥cio'");
 			}
 			list($codcargo)=mysql_fetch_array($sql_cargo);
 			$sql = mysql_query("INSERT INTO cadastro_resp
@@ -286,7 +286,7 @@ if((strlen($cpfcnpj)!=14)&&(strlen($cpfcnpj)!=18)){
 	
 	print "
 		<script language=JavaScript> 
-			alert('Empresa cadastrada! N„o esqueÁa de Imprimir o comprovante de cadastro que abrir· em uma nova janela!');
+			alert('Empresa cadastrada! N√£o esque√ßa de Imprimir o comprovante de cadastro que abrir√° em uma nova janela!');
 			window.open('../../../reports/cadastro_comprovante.php?COD=$CodEmp');
 			window.location='../../contadores.php';
 		</script>

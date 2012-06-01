@@ -19,7 +19,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 */
 ?>
 <?php 
-// inicia a sessão verificando se jah esta com o usuario logado, se estiver entra na página admin
+// inicia a sessÃ£o verificando se jah esta com o usuario logado, se estiver entra na pÃ¡gina admin
 session_start();
 if(!(isset($_SESSION["logado"]))) {   
 	print("Acesso Negado!!");
@@ -62,7 +62,7 @@ $PREFEITURA = "Prefeitura Municipal de ".$CIDADE;
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title><?php echo $PREFEITURA; ?> - NFe ISS - Comunicado</title>
 </head>
 
@@ -82,21 +82,21 @@ $PREFEITURA = "Prefeitura Municipal de ".$CIDADE;
     <td class="cab03"><?php print strtoupper($SECRETARIA); ?></td>
   </tr>
   <tr>
-    <td class="cab02">NOTA FISCAL ELETRÔNICA DE SERVIÇOS - NF-e</td>
+    <td class="cab02">NOTA FISCAL ELETRÃ”NICA DE SERVIÃ‡OS - NF-e</td>
   </tr>
   <tr>
-    <td><strong>COMUNICADO DE NOTIFICAÇÃO ENTRE PARTES</strong></td>
+    <td><strong>COMUNICADO DE NOTIFICAÃ‡ÃƒO ENTRE PARTES</strong></td>
   </tr>
 </table>
 
 <!-- tabela prefeitura fim -->	</td>
-    <td width="25%" align="left" style="border:#000000 solid">Número da Reclamação<br /><div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><strong><?php print $CODIGO; ?></strong></font></div></td>
+    <td width="25%" align="left" style="border:#000000 solid">NÃºmero da ReclamaÃ§Ã£o<br /><div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><strong><?php print $CODIGO; ?></strong></font></div></td>
   </tr>
   <tr>
-    <td align="left" style="border:#000000 solid">Data da Reclamação<br /><div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><strong><?php print (substr($datareclamacao,8,2)."/".substr($datareclamacao,5,2)."/".substr($datareclamacao,0,4)); ?></strong></font></div></td>
+    <td align="left" style="border:#000000 solid">Data da ReclamaÃ§Ã£o<br /><div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><strong><?php print (substr($datareclamacao,8,2)."/".substr($datareclamacao,5,2)."/".substr($datareclamacao,0,4)); ?></strong></font></div></td>
   </tr>
   <tr>
-    <td align="left" style="border:#000000 solid">Estado da Reclamação<br /><div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><strong><?php print $estado; ?></strong></font></div></td>
+    <td align="left" style="border:#000000 solid">Estado da ReclamaÃ§Ã£o<br /><div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><strong><?php print $estado; ?></strong></font></div></td>
   </tr>
   <tr>
     <td colspan="5" align="center" style="border:#000000 solid">
@@ -107,7 +107,7 @@ $PREFEITURA = "Prefeitura Municipal de ".$CIDADE;
     <td colspan="2" class="cab03" align="center"><?php echo strtoupper($especificacao); ?></td>
     </tr>
   <tr>
-    <td align="left" width="15%">RPS - Número:</td>
+    <td align="left" width="15%">RPS - NÃºmero:</td>
     <td align="left" width="85%"><strong><?php print $rps_numero; ?></strong></td>
     </tr>
   <tr>
@@ -133,10 +133,10 @@ $PREFEITURA = "Prefeitura Municipal de ".$CIDADE;
 	
 <table width="95%" border="0" cellspacing="0" cellpadding="2">
   <tr>
-    <td class="cab03">A T E N Ç Ã O</td>
+    <td class="cab03">A T E N Ã‡ Ãƒ O</td>
   </tr>
   <tr>
-    <td height="200" align="left" valign="top"><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A <strong><?php echo $PREFEITURA; ?></strong>, através deste e-mail, entra em contato com a empresa <strong><?php echo $empresa_nome; ?></strong>, registrada nesta Prefeitura Municipal com CNPJ/CPF <strong><?php echo $empresa_cnpjcpf; ?></strong>, na qual está cadastrada e registrada como emissora de NFe - ISS (Nota Fiscal Eletrônica de Serviços), para comunicar que foi enviado uma notificação de reclamação quanto a <strong><?php echo $especificacao; ?></strong> por parte do seguinte tomador:<br /><br />
+    <td height="200" align="left" valign="top"><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A <strong><?php echo $PREFEITURA; ?></strong>, atravÃ©s deste e-mail, entra em contato com a empresa <strong><?php echo $empresa_nome; ?></strong>, registrada nesta Prefeitura Municipal com CNPJ/CPF <strong><?php echo $empresa_cnpjcpf; ?></strong>, na qual estÃ¡ cadastrada e registrada como emissora de NFe - ISS (Nota Fiscal EletrÃ´nica de ServiÃ§os), para comunicar que foi enviado uma notificaÃ§Ã£o de reclamaÃ§Ã£o quanto a <strong><?php echo $especificacao; ?></strong> por parte do seguinte tomador:<br /><br />
 	- Tomador CNPJ/CPF: <strong><?php print $tomador_cnpj; ?></strong><br /><br />
 	- Tomador e-mail: <strong><?php print $tomador_email; ?></strong></td>
   </tr>
@@ -158,10 +158,10 @@ $PREFEITURA = "Prefeitura Municipal de ".$CIDADE;
 	
 <table width=95% border=0 cellspacing=0 cellpadding=2>
   <tr>
-    <td class=cab03>A T E N Ç Ã O</td>
+    <td class=cab03>A T E N Ã‡ Ãƒ O</td>
   </tr>
   <tr>
-    <td height=200 align=left valign=top><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A <strong>$PREFEITURA</strong>, através deste e-mail, entra em contato com a empresa <strong>$empresa_nome</strong>, registrada nesta Prefeitura Municipal com CNPJ/CPF <strong>$empresa_cnpjcpf;</strong>, na qual está cadastrada e registrada como emissora de NFe - ISS (Nota Fiscal Eletrônica de Serviços), para comunicar que foi enviado uma notificação de reclamação quanto a <strong>$especificacao</strong> por parte do seguinte tomador:<br /><br />
+    <td height=200 align=left valign=top><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A <strong>$PREFEITURA</strong>, atravÃ©s deste e-mail, entra em contato com a empresa <strong>$empresa_nome</strong>, registrada nesta Prefeitura Municipal com CNPJ/CPF <strong>$empresa_cnpjcpf;</strong>, na qual estÃ¡ cadastrada e registrada como emissora de NFe - ISS (Nota Fiscal EletrÃ´nica de ServiÃ§os), para comunicar que foi enviado uma notificaÃ§Ã£o de reclamaÃ§Ã£o quanto a <strong>$especificacao</strong> por parte do seguinte tomador:<br /><br />
 	- Tomador CNPJ/CPF: <strong>$tomador_cnpj</strong><br /><br />
 	- Tomador e-mail: <strong>$tomador_email</strong></td>
   </tr>
@@ -174,7 +174,7 @@ $PREFEITURA = "Prefeitura Municipal de ".$CIDADE;
 
 	$headers  = "MIME-Version: 1.0\r\n";
 
-	$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+	$headers .= "Content-type: text/html; charset=UTF-8\r\n";
 
 	$headers .= "From: $EMAIL \r\n";
 

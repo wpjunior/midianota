@@ -66,10 +66,10 @@ $include=$_POST['include'];
 
 
 
-	// define se È ou nao contador
+	// define se √© ou nao contador
     $sql=mysql_query("SELECT MAX(codigo) FROM servicos_categorias");
 	list($maxcodigo)=mysql_fetch_array($sql);
-	$sql_categoria=mysql_query("SELECT codigo FROM servicos_categorias WHERE nome = 'Cont·bil'");	
+	$sql_categoria=mysql_query("SELECT codigo FROM servicos_categorias WHERE nome = 'Cont√°bil'");	
 	list($codigocategoria)=mysql_fetch_array($sql_categoria);
 	$categoria=1;
 	$servico=1;
@@ -93,24 +93,24 @@ $include=$_POST['include'];
 
     // verifca se o valor da variavel cpfcnpj e valido como cpf ou cmpj
     if((strlen($cpfcnpj)!=14)&&(strlen($cpfcnpj)!=18)){
-		Mensagem("O CPF/CNPJ informado n„o È v·lido");
+		Mensagem("O CPF/CNPJ informado n√£o √© v√°lido");
 		RedirecionaPost("?include={$include}");
 		die();//die() para nao executar o restante do arquivo
     }
 
-    //Verifica se n„o h· nenhuma empresa cadastrada com o mesmo nome e/ou cnpj
+    //Verifica se n√£o h√° nenhuma empresa cadastrada com o mesmo nome e/ou cnpj
     $campo=tipoPessoa($cpfcnpj);
 	$teste_nome        = mysql_query("SELECT codigo FROM cadastro WHERE nome = '$nome'");
 	$teste_razaosocial = mysql_query("SELECT codigo FROM cadastro WHERE razaosocial = '$razaosocial'");
 	$teste_cnpj        = mysql_query("SELECT codigo FROM cadastro WHERE $campo = '$cpfcnpj'");
 	if(mysql_num_rows($teste_nome)>0){
-		Mensagem("J· existe um prestador de serviÁos com este nome");
+		Mensagem("J√° existe um prestador de servi√ßos com este nome");
 		RedirecionaPost("?include={$include}");
 	}elseif(mysql_num_rows($teste_razaosocial)>0){
-		Mensagem("J· existe um prestador de serviÁos com esta raz„o social");
+		Mensagem("J√° existe um prestador de servi√ßos com esta raz√£o social");
 		RedirecionaPost("?include={$include}");
 	}elseif(mysql_num_rows($teste_cnpj)>0){
-		Mensagem("J· existe um prestador de serviÁos com este CPF/CNPJ");
+		Mensagem("J√° existe um prestador de servi√ßos com este CPF/CNPJ");
 		RedirecionaPost("?include={$include}");
 	}else{		
 	   
@@ -150,26 +150,26 @@ $include=$_POST['include'];
 		list($codigoempresa) = mysql_fetch_array($sql_busca_cod);
 							
 							
-	   //Pega os codtipo dos prestadores que tem informaÁıes extras
+	   //Pega os codtipo dos prestadores que tem informa√ß√µes extras
 	   $codtipo_inst = codtipo('instituicao_financeira');
 	   $codtipo_opr  = codtipo('operadora_credito');
 	   $codtipo_cart = codtipo('cartorio');
 	   
-	   //testa se o prestador que est· sendo editado tem alguma informaÁ„o extra
+	   //testa se o prestador que est√° sendo editado tem alguma informa√ß√£o extra
 	   if($codtipo == $codtipo_inst){
 			mysql_query("INSERT inst_financeiras SET agencia = '$agencia', codbanco = '$codbanco', codcadastro = '$codigoempresa'");
 			$codcargo = codcargo("Gerente");
-			add_logs('Inseriu uma InstituiÁ„o Financeira');
+			add_logs('Inseriu uma Institui√ß√£o Financeira');
 			mysql_query("INSERT cadastro_resp SET nome = '$gerente', cpf = '$gerente_cpf', codcargo = '$codcargo', codemissor = '$codigoempresa'");
 	   }elseif($codtipo == $codtipo_opr){
 			mysql_query("INSERT operadoras_creditos SET agencia = '$agencia', codbanco = '$codbanco', codcadastro = '$codigoempresa'");
 			$codcargo = codcargo("Gerente");
-			add_logs('Inseriu uma Operadora de CrÈdito');
+			add_logs('Inseriu uma Operadora de Cr√©dito');
 			mysql_query("INSERT cadastro_resp SET nome = '$gerente', cpf = '$gerente_cpf', codcargo = '$codcargo', codemissor = '$codigoempresa'");
 	   	}elseif($codtipo == $codtipo_cart){
 			mysql_query("INSERT cartorios SET admpublica = '$adm_publica', nivel = '$nivel', codcadastro = '$codigoempresa'");
 			$codcargo = codcargo("Diretor");
-			add_logs('Inseriu um CartÛrio');
+			add_logs('Inseriu um Cart√≥rio');
 			mysql_query("INSERT cadastro_resp SET nome = '$diretor', cpf = '$diretor_cpf', codcargo = '$codcargo', codemissor = '$codigoempresa'");		
 	   }
 	   
@@ -184,9 +184,9 @@ $include=$_POST['include'];
 	
 		$msg = "O cadastro da empresa $nome foi efetuado com sucesso.<br>
 		Dados da empresa:<br><br>
-		Raz„o Social: $razaosocial<br>
+		Raz√£o Social: $razaosocial<br>
 		CPF/CNPJ: $cpfcnpj<br>
-		MunicÌpio: $municipio<br>
+		Munic√≠pio: $municipio<br>
 		Endereco: $logradouro, $numero<br><br>
 		  
 		Veja passo a passo como acessar o sistema:	<br><br>
@@ -194,15 +194,15 @@ $include=$_POST['include'];
 		2- Clique no link do seu respectivo tipo(Prestador ou Contador)<br>
 		3- Entre em acessar o sistema<br>
 		4- Em login insira o cpf/cnpf da empresa<br>
-		5- Sua senha È <b><font color=\"RED\">$senha</font></b><br>
-		6- Insira o cÛdigo de verificaÁ„o que aparece ao lado<br>
-		7- Depois de ter acessado o sistema, v· no link <b>Cadastro</b> e troque sua senha<br>";
+		5- Sua senha √© <b><font color=\"RED\">$senha</font></b><br>
+		6- Insira o c√≥digo de verifica√ß√£o que aparece ao lado<br>
+		7- Depois de ter acessado o sistema, v√° no link <b>Cadastro</b> e troque sua senha<br>";
 		
 		$assunto = "Acesso ao Sistema NF-e ($CONF_CIDADE).";
 	
 		$headers  = "MIME-Version: 1.0\r\n";
 	
-		$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+		$headers .= "Content-type: text/html; charset=UTF-8\r\n";
 	
 		$headers .= "From: $CONF_SECRETARIA de $CONF_CIDADE <$CONF_EMAIL>  \r\n";
 	
@@ -256,9 +256,9 @@ $include=$_POST['include'];
 		while($contsocios < $nrosocios) {   
 			if($vetor_sociosnomes[$contsocios] != "") {
                 if($contsocios==0){
-                    $sql_cargo=mysql_query("SELECT codigo FROM cargos WHERE cargo='Respons·vel'");
+                    $sql_cargo=mysql_query("SELECT codigo FROM cargos WHERE cargo='Respons√°vel'");
                 }else{
-                    $sql_cargo=mysql_query("SELECT codigo FROM cargos WHERE cargo='SÛcio'");
+                    $sql_cargo=mysql_query("SELECT codigo FROM cargos WHERE cargo='S√≥cio'");
                 }
                 list($codcargo)=mysql_fetch_array($sql_cargo);
 				$vetor_sociosnomes[$contsocios] = strtoupper($vetor_sociosnomes[$contsocios]);

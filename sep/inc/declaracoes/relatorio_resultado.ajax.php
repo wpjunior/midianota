@@ -20,19 +20,19 @@ Fith Floor, Boston, MA 02110-1301, USA
 ?>
 <?php
 
-/* N„o gravar em cache */
+/* N√£o gravar em cache */
 $gmtDate = gmdate("D, d M Y H:i:s");
 header("Expires: {$gmtDate} GMT");
 header("Last-Modified: {$gmtDate} GMT");
 header("Cache-Control: no-cache, must-revalidate");
 header("Pragma: no-cache");
-header("Content-Type: text/html; charset=iso-8859-1");
+header("Content-Type: text/html; charset=UTF-8");
 
 include("../conect.php");
 include("../../funcoes/util.php");
 
 
-// Valor do campo que fez requisiÁ„o
+// Valor do campo que fez requisi√ß√£o
 $valor = $_GET['cmbDes'];
 $DataEmissao = DataMysql($_GET['txtDataEmissao']);
 $mesComp = $_GET['cmbMesComp'];
@@ -80,10 +80,10 @@ if($valor =='tomadores'){
 		 	<tr>
 				<td width=150px bgcolor=\"#AAAAAA\" align=\"center\">Tomador</td>
 				<td width=40px bgcolor=\"#AAAAAA\" align=\"center\">Nro Nota</td>
-				<td width=80px bgcolor=\"#AAAAAA\" align=\"center\">Data Emiss„o</td>
+				<td width=80px bgcolor=\"#AAAAAA\" align=\"center\">Data Emiss√£o</td>
 				<td width=150px bgcolor=\"#AAAAAA\" align=\"center\">Emissor</td>
 				<td width=60px bgcolor=\"#AAAAAA\" align=\"center\">Valor(R$)</td>
-				<td bgcolor=\"#AAAAAA\" align=\"center\">CrÈdito(R$)</td>		
+				<td bgcolor=\"#AAAAAA\" align=\"center\">Cr√©dito(R$)</td>		
 		    </tr>
 		  </table>
 		  <div id=\"detalhes\" style=\"width:578px; height:200px; overflow:auto\">
@@ -137,8 +137,8 @@ elseif($valor == 'issretido'){
 		  <table width=\"100%\"  cellspacing=\"1\" cellpadding=\"1\" align=\"center\" border=\"0\" id=\"tblResultado\">
 		 	<tr>
 				<td width=230px bgcolor=\"#AAAAAA\" align=\"center\">Tomador</td>	
-				<td width=90px bgcolor=\"#AAAAAA\" align=\"center\">CompetÍncia</td>	
-				<td width=80px bgcolor=\"#AAAAAA\" align=\"center\">Emiss„o</td>	
+				<td width=90px bgcolor=\"#AAAAAA\" align=\"center\">Compet√™ncia</td>	
+				<td width=80px bgcolor=\"#AAAAAA\" align=\"center\">Emiss√£o</td>	
 				<td width=80px bgcolor=\"#AAAAAA\" align=\"center\">Total (R$)</td>
 				<td bgcolor=\"#AAAAAA\" align=\"center\">Valor (R$)</td>
 		    </tr>
@@ -150,7 +150,7 @@ elseif($valor == 'issretido'){
 		while(list($tomador,$valor,$multa,$competencia,$emissao,$est,$des_codigo)=mysql_fetch_array($sql)){
 			$sql2 = mysql_query("SELECT SUM(valor_nota) FROM des_issretido_notas WHERE coddes_issretido = '$des_codigo'");
 			list($total) = mysql_fetch_array($sql2);
-			$guia_pago = $guia_pago=="S" ? "sim" : "n„o";
+			$guia_pago = $guia_pago=="S" ? "sim" : "n√£o";
 			echo"    
 				<tr>
 					<td width=230px bgcolor=\"#FFFFFF\">$tomador</td>
@@ -198,8 +198,8 @@ elseif($valor == 'emissores'){
 		  <table width=\"100%\"  cellspacing=\"1\" cellpadding=\"1\" align=\"center\" border=\"0\" id=\"tblTituloResultado\">
 		    <tr>
 		    	<td width=200px bgcolor=\"#AAAAAA\" align=\"center\">Prestador</td>
-				<td width=90px bgcolor=\"#AAAAAA\" align=\"center\">CompetÍncia</td>
-				<td width=80px bgcolor=\"#AAAAAA\" align=\"center\">Emiss„o</td>
+				<td width=90px bgcolor=\"#AAAAAA\" align=\"center\">Compet√™ncia</td>
+				<td width=80px bgcolor=\"#AAAAAA\" align=\"center\">Emiss√£o</td>
 				<td width=90px bgcolor=\"#AAAAAA\" align=\"center\">Total R$</td>
 				<td bgcolor=\"#AAAAAA\" align=\"center\">Valor R$</td>
 		    </tr>
@@ -209,7 +209,7 @@ elseif($valor == 'emissores'){
 		    ";
 								  
 	    while(list($emissor,$competencia,$dataemissao,$total,$valor,$est)=mysql_fetch_array($sql)){
-			$guia_pago = $guia_pago=="S" ? "sim" : "n„o";
+			$guia_pago = $guia_pago=="S" ? "sim" : "n√£o";
 			$comp = explode("-",$competencia);
 			$competencia = $comp[1]."/".$comp[0];
 	    	echo"

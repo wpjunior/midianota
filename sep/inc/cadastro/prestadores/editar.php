@@ -64,10 +64,10 @@ $datafim = DataMysql($_POST['txtDataFim']);
 $codtipo_prestador = $array_codtipo[0];
 	
 
-	// define se é ou nao contador
+	// define se Ã© ou nao contador
     $sql=mysql_query("SELECT MAX(codigo) FROM servicos_categorias");
 	list($maxcodigo)=mysql_fetch_array($sql);
-	$sql_categoria=mysql_query("SELECT codigo FROM servicos_categorias WHERE nome = 'Contábil'");	
+	$sql_categoria=mysql_query("SELECT codigo FROM servicos_categorias WHERE nome = 'ContÃ¡bil'");	
 	list($codigocategoria)=mysql_fetch_array($sql_categoria);
 	$categoria=1;
 	$servico=1;
@@ -127,7 +127,7 @@ $vetor_exluir_servicos = array($checkExcluiServico1,$checkExcluiServico2,$checkE
 
 
 
-//vetores para editar sócio
+//vetores para editar sÃ³cio
 $vetor_sociosnomes = array($txtnomesocio1,$txtnomesocio2,$txtnomesocio3,$txtnomesocio4,$txtnomesocio5,$txtnomesocio6,$txtnomesocio7,$txtnomesocio8,$txtnomesocio9,$txtnomesocio10);
 
 $vetor_socioscpf = array($txtcpfsocio1,$txtcpfsocio2,$txtcpfsocio3,$txtcpfsocio4,$txtcpfsocio5,$txtcpfsocio6,$txtcpfsocio7,$txtcpfsocio8,$txtcpfsocio9,$txtcpfsocio10);
@@ -140,7 +140,7 @@ $checkExcluiSocio6,$checkExcluiSocio7,$checkExcluiSocio8,$checkExcluiSocio9,$che
 
 
 
-//vetores para inserir sócio
+//vetores para inserir sÃ³cio
 
 $vetor_nome_socios = array($txtNomeSocio1,$txtNomeSocio2,$txtNomeSocio3,$txtNomeSocio4,$txtNomeSocio5,$txtNomeSocio6,
 $txtNomeSocio7,$txtNomeSocio8,$txtNomeSocio9,$txtNomeSocio10);
@@ -159,13 +159,13 @@ list($Nempresa,$CodTipo,$CodTipoDec,$Rempresa,$CNCPempresa,$Iempresa,$EMempresa,
 	$teste_razaosocial = mysql_query("SELECT codigo FROM cadastro WHERE razaosocial = '$razaosocial' AND razaosocial != '$Rempresa'");
 	$teste_cnpj        = mysql_query("SELECT codigo FROM cadastro WHERE $campo = '$cnpjcpfempresa' AND $campo != '$CNCPempresa'");
 	if(mysql_num_rows($teste_nome)>0){
-		Mensagem("Já existe um prestador de serviços com este nome");
+		Mensagem("JÃ¡ existe um prestador de serviÃ§os com este nome");
 		RedirecionaPost("?include={$include}");
 	}elseif(mysql_num_rows($teste_razaosocial)>0){
-		Mensagem("Já existe um prestador de serviços com esta razão social");
+		Mensagem("JÃ¡ existe um prestador de serviÃ§os com esta razÃ£o social");
 		RedirecionaPost("?include={$include}");
 	}elseif(mysql_num_rows($teste_cnpj)>0){
-		Mensagem("Já existe um prestador de serviços com este CPF/CNPJ");
+		Mensagem("JÃ¡ existe um prestador de serviÃ§os com este CPF/CNPJ");
 		RedirecionaPost("?include={$include}");
 	}else{
 
@@ -178,9 +178,9 @@ $sql_resp = mysql_query("SELECT nome, cpf FROM cadastro_resp WHERE codemissor = 
 list($Nome_Responsavel,$Cpf_Responsavel) = mysql_fetch_array($sql_resp);
 
 
-//Busca as informações que são extra para cada tipo de prestador
-$sql_info_instituições = mysql_query("SELECT agencia, codbanco FROM inst_financeiras WHERE codcadastro = '$codigoempresa'");
-list($Agencia_Inst,$Codbanco_Inst) = mysql_fetch_array($sql_info_instituições);
+//Busca as informaÃ§Ãµes que sÃ£o extra para cada tipo de prestador
+$sql_info_instituiÃ§Ãµes = mysql_query("SELECT agencia, codbanco FROM inst_financeiras WHERE codcadastro = '$codigoempresa'");
+list($Agencia_Inst,$Codbanco_Inst) = mysql_fetch_array($sql_info_instituiÃ§Ãµes);
 
 $sql_info_operadoras = mysql_query("SELECT agencia, codbanco FROM operadoras_creditos WHERE codcadastro = '$codigoempresa'");
 list($Agencia_Opr,$Codbanco_Opr) = mysql_fetch_array($sql_info_operadoras);
@@ -212,10 +212,10 @@ if(($nomeempresa != $Nempresa) ||($razaosocial != $Rempresa)|| ($cnpjcpfempresa 
 				$nomeempresa,<br>
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;Por meio deste e-mail, estamos informando-lhe que o estado de sua empresa<br>
-				foi alterado para inativo no Sistema Eletrônico da Prefeitura (SEP).<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;Assim sua empresa não podera efetuar login no sistema de NF-e.<br>
+				foi alterado para inativo no Sistema EletrÃ´nico da Prefeitura (SEP).<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;Assim sua empresa nÃ£o podera efetuar login no sistema de NF-e.<br>
 				<br>
-				Para mais informações, entrar em contato com a prefeitura.
+				Para mais informaÃ§Ãµes, entrar em contato com a prefeitura.
 			";
 			
 		}else{
@@ -224,10 +224,10 @@ if(($nomeempresa != $Nempresa) ||($razaosocial != $Rempresa)|| ($cnpjcpfempresa 
 				$nomeempresa,<br>
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;Por meio deste e-mail, estamos informando-lhe que o estado de sua empresa<br>
-				foi alterado para Ativo no Sistema Eletrônico da Prefeitura (SEP).<br>
+				foi alterado para Ativo no Sistema EletrÃ´nico da Prefeitura (SEP).<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;Assim sua empresa podera efetuar login no sistema de NF-e.<br>
 				<br>
-				Para mais informações, entrar em contato com a prefeitura.
+				Para mais informaÃ§Ãµes, entrar em contato com a prefeitura.
 			";
 					
 		}
@@ -236,7 +236,7 @@ if(($nomeempresa != $Nempresa) ||($razaosocial != $Rempresa)|| ($cnpjcpfempresa 
 		
 		$headers = "MIME-Version: 1.0\r\n";
 		
-		$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+		$headers .= "Content-type: text/html; charset=UTF-8\r\n";
 		
 		$headers .= "From: $CONF_SECRETARIA de $CONF_CIDADE <$CONF_EMAIL>  \r\n";
 		
@@ -250,12 +250,12 @@ if(($nomeempresa != $Nempresa) ||($razaosocial != $Rempresa)|| ($cnpjcpfempresa 
 	  
 	  
 	  
-   //Pega os codtipo dos prestadores que tem informações extras
+   //Pega os codtipo dos prestadores que tem informaÃ§Ãµes extras
    $codtipo_inst = codtipo('instituicao_financeira');
    $codtipo_opr  = codtipo('operadora_credito');
    $codtipo_cart = codtipo('cartorio');
    
-   //testa se o prestador que está sendo editado tem alguma informação extra
+   //testa se o prestador que estÃ¡ sendo editado tem alguma informaÃ§Ã£o extra
    if($codtipo_prestador == $codtipo_inst){
    		mysql_query("UPDATE inst_financeiras SET agencia = '$agencia', codbanco = '$codbanco' WHERE codcadastro = '$codigoempresa'");
 		$codcargo = codcargo("Gerente");
@@ -333,7 +333,7 @@ if(($nomeempresa != $Nempresa) ||($razaosocial != $Rempresa)|| ($cnpjcpfempresa 
 			  
 			  list($nome_socios, $CPF_socios)=mysql_fetch_array($sql_seleciona_servicos);
 			  
-			  $sql_cargo_socio = mysql_query("SELECT codigo FROM cargos WHERE cargo = 'Sócio'");
+			  $sql_cargo_socio = mysql_query("SELECT codigo FROM cargos WHERE cargo = 'SÃ³cio'");
 			  list($cod_cargo_socio) = mysql_fetch_array($sql_cargo_socio);
 			  
 			  

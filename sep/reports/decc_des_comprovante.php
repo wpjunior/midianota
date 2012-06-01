@@ -20,7 +20,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 ?>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Comprovante de DES</title>
 <link href="../css/imprimir_descomprovantes.css" rel="stylesheet" type="text/css"></head>
 <?php 
@@ -63,7 +63,7 @@ Fith Floor, Boston, MA 02110-1301, USA
         <td width="520" style="border:0px;" align="left" valign="middle">
 		<font class="prefeitura">Prefeitura Municipal de <?php echo $CONF_CIDADE; ?></font><br>
 		<font class="secretaria"><?php echo $CONF_SECRETARIA; ?><br>
-		Comprovante de Declara&ccedil;&atilde;o Empresa de Construção Civil </font></td>
+		Comprovante de Declara&ccedil;&atilde;o Empresa de ConstruÃ§Ã£o Civil </font></td>
       </tr>
     </table></td>
   </tr>
@@ -96,7 +96,7 @@ Fith Floor, Boston, MA 02110-1301, USA
     <td height="30" colspan="4" align="center" bgcolor="#CCCCCC"><strong>CERTIFICA&Ccedil;&Atilde;O</strong></td>
   </tr>
   <tr>
-    <td height="200" colspan="4" align="center" valign="middle"><span class="style1">A Prefeitura Municipal de <font class="prefeitura"><?php echo $CONF_CIDADE; ?></font> certifica que a Institui&ccedil;&atilde;o Financeira citada acima concluiu o processo de Declara&ccedil;&atilde;o  Empresa de Construção Civil, referente ao per&iacute;odo <font class="prefeitura"><?php echo DataPt($competencia); ?></font>.</span>   </td>
+    <td height="200" colspan="4" align="center" valign="middle"><span class="style1">A Prefeitura Municipal de <font class="prefeitura"><?php echo $CONF_CIDADE; ?></font> certifica que a Institui&ccedil;&atilde;o Financeira citada acima concluiu o processo de Declara&ccedil;&atilde;o  Empresa de ConstruÃ§Ã£o Civil, referente ao per&iacute;odo <font class="prefeitura"><?php echo DataPt($competencia); ?></font>.</span>   </td>
   </tr>
   <tr>
     <td height="30" colspan="4" align="center" bgcolor="#CCCCCC"><strong>OBSERVA&Ccedil;&Otilde;ES</strong></td>

@@ -20,7 +20,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 ?>
 <?php
   
-  // arquivo de conexão com o banco
+  // arquivo de conexÃ£o com o banco
   include("../include/conect.php"); 
   
   // arquivo com funcoes uteis
@@ -32,7 +32,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>e-Nota</title>
 <script type="text/javascript" src="../scripts/java_site.js" language="javascript"></script>
 <script type="text/javascript" src="../scripts/padrao.js"></script>
@@ -60,7 +60,7 @@ Fith Floor, Boston, MA 02110-1301, USA
     <td align="center" valign="top">
     
     
-<!-- box de conteúdos -->
+<!-- box de conteÃºdos -->
     
     
  <?php

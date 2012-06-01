@@ -51,7 +51,7 @@ $sql = mysql_query("UPDATE notas SET estado = 'C', motivo_cancelamento = '$txtMo
 
 	$headers  = "MIME-Version: 1.0\r\n";
 
-	$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+	$headers .= "Content-type: text/html; charset=UTF-8\r\n";
 
 	$headers .= "From: $empresa_email \r\n";
 

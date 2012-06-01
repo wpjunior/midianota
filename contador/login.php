@@ -19,7 +19,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 */
 ?>
 <?php 
-// inicia a sessão verificando se jah esta com o usuario logado, se estiver entra na página admin
+// inicia a sessÃ£o verificando se jah esta com o usuario logado, se estiver entra na pÃ¡gina admin
 session_name("contador");
 session_start();
 $_SESSION['autenticacao'] = rand(10000,99999);
@@ -30,7 +30,7 @@ if(!(isset($_SESSION["empresa"])))
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>e-Nota</title>
 <script src="../scripts/padrao.js" language="javascript" type="text/javascript"></script>
 <script src="../scripts/java_site.js" language="javascript" type="text/javascript"></script>
@@ -90,7 +90,7 @@ if(!(isset($_SESSION["empresa"])))
 	 </tr>
 	 <tr valign="baseline"> 
 	  <td style="font-size:9px">
-	    Cód. Verificação
+	    CÃ³d. VerificaÃ§Ã£o
 	  </td>
 	  <td align="left" >	 
 	   <input type="text" name="codseguranca" id="codseguranca" size="6" class="texto" />  &nbsp;

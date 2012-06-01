@@ -44,7 +44,7 @@ $btCadastrarEmpresa = "Cadastrar";
 
 	$sql = mysql_query("SELECT MAX(codigo) FROM servicos_categorias");
 	list($maxcodigo) = mysql_fetch_array($sql);
-	$sql_categoria = mysql_query("SELECT codigo FROM servicos_categorias WHERE nome ='Cont·bil'");	
+	$sql_categoria = mysql_query("SELECT codigo FROM servicos_categorias WHERE nome ='Cont√°bil'");	
 	list($codigocategoria) = mysql_fetch_array($sql_categoria);
 	$categoria=1;
 	$servico=1;
@@ -63,28 +63,28 @@ $btCadastrarEmpresa = "Cadastrar";
 	}
 		
 
-    //Verifica se o login ja existe e se n„o h· nenhuma empresa cadastrada com o mesmo nome e/ou cnpj
+    //Verifica se o login ja existe e se n√£o h√° nenhuma empresa cadastrada com o mesmo nome e/ou cnpj
 	$teste_nome        = mysql_query("SELECT codigo FROM emissores WHERE nome = '$nome'");
 	$teste_razaosocial = mysql_query("SELECT codigo FROM emissores WHERE razaosocial = '$razaosocial'");
 	$teste_cnpj        = mysql_query("SELECT codigo FROM emissores WHERE cnpjcpf = '$cpfcnpj'");
 	if(mysql_num_rows($teste_nome)>0){
 		echo "	
 			<script>
-				alert('J· existe uma empresa com este nome');
+				alert('J√° existe uma empresa com este nome');
 				window.location='../../decc.php';
 			</script>
 		";
 	}elseif(mysql_num_rows($teste_razaosocial)>0){
 		echo "	
 			<script>
-				alert('J· existe uma empresa com esta raz„o social');
+				alert('J√° existe uma empresa com esta raz√£o social');
 				window.location='../../decc.php';
 			</script>
 		";
 	}elseif(mysql_num_rows($teste_cnpj)>0){
 		echo "	
 			<script>
-				alert('J· existe uma empresa com este CPF/CNPJ');
+				alert('J√° existe uma empresa com este CPF/CNPJ');
 				window.location='../../decc.php';
 			</script>
 		";
@@ -92,7 +92,7 @@ $btCadastrarEmpresa = "Cadastrar";
 	   
 		// insere a empresa no banco
 		mysql_query("INSERT INTO empreiteiras SET nome='$nome', senha = '$senha', razaosocial='$razaosocial', cnpj= '$cpfcnpj', endereco='$endereco', inscrmunicipal='$inscricaomunicipal',  municipio ='$municipio', estado='NL', nfe='N', email='$email',uf='$uf', ultimanota= 0, fonecomercial = '$fone', fonecelular = '$celular'");
-		add_logs('Inseriu uma Empreiteira de ServiÁos');
+		add_logs('Inseriu uma Empreiteira de Servi√ßos');
 		
 		
 		
@@ -100,9 +100,9 @@ $btCadastrarEmpresa = "Cadastrar";
 	
 		$msg ="O cadastro da empresa $nome foi efetuado com sucesso.<br>
 		Dados da empresa:<br><br>
-		Raz„o Social: $razaosocial<br>
+		Raz√£o Social: $razaosocial<br>
 		CPF/CNPJ: $cpfcnpj<br>
-		MunicÌpio: $municipio<br>
+		Munic√≠pio: $municipio<br>
 		Endereco: $endereco<br>
 		Senha de acesso: $senha<br><br>
 		  
@@ -111,15 +111,15 @@ $btCadastrarEmpresa = "Cadastrar";
 		2- Clique no link prestadores<br>
 		3- Clique na imagem em acessar NF-e<br>
 		4- Em login insira o cpf/cnpf da empresa<br>
-		5- Sua senha È <b><font color=\"RED\">$senha</font></b><br>
-		6- Insira o cÛdigo de verificaÁ„o que aparece ao lado<br>
-		7- Depois de ter acessado o sistema, v· no link usu·rio e troque sua senha<br>";	
+		5- Sua senha √© <b><font color=\"RED\">$senha</font></b><br>
+		6- Insira o c√≥digo de verifica√ß√£o que aparece ao lado<br>
+		7- Depois de ter acessado o sistema, v√° no link usu√°rio e troque sua senha<br>";	
 		
 		$assunto = "Acesso ao Sistema NF-e ($PREFEITURA).";
 	
 		$headers  = "MIME-Version: 1.0\r\n";
 	
-		$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+		$headers .= "Content-type: text/html; charset=UTF-8\r\n";
 	
 		$headers .= "From: $EMAIL \r\n";
 	
@@ -153,7 +153,7 @@ $btCadastrarEmpresa = "Cadastrar";
 					$vetor_insere_servico[$contpos]=$_POST['cmbCodigo'.$codcategoria.$conts];
 					if($_POST['cmbCodigo'.$codcategoria.$conts]){
 						mysql_query("INSERT INTO empreiteiras_servicos SET codservico = '".$_POST['cmbCodigo'.$codcategoria.$conts]."', codempreiteira='$CODEMPRESA'");
-					add_logs('Inseriu um ServiÁo de Empreiteira');	
+					add_logs('Inseriu um Servi√ßo de Empreiteira');	
 					} 
 					$contpos++;	
 			   }		

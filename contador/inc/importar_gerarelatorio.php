@@ -21,7 +21,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>RPS convertidos em NF-e</title>
 <link href="../../css/imprimir_emissor.css" rel="stylesheet" type="text/css" />
 </head>
@@ -78,7 +78,7 @@ if(!(isset($_SESSION["empresa"]))){
 		if(mysql_num_rows($sql)>0){
 	?>
 	  <tr>
-		<td colspan="10" align="left" class="cab01">RPS CONVERTIDOS EM NFE <?php if($string){ echo "- Período: $mes/$ano"; }?></td>
+		<td colspan="10" align="left" class="cab01">RPS CONVERTIDOS EM NFE <?php if($string){ echo "- PerÃ­odo: $mes/$ano"; }?></td>
 	  </tr>
 	  <tr>
 		<td>Total de RPS convertidos: <?php echo mysql_num_rows($sql);?></td>
@@ -128,7 +128,7 @@ if(!(isset($_SESSION["empresa"]))){
 	}else{
 		?>
 			<tr>
-				<td align="center"><b>Não há rps convertidos nesse período!</b></td>
+				<td align="center"><b>NÃ£o hÃ¡ rps convertidos nesse perÃ­odo!</b></td>
 			</tr>
 	<?php
 	}

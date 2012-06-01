@@ -42,13 +42,13 @@ $CODIGO = $_REQUEST['txtCodigo']; ?>
  list($codigo_emp,$email,$num_nota,$num_rps,$nome_empresa,$em_cnpj,$em_cpf,$dataehora,$codverificacao,$empresa_email)=mysql_fetch_array($sql);
  $cpfcnpf_empresa = $em_cnpj ? $em_cnpj : $em_cpf;
 
-    $msg = "Comunicamos que a NFE com os seguintes dados foi cancelada pela empresa prestadora de serviço:<br><br>
-	- Número da nota: $num_nota;<br>
-	- Com data e hora de emissão de: $dataehora ;<br>
-	- Código de verificação: $codverificacao ;<br>
-	- RPS Número: $num_rps <br>	
-	- Prestador de serviço: $nome_empresa ;<br>
-	- CPF/CNPJ do prestador de serviço: $cpfcnpf_empresa ;<br>  ";
+    $msg = "Comunicamos que a NFE com os seguintes dados foi cancelada pela empresa prestadora de serviÃ§o:<br><br>
+	- NÃºmero da nota: $num_nota;<br>
+	- Com data e hora de emissÃ£o de: $dataehora ;<br>
+	- CÃ³digo de verificaÃ§Ã£o: $codverificacao ;<br>
+	- RPS NÃºmero: $num_rps <br>	
+	- Prestador de serviÃ§o: $nome_empresa ;<br>
+	- CPF/CNPJ do prestador de serviÃ§o: $cpfcnpf_empresa ;<br>  ";
 	
 	
 	
@@ -58,7 +58,7 @@ $CODIGO = $_REQUEST['txtCodigo']; ?>
 
 	$headers  = "MIME-Version: 1.0\r\n";
 
-	$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+	$headers .= "Content-type: text/html; charset=UTF-8\r\n";
 
 	$headers .= "From: $empresa_email \r\n";
 

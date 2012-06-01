@@ -20,9 +20,9 @@ Fith Floor, Boston, MA 02110-1301, USA
 ?>
 <?php
 $campo = $_GET['campo'];
-// Valor do campo que fez requisição
+// Valor do campo que fez requisiÃ§Ã£o
 $valor = $_GET['valor'];
-$valido='Emissor não cadastrado';
+$valido='Emissor nÃ£o cadastrado';
 include("../../include/conect.php");
 
 $sql=mysql_query("SELECT cnpjcpf ,razaosocial FROM emissores");
@@ -39,6 +39,6 @@ while(list($CNPJCPF,$RazaoSocial)=mysql_fetch_array($sql))
 echo $valido; 
 
  
-// Acentuação
-header("Content-Type: text/html; charset=ISO-8859-1",true);
+// AcentuaÃ§Ã£o
+header("Content-Type: text/html; charset=UTF-8",true);
 ?>

@@ -31,16 +31,16 @@ Fith Floor, Boston, MA 02110-1301, USA
 		$nome_prestador,<br>
 		<br>
 		Foi gerado uma nova senha de acesso ao sistema.<br>
-		Sua senha È : $novasenha<br>
+		Sua senha √© : $novasenha<br>
 		<br>
-		Caso n„o tenha solicitado uma renovaÁ„o de senha, favor entrar em contato com a prefeitura.
+		Caso n√£o tenha solicitado uma renova√ß√£o de senha, favor entrar em contato com a prefeitura.
 	";	
 	
 	$assunto = "Nova senha de acesso ao sistema de NF-e.";
 
 	$headers  = "MIME-Version: 1.0\r\n";
 
-	$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+	$headers .= "Content-type: text/html; charset=UTF-8\r\n";
 
 	$headers .= "From: $CONF_SECRETARIA de $CONF_CIDADE <$CONF_EMAIL>  \r\n";
 

@@ -20,7 +20,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 ?>
 <?php
   session_start();
-  // arquivo de conexão com o banco
+  // arquivo de conexÃ£o com o banco
   include("../include/conect.php"); 
   
   // arquivo com funcoes uteis
@@ -34,7 +34,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>e-Nota</title>
 <script src="../scripts/java_site.js" language="javascript" type="text/javascript"></script>
 <link href="../css/padrao_site.css" rel="stylesheet" type="text/css" />
@@ -72,7 +72,7 @@ Fith Floor, Boston, MA 02110-1301, USA
   <tr>
     <td height="20" align="left" bgcolor="#CCCCCC">
 	
-Você pode visualizar os manuais fazendo o download dos arquivos em formato PDF.
+VocÃª pode visualizar os manuais fazendo o download dos arquivos em formato PDF.
 	
 	</td>
     </tr>
@@ -133,7 +133,7 @@ if(mysql_num_rows($sql)>0){
 	echo "
 		<table width=\"95%\" border=\"0\" cellspacing=\"2\" cellpadding=\"0\">
 			<tr>
-				<td>Não há nenhuma lei cadastrada</td>
+				<td>NÃ£o hÃ¡ nenhuma lei cadastrada</td>
 			</tr>
 		</table>
 		";

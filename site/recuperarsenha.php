@@ -20,7 +20,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 ?>
 <?php
   
-  // arquivo de conexão com o banco
+  // arquivo de conexÃ£o com o banco
   include("../include/conect.php"); 
   
   // arquivo com funcoes uteis
@@ -32,7 +32,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>e-Nota</title>
 <script src="../scripts/java_site.js" language="javascript" type="text/javascript"></script>
 <script src="../scripts/padrao.js" language="javascript" type="text/javascript"></script>
@@ -87,7 +87,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 		  	</tr>
 			<tr>
 			  <td align="center">&nbsp;</td>
-			  <td align="left" valign="middle"><input type="submit" value="Avançar" class="botao" /></td>
+			  <td align="left" valign="middle"><input type="submit" value="AvanÃ§ar" class="botao" /></td>
 		  </tr>
 	  </table>
 				
@@ -108,18 +108,18 @@ if ($_POST){
 	$email_confirmacao = $_POST['txtEmail'];
 	$sql_senha = mysql_query("SELECT nome, email, senha FROM cadastro WHERE (cnpj='$cnpj' OR cpf='$cnpj')");
 	if (! mysql_num_rows($sql_senha)){
-		Mensagem("CNPJ/CPF não cadastrado! Favor verificar");
+		Mensagem("CNPJ/CPF nÃ£o cadastrado! Favor verificar");
 		Redireciona("recuperarsenha.php");
 	}
 	
 	list($nome, $email,$senha)=mysql_fetch_array($sql_senha);
 	
 	if ($email!=$email_confirmacao) {
-		Mensagem("Email não confere com o cadastrado!");
+		Mensagem("Email nÃ£o confere com o cadastrado!");
 		Redireciona("recuperarsenha.php");
 	} else {
-		$corpo_email = "Olá $nome,\nSua senha é: $senha\n\nEm caso de duvidas entrar em contato com a prefeitura.\nObrigado.";
-		mail($email,"Recuperação de Senha do ISS Digital",$corpo_email);
+		$corpo_email = "OlÃ¡ $nome,\nSua senha Ã©: $senha\n\nEm caso de duvidas entrar em contato com a prefeitura.\nObrigado.";
+		mail($email,"RecuperaÃ§Ã£o de Senha do ISS Digital",$corpo_email);
 		Mensagem("A senha foi enviada para seu Email!");
 		Redireciona("recuperarsenha.php");
 	}

@@ -25,7 +25,7 @@ session_start();
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>e-Nota</title>
 <link href="../css/imprimir_emissor.css" rel="stylesheet" type="text/css" />
 </head>
@@ -48,7 +48,7 @@ else {
 	if($import != "") {
 		$arq = $_FILES["import"]['name'];
 		$arq_tmp = $_FILES['import']['tmp_name'];   
-		$extensao = substr($arq,-3);// pega a extensão do arquivo 
+		$extensao = substr($arq,-3);// pega a extensÃ£o do arquivo 
   		//$randomico = rand(00000,99999);
 		$arq = $CODIGO_DA_EMPRESA.$arq;
 		if(($extensao =="xml")||($extensao =="XML")) {
@@ -58,7 +58,7 @@ else {
     		if(file_exists('importar/'.$arq)) {    
 	 			$sql=mysql_query("SELECT ultimanota FROM cadastro WHERE codigo = '$CODIGO_DA_EMPRESA'");
 	 			list($UltimaNota)=mysql_fetch_array($sql);
-     			$xml = simplexml_load_file("importar/$arq"); // lê o arquivo XML 
+     			$xml = simplexml_load_file("importar/$arq"); // lÃª o arquivo XML 
      			$cont =0; 
 	 			$erro =0; 
 				$contServicos = 0;
@@ -128,11 +128,11 @@ else {
 					$estado        = $xml->nota[$cont]->estado;
 					$deducaoirrf   = $xml->nota[$cont]->deducaoirrf;
 					
-					//Verifica a validação do XML
+					//Verifica a validaÃ§Ã£o do XML
 					include("inc/importar_erros.php") ;
 					$sql_verifica_rps = mysql_query("SELECT codigo FROM notas WHERE rps_numero = '$rps_numero' AND codemissor = '$CODIGO_DA_EMPRESA'");
 					if(mysql_num_rows($sql_verifica_rps)){
-						echo "<center><b>A nota com o número de RPS $rps_numero, já foi emitida!</b></center>";
+						echo "<center><b>A nota com o nÃºmero de RPS $rps_numero, jÃ¡ foi emitida!</b></center>";
 						exit;
 					}
 					$cont++;
@@ -154,28 +154,28 @@ else {
 				if($erro > 0){
 					unlink("importar/$arquivo_xml");
 				}
-				// verifica a formatação do arquivo XML
+				// verifica a formataÃ§Ã£o do arquivo XML
 	 			if($erro ==1){
-					print ("<center><b>Arquivo contém dados inconsistentes fora do padrão</b></center>");
+					print ("<center><b>Arquivo contÃ©m dados inconsistentes fora do padrÃ£o</b></center>");
 				}	
 	 			elseif($erro ==2){
-	  				print ("<center><b>Arquivo contém código de servico inválido </b></center>");
+	  				print ("<center><b>Arquivo contÃ©m cÃ³digo de servico invÃ¡lido </b></center>");
 	 			} // fim elseif
 				elseif($erro ==3){
-	  				print ("<center><b>Arquivo contém um código de serviço que a empresa não pode emitir nota</b></center>");
+	  				print ("<center><b>Arquivo contÃ©m um cÃ³digo de serviÃ§o que a empresa nÃ£o pode emitir nota</b></center>");
 				}
 	 			elseif($erro ==4){
-	  				print ("<center><b>CPF/CNPJ não contém uma formatação válida </b></center>");
+	  				print ("<center><b>CPF/CNPJ nÃ£o contÃ©m uma formataÃ§Ã£o vÃ¡lida </b></center>");
 	 			} 
 	 			elseif($erro ==5){
-					print ("<center><b>Data do RPS não contém uma formatação válida </b></center>");
+					print ("<center><b>Data do RPS nÃ£o contÃ©m uma formataÃ§Ã£o vÃ¡lida </b></center>");
 	 			} 
 	 			elseif($erro ==6){
-					print ("<center><b>CEP do tomador não contém uma formatação válida </b></center>");
+					print ("<center><b>CEP do tomador nÃ£o contÃ©m uma formataÃ§Ã£o vÃ¡lida </b></center>");
 	 			}elseif($erro == 7){
-					echo "<center><b>A nota com o número de RPS $rps_numero, já foi emitida!</b></center>";
+					echo "<center><b>A nota com o nÃºmero de RPS $rps_numero, jÃ¡ foi emitida!</b></center>";
 				}elseif($erro == 8){
-					echo "<center><b>O prestador <b>$razaoPrestador</b> já emitiu $ultimaNota nota(s), o xml contém $cont nota(s) e seu limite de AIDFe é de $limite nota(s)! Por favor solicite um limite de AIDFe maior.</b></center>";
+					echo "<center><b>O prestador <b>$razaoPrestador</b> jÃ¡ emitiu $ultimaNota nota(s), o xml contÃ©m $cont nota(s) e seu limite de AIDFe Ã© de $limite nota(s)! Por favor solicite um limite de AIDFe maior.</b></center>";
 				}
 				else {
 	  				$cont =0; 
@@ -187,7 +187,7 @@ else {
 			<table width="100%"> 
 				<tr>
 					<td colspan="20" class="cab01">
-						Verificação de dados do  arquivo XML da  empresa  <?php echo $NOME; ?>
+						VerificaÃ§Ã£o de dados do  arquivo XML da  empresa  <?php echo $NOME; ?>
 					</td>
 				</tr>
 			</table>
@@ -337,10 +337,10 @@ else {
 <br />
 <table width="100%" style="border:1px solid #000" cellspacing="0">
 	<tr>
-		<td colspan="6" align="center" class="cab01">Serviço(s)</td>
+		<td colspan="6" align="center" class="cab01">ServiÃ§o(s)</td>
 	</tr>
 	<tr class="cab04">
-		<td align="center">Descrição</td>
+		<td align="center">DescriÃ§Ã£o</td>
 		<td align="center">Al&iacute;quota</td>
 		<td align="center">Base de C&aacute;lc.</td>
 		<td align="center">ISS</td>
@@ -356,7 +356,7 @@ foreach($xml->nota[$cont]->codservico[$contServicos]->children() as $elemento2 =
 	$basecalculo = $xml->nota[$cont]->codservico[$contServicos]->basecalculo;
 	$issretido   = $xml->nota[$cont]->codservico[$contServicos]->issretido;
 	
-	//Pega dados do serviço pelo banco
+	//Pega dados do serviÃ§o pelo banco
 	$sql_servicos = mysql_query("SELECT descricao, aliquota FROM servicos WHERE codservico = '$codservico'");
 	list($servicosDescricao,$servicoAliquota) = mysql_fetch_array($sql_servicos);
 	
@@ -388,7 +388,7 @@ foreach($xml->nota[$cont]->codservico[$contServicos]->children() as $elemento2 =
 		$totalISSRetido += floatval($issretido);
 		
 		}else{
-			echo "O arquivo contém codigo de serviços inválidos!";
+			echo "O arquivo contÃ©m codigo de serviÃ§os invÃ¡lidos!";
 		}
 	}//fim if testa se tem descricao
 	
@@ -437,7 +437,7 @@ foreach($xml->nota[$cont]->codservico[$contServicos]->children() as $elemento2 =
 					$credito = $nfe_cred;
 				}
 			}
-			//Verifica se o valor não foi menor que todos os valores do banco, sendo assim se encaixa na regra de maior valor do banco
+			//Verifica se o valor nÃ£o foi menor que todos os valores do banco, sendo assim se encaixa na regra de maior valor do banco
 			if($credito == ""){
 				$sql_max_cred = mysql_query("SELECT credito FROM nfe_creditos WHERE estado = 'A' ORDER BY valor DESC LIMIT 1");
 				list($cred_max) = mysql_fetch_array($sql_max_cred);
@@ -458,13 +458,13 @@ foreach($xml->nota[$cont]->codservico[$contServicos]->children() as $elemento2 =
 		<td align="center" class="cab01" colspan="6">Dados da nota</td>
 	</tr>
 	<tr>
-		<td colspan="8">Discriminação:</td>
+		<td colspan="8">DiscriminaÃ§Ã£o:</td>
 	</tr>
 	<tr>
 		<td colspan="8" align="left" class="cab05"><?php echo nl2br($discriminacao);?></td>
 	</tr>
 	<tr>
-		<td colspan="8">Observações:</td>
+		<td colspan="8">ObservaÃ§Ãµes:</td>
 	</tr>
 	<tr>
 		<td colspan="8" align="left" class="cab05"><?php echo nl2br($observacao);?></td>
@@ -475,7 +475,7 @@ foreach($xml->nota[$cont]->codservico[$contServicos]->children() as $elemento2 =
 	<tr>
 		<td>Base de c&aacute;lculo da nota:</td>
 		<td><?php echo DecToMoeda($totalBaseCalculo);?></td>
-		<td>Deduções da nota:</td>
+		<td>DeduÃ§Ãµes da nota:</td>
 		<td><?php echo DecToMoeda($valordeducoes);?></td>
 	</tr>
 	<tr>
@@ -497,7 +497,7 @@ foreach($xml->nota[$cont]->codservico[$contServicos]->children() as $elemento2 =
 	<tr>
 		<td>Al&iacute;quota de IRRF:</td>
 		<td align="left"><?php echo $aliqirrf;?></td>
-		<td>Dedução de IRRF:</td>
+		<td>DeduÃ§Ã£o de IRRF:</td>
 		<td align="left"><?php echo DecToMoeda($deducaoirrf);?></td>
 		<td>Valor IRRF:</td>
 		<td align="left"><?php echo DecToMoeda($valorIRRF);?></td>
@@ -505,20 +505,20 @@ foreach($xml->nota[$cont]->codservico[$contServicos]->children() as $elemento2 =
 	<tr>
 		<td>Valor Nota:</td>
 		<td><?php echo DecToMoeda($valorTotalNota);?></td>
-		<td>Retenções da nota:</td>
+		<td>RetenÃ§Ãµes da nota:</td>
 		<td><?php echo DecToMoeda($valorTotalRetencoes);?></td>
 	</tr>
 	<?php
 		if(($situacaoCreditos == "s") || ($situacaoCreditos == "S")){
 	?>
 	<tr>
-		<td align="left">Créditos:</td>
+		<td align="left">CrÃ©ditos:</td>
 		<td><?php echo DecToMoeda($valorCredito);?></td>
 		<td align="center">
 			<?php 
 				if($credito == 0){ 
-					echo "Não foi gerado crédito, pois esta nota não se enquadra em <br>
-					nenhuma regra de crédito do sistema de e-Nota <br>
+					echo "NÃ£o foi gerado crÃ©dito, pois esta nota nÃ£o se enquadra em <br>
+					nenhuma regra de crÃ©dito do sistema de e-Nota <br>
 					da prefeitura de ".strtoupper($CONF_CIDADE);
 				}
 			?>
@@ -545,7 +545,7 @@ foreach($xml->nota[$cont]->codservico[$contServicos]->children() as $elemento2 =
 	   <td colspan="20" align="left">
 		<form action="importar_inserir.php" method="post">
 		 <input type="hidden" value="<?php print $arq;?>" name="txtArquivoNome" />
-         <input type="submit" name="btImportarXML" value="Importar Arquivo" class="botao" onclick="return confirm('Deseja gerar está(s) nota(s)?')"/>
+         <input type="submit" name="btImportarXML" value="Importar Arquivo" class="botao" onclick="return confirm('Deseja gerar estÃ¡(s) nota(s)?')"/>
 	    </form>
 	   </td>
 	  </tr>
@@ -554,18 +554,18 @@ foreach($xml->nota[$cont]->codservico[$contServicos]->children() as $elemento2 =
 	</tr>
 </table>
 <?php   	    
-				}// If se não deu erro
+				}// If se nÃ£o deu erro
 			}// end if exists    
 			else{
 				print("<center><b>Falha ao tentar abrir o arquivo XML</b></center>");     
 			}
-		}// if entensão do arquivo
+		}// if entensÃ£o do arquivo
 		else{
-			print("<center><b>O arquivo Importado não tem a extensão XML</b></center>");    
+			print("<center><b>O arquivo Importado nÃ£o tem a extensÃ£o XML</b></center>");    
 		}   
 	}// end if campo text import
 	else {
-		print("<center><b>Insira o arquivo para a importação</b></center>");
+		print("<center><b>Insira o arquivo para a importaÃ§Ã£o</b></center>");
 	}
 }  
 
