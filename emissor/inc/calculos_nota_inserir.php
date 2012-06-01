@@ -103,6 +103,13 @@ Fith Floor, Boston, MA 02110-1301, USA
    	<td colspan="8">
 		<fieldset><legend><b>ISS</b></legend>
 			<table width="100%">
+			    <tr>
+				    <td align="left">ISS Retido</td>
+				    <td align="left">
+                        <input id="radioIssRedido1" type="radio" name="radioIssRedido" value="1"/> Sim
+				        <input id="radioIssRedido0" type="radio" name="radioIssRedido" value="0" selected="selected"/> Não
+				    </td>
+				</tr>
 				<tr>
 					<td width="31%" align="left">
 						Alíquota					

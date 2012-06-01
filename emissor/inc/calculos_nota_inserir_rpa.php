@@ -65,6 +65,9 @@ if(false){?><table><?php }
 						?>
 						</select>
 					</td>
+				</tr><tr>
+				    <td align="left">ISS Retido</td>
+				    <td align="left">ISS Retido</td>
 				</tr>
 				<tr style="display:none;">    	
 					<td align="left">
