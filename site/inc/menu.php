@@ -25,12 +25,12 @@ $menus = array(
 	'Contadores' 			=> 'contadores.php',
 	'Tomadores' 			=> 'tomadores.php',
 	'RPS' 					=> 'rps.php',
-	'Benefícios' 			=> 'beneficios.php',
+	'BenefÃ­cios' 			=> 'beneficios.php',
 	'Perguntas e Respostas' => 'faq.php',
-	'Reclamações' 			=> 'ouvidoria.php',
-	'Notícias'				=> 'noticias.php',
+	'ReclamaÃ§Ãµes' 			=> 'ouvidoria.php',
+	'NotÃ­cias'				=> 'noticias.php',
 	'Manuais de Ajuda'		=> 'manuais.php',
-	'Legislação'			=> 'legislacao.php'
+	'LegislaÃ§Ã£o'			=> 'legislacao.php'
 );
 
 ?>
