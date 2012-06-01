@@ -35,18 +35,18 @@ Fith Floor, Boston, MA 02110-1301, USA
 
 <table width="100%" border="0" cellspacing="2" cellpadding="2"> 
 <tr>
-    <td width="25%" align="left">Nome/Razão Social<font color="#FF0000">*</font></td>
+    <td width="25%" align="left">Nome/RazÃ£o Social<font color="#FF0000">*</font></td>
     <td width="75%" align="left"><input name="txtTomadorNome" id="txtTomadorNome" type="text" size="55" class="texto" value="<?php echo $dados->nome ;?>" <?php echo $disable; ?>>
 </td>
   </tr>  
   <tr>
-    <td align="left">Inscrição Municipal</td>
+    <td align="left">InscriÃ§Ã£o Municipal</td>
     <td align="left"><input name="txtTomadorIM" type="text" size="30" onkeydown="return NumbersOnly( event );" class="texto" value="<?php echo $dados->inscrmunicipal ;?>"<?php echo $disable; ?>></td>
   </tr>
   <tr>
     <td align="left">Logradouro</td>
     <td align="left"><input name="txtTomadorLogradouro" type="text" size="30" class="texto" value="<?php echo $dados->logradouro ;?>" <?php echo $disable; ?>>
-     &nbsp;&nbsp;Número <input name="txtTomadorNumero" type="text" onkeydown="return NumbersOnly( event );" size="5" class="texto" maxlength="5" value="<?php echo $dados->numero ;?>" <?php echo $disable; ?>/>
+     &nbsp;&nbsp;NÃºmero <input name="txtTomadorNumero" type="text" onkeydown="return NumbersOnly( event );" size="5" class="texto" maxlength="5" value="<?php echo $dados->numero ;?>" <?php echo $disable; ?>/>
 	</td>
   </tr>  
   <tr>
@@ -82,7 +82,7 @@ Fith Floor, Boston, MA 02110-1301, USA
   </tr>
   <tr>
     <td align="left">
-		Município<font color="#FF0000">*</font></td>
+		MunicÃ­pio<font color="#FF0000">*</font></td>
     <td align="left">
         <div  id="txtTomadorMunicipio">
         	<input type="hidden" name="txtTomadorMunicipio" value="<?php echo $dados->municipio ;?>" />
@@ -104,6 +104,6 @@ Fith Floor, Boston, MA 02110-1301, USA
 	</td>
   </tr>
   <tr>
-  	<td colspan="8" align="right"><font color="#FF0000">**</font><i><!--Preencha o campo para que o e-mail possa ser enviado-->Digite o e-mail do tomador para que o mesmo seja notificado sobre a emissão.</i></td>
+  	<td colspan="8" align="right"><font color="#FF0000">**</font><i><!--Preencha o campo para que o e-mail possa ser enviado-->Digite o e-mail do tomador para que o mesmo seja notificado sobre a emissÃ£o.</i></td>
   </tr>
 </table>  
