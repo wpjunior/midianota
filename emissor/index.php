@@ -17,9 +17,5 @@ junto com este sistema, se nao, acesse o Portal do Software Publico Brasileiro n
 www.softwarepublico.gov.br, ou escreva para a Fundacao do Software Livre Inc., 51 Franklin St,
 Fith Floor, Boston, MA 02110-1301, USA
 */
-?>
-<?php 
-  $Link = $_SERVER['HTTP_HOST'];
- print("<script language=\"text/javascript\">parent.location='login.php';</script>");
-
+  header('Location: login.php') ;
 ?>
