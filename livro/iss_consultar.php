@@ -58,7 +58,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 
                                     $anoempresa=substr($empcnpj->datainicio,0,-6);
                                     $anofimempresa=substr($empcnpj->datafim,0,-6);
-                                    $meses=array("1"=>"Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+                                    $meses=array("1"=>"Janeiro","Fevereiro","MarÃ§o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
                                     
                                     ?>
                                     <table cellpadding="0" cellspacing="0"><tr><td>

@@ -22,7 +22,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 require_once("../conect.php");
 require_once("../nocache.php");
 require_once("../../funcoes/util.php");
-//Recebe as variaveis do formulário
+//Recebe as variaveis do formulÃ¡rio
 $buscadescservicos = $_GET['txtBuscaDescServicos'];
 $buscacodservicos =  $_GET['txtBuscaCodServicos'];
 $buscacategoria=$_GET['cmbCategorias'];
@@ -98,8 +98,8 @@ if(mysql_num_rows($sql)>0){
 <input type="hidden" name="COD" id="COD" />
  <table width="100%" border="0" cellpadding="0" cellspacing="0" >  
   <tr>
-    <td align="center"><b>Código</b></td>
-    <td align="center"><b>Serviço</b></td>
+    <td align="center"><b>CÃ³digo</b></td>
+    <td align="center"><b>ServiÃ§o</b></td>
     <td align="center"><b>Aliq %</b></td>
 	<td align="center"><b>Aliq IR%</b></td>
     <td align="center"><b>Estado</b></td>
@@ -112,7 +112,7 @@ if(mysql_num_rows($sql)>0){
 
 
 while(list($estado,$codservico,$descricao,$aliquota,$aliquotair,$codigo)=mysql_fetch_array($sql)){ 
-	//Renomeia o estado do serviço 
+	//Renomeia o estado do serviÃ§o 
 	if($estado == 'A'){
 	 $estado = "Ativo";
 	}
@@ -155,7 +155,7 @@ while(list($estado,$codservico,$descricao,$aliquota,$aliquotair,$codigo)=mysql_f
 	echo "
 		<table width=\"100%\">
 			<tr>
-				<td align=\"center\"><b>Não houve resultados</b></td>
+				<td align=\"center\"><b>NÃ£o houve resultados</b></td>
 			</tr>
 		</table>";
 }

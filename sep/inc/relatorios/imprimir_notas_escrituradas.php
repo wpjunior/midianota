@@ -92,7 +92,7 @@ if (mysql_num_rows($sql) <= 0) {
 	</tr>
 	<?php } if($_POST["txtDataFim"]){ ?>
 	<tr>
-		<td><strong>Até a data:</strong></td>
+		<td><strong>AtÃ© a data:</strong></td>
 		<td><?php echo $_POST["txtDataFim"]; ?></td>
 	</tr>
 	<?php } if($_POST["txtCnpjPrestador"]) {?>

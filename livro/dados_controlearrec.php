@@ -37,7 +37,7 @@ $livro = mysql_fetch_object($sql_livro);
                 </tr>
                 <tr>	
                     <td>
-                        <b>Inscrição Municipal:</b>
+                        <b>InscriÃ§Ã£o Municipal:</b>
                     </td>
                     <td>
                         <?php echo $livro->inscmunicipal;?>
@@ -69,7 +69,7 @@ $livro = mysql_fetch_object($sql_livro);
                 </tr>
                 <tr>
                     <td>
-                        <b>Geração:</b>
+                        <b>GeraÃ§Ã£o:</b>
                     </td>
                     <td>
                        <?php echo $livro->geracao;?>
@@ -109,7 +109,7 @@ $livro = mysql_fetch_object($sql_livro);
                 </tr>
                 <tr>
                     <td>
-                        <b>Observações</b>
+                        <b>ObservaÃ§Ãµes</b>
                     </td>
                     <td>
                         <?php echo $livro->obs;?>

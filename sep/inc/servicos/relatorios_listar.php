@@ -26,11 +26,11 @@ Fith Floor, Boston, MA 02110-1301, USA
 	if(mysql_num_rows($sql)>0)
 		{
 			?>
-				<fieldset><legend><?php echo mysql_num_rows($sql); ?> Prestadores deste serviço encontrados</legend>	
+				<fieldset><legend><?php echo mysql_num_rows($sql); ?> Prestadores deste serviÃ§o encontrados</legend>	
 					<table width="100%">
 						<tr bgcolor="#999999">
 							<td width="33%">Emissor</td>
-							<td width="33%">Endereço</td>
+							<td width="33%">EndereÃ§o</td>
 							<td width="33%">E-mail</td>
 						</tr>
 					</table>
@@ -55,6 +55,6 @@ Fith Floor, Boston, MA 02110-1301, USA
 		}
 	else
 		{
-			echo "Nenhum prestador deste serviço encontrado!";
+			echo "Nenhum prestador deste serviÃ§o encontrado!";
 		}		
 	?>

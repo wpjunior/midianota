@@ -29,17 +29,17 @@ if(($servicos !="") &&($aliquota !=""))
   if(is_numeric($aliquota))
   {
    $sql= mysql_query("INSERT INTO cartorios_servicos SET servicos='$servicos', aliquota= '$aliquota', estado='$estado', codtipo='$codcategoria'");
-   print "<script language=JavaScript> alert('Serviço inserido com sucesso');</script>";   
-   add_logs('Inseriu novo serviço de Cartório');	
+   print "<script language=JavaScript> alert('ServiÃ§o inserido com sucesso');</script>";   
+   add_logs('Inseriu novo serviÃ§o de CartÃ³rio');	
   }
   else
   {
-   print "<script language=JavaScript> alert('Ambas aliquotas devem ser preenchidas com números e ponto, verifique exemplo');</script>";
+   print "<script language=JavaScript> alert('Ambas aliquotas devem ser preenchidas com nÃºmeros e ponto, verifique exemplo');</script>";
   }
 }
 else
 {
-  print "<script language=JavaScript> alert('Favor preencher campos obrigatórios');</script>";
+  print "<script language=JavaScript> alert('Favor preencher campos obrigatÃ³rios');</script>";
 }
 
 

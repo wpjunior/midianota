@@ -29,7 +29,7 @@ include("../../funcoes/util.php");
 ?>
 
 
-  <?php  //comando sql que mostrará as categorias e a quantidade de cada um (Lista Estatística)
+  <?php  //comando sql que mostrarÃ¡ as categorias e a quantidade de cada um (Lista EstatÃ­stica)
 
 $sql_categ = mysql_query("SELECT
 						  servicos.codcategoria, servicos_categorias.nome, COUNT(servicos_categorias.nome)

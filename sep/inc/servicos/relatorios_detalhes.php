@@ -33,7 +33,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 		{
 			$qtd=mysql_num_rows($sql_notas)+mysql_num_rows($sql_des);
 			?>
-				<fieldset><legend><?php echo $qtd; ?> Prestações do serviço durante o período</legend>	
+				<fieldset><legend><?php echo $qtd; ?> PrestaÃ§Ãµes do serviÃ§o durante o perÃ­odo</legend>	
 					<table width="100%">
 						<tr bgcolor="#999999">
 							<td width="25%">Data</td>
@@ -78,5 +78,5 @@ Fith Floor, Boston, MA 02110-1301, USA
 		}
 	else
 		{
-			echo "Nenhuma prestação deste serviço foi realizada durante o período!";
+			echo "Nenhuma prestaÃ§Ã£o deste serviÃ§o foi realizada durante o perÃ­odo!";
 		}		?>

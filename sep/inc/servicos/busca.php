@@ -19,7 +19,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 */
 ?>
 <?php
-//Recebe as variaveis do formulário
+//Recebe as variaveis do formulÃ¡rio
 $buscadescservicos = $_POST['txtBuscaDescServicos'];
 $buscacodservicos =  $_POST['txtBuscaCodServicos'];
 $buscacategoria=$_POST['cmbCategorias'];
@@ -88,14 +88,14 @@ $sql=mysql_query("
 				");
 if(mysql_num_rows($sql)>0){
 ?> 
-<!-- cabeçalho da pesquisa --> 
+<!-- cabeÃ§alho da pesquisa --> 
 <fieldset><legend>Resultado da Pesquisa</legend>      
 <input type="hidden" name="include" id="include" value="<?php echo  $_POST['include'];?>" />
 <input type="hidden" name="COD" id="COD" />
  <table width="100%" border="0" cellpadding="0" cellspacing="0" >  
   <tr>
-    <td align="center"><b>Código</b></td>
-    <td align="center"><b>Serviço</b></td>
+    <td align="center"><b>CÃ³digo</b></td>
+    <td align="center"><b>ServiÃ§o</b></td>
     <td align="center"><b>Aliq %</b></td>
 	<td align="center"><b>Aliq IR%</b></td>
     <td align="center"><b>Estado</b></td>
@@ -108,7 +108,7 @@ if(mysql_num_rows($sql)>0){
 
 
 while(list($estado,$codservico,$descricao,$aliquota,$aliquotair,$codigo)=mysql_fetch_array($sql)){ 
-	//Renomeia o estado do serviço 
+	//Renomeia o estado do serviÃ§o 
 	if($estado == 'A'){
 	 $estado = "Ativo";
 	}
@@ -142,7 +142,7 @@ while(list($estado,$codservico,$descricao,$aliquota,$aliquotair,$codigo)=mysql_f
 	echo "
 		<table width=\"100%\">
 			<tr>
-				<td align=\"center\"><b>Não houve resultados</b></td>
+				<td align=\"center\"><b>NÃ£o houve resultados</b></td>
 			</tr>
 		</table>";
 }

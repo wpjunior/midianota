@@ -53,14 +53,14 @@ Fith Floor, Boston, MA 02110-1301, USA
 	<?php include("inc/cadastro/prestadores/busca_contador.php"); ?>
 </div>
 <?php
-	//Testa se o usuario acionou o botao de inserção de novo contador se sim direciona para o cadastro de prestadores
+	//Testa se o usuario acionou o botao de inserÃ§Ã£o de novo contador se sim direciona para o cadastro de prestadores
 	if($_POST['btNovoContador']){
 		RedirecionaPost("principal.php?include=inc/cadastro/prestadores/cadastro.php");
 		die();
 	}
 
 
-	//Testa se algum dos botões foi acionado
+	//Testa se algum dos botÃµes foi acionado
 	if(($_POST['btAdcionar'] == "Adcionar Contador") || ($_POST['btAtualizar'] == "Atualizar Contador")){
 		$cod_prest = $_POST['CODPRESTADOR'];
 		$cod_cont  = $_POST['CODCONTADOR'];
@@ -74,7 +74,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 		}
 	}
 		
-	//Verifica se foi feita uma busca pelo prestador se sim traz as informações do banco sobre o mesmo
+	//Verifica se foi feita uma busca pelo prestador se sim traz as informaÃ§Ãµes do banco sobre o mesmo
 	if($_POST['CODPRESTADOR']){
 		$codigo_prestador = $_POST['CODPRESTADOR'];
 		$codigo_contador  = $_POST['CODCONTADOR'];
@@ -96,7 +96,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 			$codigo_contador = $codcontador;
 		}
 		
-		//busca as informações do contador referente ao prestador ou informações referentes ao contador buscado pelo usuario
+		//busca as informaÃ§Ãµes do contador referente ao prestador ou informaÃ§Ãµes referentes ao contador buscado pelo usuario
 		$sql_contador = mysql_query("
 			SELECT
 				nome,
@@ -124,10 +124,10 @@ Fith Floor, Boston, MA 02110-1301, USA
 				<input type="hidden" name="include" id="include" value="<?php echo $_POST['include'];?>" />
 				<input type="hidden" name="CODPRESTADOR" value="<?php echo $_POST['CODPRESTADOR'];?>" />
 				<input type="hidden" name="CODCONTADOR" value="<?php echo $_POST['CODCONTADOR'];?>" />
-				<fieldset><legend>Inserção do contador para o Prestador</legend>
+				<fieldset><legend>InserÃ§Ã£o do contador para o Prestador</legend>
 					<table width="100%">
 						<tr>
-							<td align="left" colspan="2"><b>Informações da Empresa</b></td>
+							<td align="left" colspan="2"><b>InformaÃ§Ãµes da Empresa</b></td>
 						</tr>
 						<tr>
 							<td align="left"> Nome </td>
@@ -136,7 +136,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 							</td>
 						</tr>
 						<tr>
-							<td align="left"> Razão Social </td>
+							<td align="left"> RazÃ£o Social </td>
 							<td align="left">
 								<input type="text" size="70" maxlength="100" name="txtRazaoEmp" class="texto" 
 								value="<?php if(isset($razaosocial)){echo $razaosocial;} ?>">
@@ -159,7 +159,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 							<td colspan="2"><hr size="1" color="#000000"></td>
 						</tr>
 						<tr>
-							<td align="left" colspan="2"><b>Informações do Contador</b></td>
+							<td align="left" colspan="2"><b>InformaÃ§Ãµes do Contador</b></td>
 						</tr>
 						<tr>
 							<td align="left"> Nome<font color="#FF0000">*</font> </td>
@@ -190,7 +190,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 							<td width="23%" align="left">
 								<?php if(!isset($codcontador)){?>
 									<input name="btAdcionar" type="submit" class="botao" value="Adcionar Contador" <?php if(!isset($_POST['CODPRESTADOR'])){ echo "disabled=\"disabled\"";}?>
-									onclick="return ValidaFormulario('txtNomeCont|txtCNPJEmp|txtFoneComercial','Você deve buscar algum contador cadastrado no sistema!')">
+									onclick="return ValidaFormulario('txtNomeCont|txtCNPJEmp|txtFoneComercial','VocÃª deve buscar algum contador cadastrado no sistema!')">
 								<?php }?>
 								<?php if(isset($codcontador)){?><input name="btAtualizar" type="submit" class="botao" value="Atualizar Contador" /><?php }?>
 							</td>

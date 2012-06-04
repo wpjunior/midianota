@@ -35,7 +35,7 @@ if(isset($_POST['btCadastrar'])){
 		    	</td>
 		    </tr>
 			<tr>
-				<td align="left">Descrição<font color="#FF0000"> *</font></td>
+				<td align="left">DescriÃ§Ã£o<font color="#FF0000"> *</font></td>
 				<td align="left">
 					<textarea cols="40" rows="5" name="txtInsDescricao" id="txtInsDescricao" class="texto"></textarea></td>
 			</tr>

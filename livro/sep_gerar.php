@@ -37,7 +37,7 @@ if($_POST['btGerar']){
     <td align="center">
 		<form method="post" id="FrmLivro" onsubmit="return ValidaFormulario('txtDataVencimento|txtObs|cmbMes|cmbAno');">
 			<input type="hidden" name="include" id="include" value="<?php echo $_POST["include"];?>" />
-			<fieldset><legend>Geração do Livro Digital</legend>
+			<fieldset><legend>GeraÃ§Ã£o do Livro Digital</legend>
 				<table width="100%" border="0">
 					<tr>
 						<td  align="left">

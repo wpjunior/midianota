@@ -71,7 +71,7 @@ class ArquivoRetorno {
 		//le o arquivo em forma de array
 		$arq_array = file($target_path);
 		
-		//tira a primeira linha que é a identificacao do banco
+		//tira a primeira linha que Ã© a identificacao do banco
 		$dados_banco = array_shift($arq_array);
 		
 		//tira a ultima que nao sei para que serve

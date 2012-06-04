@@ -41,9 +41,9 @@ Fith Floor, Boston, MA 02110-1301, USA
 							<br />
 				<a href="inc/ajuda/manuais/simples_nacional.pdf" target="_blank">05. Prestadores</a><br />
 							<br />
-				<a href="inc/ajuda/manuais/manual_nota_fiscal_eletronica.pdf" target="_blank">06. Manual da Nota Fiscal Eletrônica</a><br />
+				<a href="inc/ajuda/manuais/manual_nota_fiscal_eletronica.pdf" target="_blank">06. Manual da Nota Fiscal EletrÃ´nica</a><br />
 							<br />				
-				<a href="inc/ajuda/manuais/manual_declaracoes_online.pdf" target="_blank"> 07. Declarações Online</a><br />
+				<a href="inc/ajuda/manuais/manual_declaracoes_online.pdf" target="_blank"> 07. DeclaraÃ§Ãµes Online</a><br />
 							<br /> 		
 				<a href="inc/ajuda/manuais/manual_sistema_iss.pdf" target="_blank"> 08. Manual do Sistema ISS (Completo)</a><br />
 							<br /> 		

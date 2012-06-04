@@ -26,7 +26,7 @@ INNER JOIN aidfe_solicitacoes ON cadastro.codigo = aidfe_solicitacoes.solicitant
 <table border="0" cellspacing="0" cellpadding="0" bgcolor="#CCCCCC">
   <tr>
     <td width="18" align="left" background="img/form/cabecalho_fundo.jpg"><img src="img/form/cabecalho_icone.jpg" /></td>
-    <td width="700" background="img/form/cabecalho_fundo.jpg" align="left" class="formCabecalho">&nbsp;Prestadores - AIDF eletrônica</td>  
+    <td width="700" background="img/form/cabecalho_fundo.jpg" align="left" class="formCabecalho">&nbsp;Prestadores - AIDF eletrÃ´nica</td>  
     <td width="19" align="right" valign="top" background="img/form/cabecalho_fundo.jpg"><a href=""><img src="img/form/cabecalho_btfechar.jpg" width="19" height="21" border="0" /></a></td>
   </tr>
   <tr>
@@ -35,7 +35,7 @@ INNER JOIN aidfe_solicitacoes ON cadastro.codigo = aidfe_solicitacoes.solicitant
 
 
 <fieldset style="margin-left:10px; margin-right:10px;">
-	<legend>Solicitações</legend>
+	<legend>SolicitaÃ§Ãµes</legend>
 	<?php
 	if(mysql_num_rows($sql)){
 	?>
@@ -65,7 +65,7 @@ INNER JOIN aidfe_solicitacoes ON cadastro.codigo = aidfe_solicitacoes.solicitant
 	</table>
 	<?php
 	}else{?>
-		<center><b>Não há solicitações</b></center>
+		<center><b>NÃ£o hÃ¡ solicitaÃ§Ãµes</b></center>
 	<?php
 	}
 	?>
@@ -149,7 +149,7 @@ INNER JOIN aidfe_solicitacoes ON cadastro.codigo = aidfe_solicitacoes.solicitant
 </form>	
 <?php
 	if($btBusca!=""){// Verifica se a busca foi feita
-	if($btAtualizar!="")// Se a atualização foi feita, registra as informações no banco
+	if($btAtualizar!="")// Se a atualizaÃ§Ã£o foi feita, registra as informaÃ§Ãµes no banco
 		{?>
 			<form name="frmAIDF" method="post" id="frmAIDF">
 			<input type="hidden" name="include" id="include" value="<?php echo  $_POST['include'];?>" />
@@ -199,7 +199,7 @@ INNER JOIN aidfe_solicitacoes ON cadastro.codigo = aidfe_solicitacoes.solicitant
 	<input name="txtCNPJ" type="hidden" value="<?php echo $_POST['txtCNPJ'];?>"/> 
 	<?php
 	if(mysql_num_rows($sql)==0){
-		echo "<center><b>Não há solicitações</b></center>";
+		echo "<center><b>NÃ£o hÃ¡ solicitaÃ§Ãµes</b></center>";
 	}else{
 		?>
 		<table align="left" width="100%">

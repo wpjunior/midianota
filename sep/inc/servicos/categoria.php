@@ -31,13 +31,13 @@ Fith Floor, Boston, MA 02110-1301, USA
 					$sql_verifica = mysql_query("SELECT codigo FROM servicos_categorias WHERE nome='$categoria'");
 					if(mysql_num_rows($sql_verifica)>0)
 						{
-							Mensagem("J· existe uma categoria com esse nome!");
+							Mensagem("J√° existe uma categoria com esse nome!");
 						}
 					else
 						{	
 							
 							$sql = mysql_query("INSERT INTO servicos_categorias SET nome='$categoria', tipo = '$tipo'");
-							add_logs('Inseriu uma categoria de ServiÁo');
+							add_logs('Inseriu uma categoria de Servi√ßo');
 							Mensagem("Categoria inserida com sucesso!");
 						}	
 				}
@@ -50,7 +50,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 		$desc = $_POST["txtServicoEdit"];
 		$codserv = $_POST["hdCodServ"];
 		mysql_query("UPDATE servicos_categorias SET nome = '$desc' WHERE codigo = '$codserv'");
-		Mensagem("ServiÁo atualizado");
+		Mensagem("Servi√ßo atualizado");
 	}//fim if
 ?>
 <table border="0" cellspacing="0" cellpadding="0" bgcolor="#CCCCCC">
@@ -69,7 +69,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 				<input type="hidden" name="include" id="include" value="<?php echo  $_POST['include'];?>" />
 					<table>
 						<tr>
-							<td>Nome da sess„o</td>
+							<td>Nome da sess√£o</td>
 							<td><input type="text" class="texto" name="txtCategoria" id="txtCategoria" size="50" /></td>
 							<td><input type="submit" class="botao" name="btInserirCategoria" value="Inserir" onclick="return ValidaFormulario('txtCategoria|cmbTipo')" /></td>
 						</tr>

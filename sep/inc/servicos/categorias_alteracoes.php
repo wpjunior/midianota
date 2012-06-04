@@ -25,7 +25,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 	include("../conect.php");
 	require_once("../../funcoes/util.php");
 	$sql=mysql_query("UPDATE servicos_categorias SET nome='$txtEditarCategoria' WHERE codigo='$txtCodCategoria'");
-	add_logs('Alterou uma categoria de Serviço');	
+	add_logs('Alterou uma categoria de ServiÃ§o');	
 	echo "
 		<script>
 			alert('Categoria alterada com sucesso');									

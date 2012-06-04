@@ -24,16 +24,16 @@ Fith Floor, Boston, MA 02110-1301, USA
  
  while($cont <= $nrosocios) {
     if($cont==1){
-        $nome="Responsável";
+        $nome="ResponsÃ¡vel";
         $display="block";
         $obrigatorio="<font color=\"#FF0000\">*</font>";
     }else{
-        $nome="Sócio";
+        $nome="SÃ³cio";
         $display="none";
         $obrigatorio="";
     }
  ?>
-<!------------------- SÓCIO 1------------------------------------------------------------------------------------------> 
+<!------------------- SÃ“CIO 1------------------------------------------------------------------------------------------> 
 <tr id="linha01socio<?php echo $cont; ?>" style="display:<?php echo $display; ?>" align="right">
 	<td height="0"></td>
   </tr>

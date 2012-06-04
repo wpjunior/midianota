@@ -34,7 +34,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 	<table width="760" align="left">
 		<tr>
 			<td>
-				<fieldset><legend>Relatório geral</legend>
+				<fieldset><legend>RelatÃ³rio geral</legend>
 				<?php  
 				//pega o numero total de notas emitidas
 				$sql_relatorios = mysql_query("SELECT * FROM notas");
@@ -84,7 +84,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 					</tr>
 					</table>
 				</fieldset>
-				<fieldset><legend>Relatório de notas</legend>
+				<fieldset><legend>RelatÃ³rio de notas</legend>
 					<form method="post" name="frmNotas">
 					<input type="hidden" name="include" id="include" value="<?php echo $_POST["include"]; ?>" />
 					<input type="hidden" name="btNotas" id="btNotas" value="<?php echo $_POST["btNotas"]; ?>" />
@@ -95,7 +95,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 								<td align="left">
 									<select name="cmbEstado" class="combo">
 										<option value="">Todos</option>
-										<?php //Pega o estado do banco e muda a descricao para a vizualização do usuario no combobox
+										<?php //Pega o estado do banco e muda a descricao para a vizualizaÃ§Ã£o do usuario no combobox
 											$sql = mysql_query("SELECT estado FROM notas GROUP BY estado");
 											while(list($estado) = mysql_fetch_array($sql))
 												{
@@ -136,7 +136,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 					</form>
 				</fieldset>
 				<?php if($_POST["btProcurar"]) {?>
-				<fieldset><legend>Relatório</legend>
+				<fieldset><legend>RelatÃ³rio</legend>
 					<table align="center">
 						<tr>
 							<td>

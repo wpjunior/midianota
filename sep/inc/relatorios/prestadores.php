@@ -95,7 +95,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 					</div>				</td>
 			</tr>
             <tr>
-			  <td align="left" style="text-indent:5px">Tipo de <br />&nbsp;declaração</td>
+			  <td align="left" style="text-indent:5px">Tipo de <br />&nbsp;declaraÃ§Ã£o</td>
 				<td colspan="3" align="left">
 					<select name="cmbTipoDec" id="cmbTipoDec" class="combo">
 						<option value=""></option>

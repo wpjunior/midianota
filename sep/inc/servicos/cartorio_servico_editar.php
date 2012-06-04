@@ -19,7 +19,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 */
 ?>
 <?php  
-//Recebe os dados do Formul·rio de alteraÁ„o e faz o UPDATE no banco
+//Recebe os dados do Formul√°rio de altera√ß√£o e faz o UPDATE no banco
 if ($_POST['btCadastrar'] !=""){
 	$Cod = $_POST['COD'];
 	$Servicos =$_POST['txtEdDescServicos'];      
@@ -53,11 +53,11 @@ if ($_POST['btCadastrar'] !=""){
 			WHERE 
 				codigo= '$Cod'
 		");
-		add_logs('Atualizou ServiÁo de CartÛrio');	
-		Mensagem("AlteraÁıes concluÌdas com sucesso!"); 
+		add_logs('Atualizou Servi√ßo de Cart√≥rio');	
+		Mensagem("Altera√ß√µes conclu√≠das com sucesso!"); 
 	} else {
-		/*print "<script language=JavaScript> alert('… necess·rio no mÌnimo uma alteraÁ„o nos campos.');</script>";*/
-		Mensagem('… necess·rio no mÌnimo uma alteraÁ„o nos campos');
+		/*print "<script language=JavaScript> alert('√â necess√°rio no m√≠nimo uma altera√ß√£o nos campos.');</script>";*/
+		Mensagem('√â necess√°rio no m√≠nimo uma altera√ß√£o nos campos');
 	}  
 	
 }
@@ -70,7 +70,7 @@ list($servicos,$aliquota,$estado)=mysql_fetch_array($sqlEditar);
 <table width="98%" align="center">
     <tr>
      <td>
-      <fieldset><legend>EdiÁ„o de ServiÁos</legend>
+      <fieldset><legend>Edi√ß√£o de Servi√ßos</legend>
       <form  method="post" id="frmEditar">   
 		  <input type="hidden" name="include" id="include" value="<?php echo  $_POST['include'];?>" />
 		  <input type="hidden" name="COD" id="COD" value="<?php echo  $_POST['COD'];?>" />

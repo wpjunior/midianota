@@ -27,7 +27,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 					$sql_verifica = mysql_query("SELECT codigo FROM cartorios_tipo WHERE tipocartorio='$categoria'");
 					if(mysql_num_rows($sql_verifica)>0)
 						{
-							Mensagem("Já existe uma categoria com esse nome!");
+							Mensagem("JÃ¡ existe uma categoria com esse nome!");
 						}
 					else
 						{	
@@ -45,7 +45,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 		$desc = $_POST["txtServicoEdit"];
 		$codserv = $_POST["hdCodServ"];
 		mysql_query("UPDATE cartorios_tipo SET tipocartorio = '$desc' WHERE codigo = '$codserv'");
-		Mensagem("Serviço atualizado");
+		Mensagem("ServiÃ§o atualizado");
 	}//fim if
 ?>
 <table border="0" cellspacing="0" cellpadding="0" bgcolor="#CCCCCC">

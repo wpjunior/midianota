@@ -25,11 +25,11 @@ Fith Floor, Boston, MA 02110-1301, USA
 <?php 
 include("../../conect.php");
 include("../../../funcoes/util.php");
-//Recebe as variáveis 
+//Recebe as variÃ¡veis 
 
 //Seleciona o brasao da seguinte prefeitura
 $sql_brs= mysql_query("SELECT brasao FROM configuracoes"); 
-//lista a variável q receberá ao seguinte brasão
+//lista a variÃ¡vel q receberÃ¡ ao seguinte brasÃ£o
 list($BRASAO) = mysql_fetch_array($sql_brs);
 
 $codigo = $_POST['CODEMISSOR'];
@@ -77,7 +77,7 @@ if($complemento)
 $cpf_cnpj = $cnpj . $cpf;
 
 switch($estado){
-		case "NL": $estado = "Aguardando a Liberação da prefeitura";		break;
+		case "NL": $estado = "Aguardando a LiberaÃ§Ã£o da prefeitura";		break;
 		case "A" : $estado = "Liberado";									break;
 		case "I" : $estado = "Empresa inativa";								break;
 }//fim switch estado
@@ -116,7 +116,7 @@ list($tipo_declaracao_extens) = mysql_fetch_array($busca_tipo_declaracao);
 if($nfe == 's')
 {$nfe = 'SIM';}
 elseif ($nfe == 'n')
-{$nfe = 'NÃO';}
+{$nfe = 'NÃƒO';}
 
 
 
@@ -125,7 +125,7 @@ elseif ($nfe == 'n')
 elseif($estado == 'I')
 {$estado = 'INATIVO';}
 elseif($estado == "")
-{$estado = 'Não Informado';}
+{$estado = 'NÃ£o Informado';}
 */
 
 // verifica se os campos nao obrigatorios estao vazios, caso estejam, mostra mensagem de valor Nao Informado
@@ -153,7 +153,7 @@ $nfe = verificacampo($nfe);
 </style>
 </head>
 
-<body> 
+<body>Â 
 <div id="DivImprimir">
   <input name="button" type="button" onClick="print();this.style.display = 'none';" value="Imprimir" />
 </div>
@@ -234,7 +234,7 @@ $nfe = verificacampo($nfe);
   </tr>
   <tr>
   	<?php 
-  	$codcargo = codcargo('Responsável');
+  	$codcargo = codcargo('ResponsÃ¡vel');
   	$busca_resp = mysql_query("SELECT nome, cpf FROM cadastro_resp WHERE codemissor = '$codigo' AND codcargo=$codcargo");
   	list($responsavel,$cpf_resp) = mysql_fetch_array($busca_resp);
   	?>
@@ -243,7 +243,7 @@ $nfe = verificacampo($nfe);
   </tr>
   
  <?php 
-  $codcargo = codcargo('Sócio');
+  $codcargo = codcargo('SÃ³cio');
   $busca_socio = mysql_query("SELECT nome, cpf FROM cadastro_resp WHERE codemissor = '$cod_emissor' AND codcargo=$codcargo");
   // uso do while para exibir cada registro encontrado
   while(list ($nome_socio,$cpf_socio) = mysql_fetch_array($busca_socio)){

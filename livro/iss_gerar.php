@@ -2,7 +2,7 @@
 $empresa=mysql_query("SELECT * FROM cadastro WHERE codigo='{$_SESSION['codempresa']}'");
 $dados=mysql_fetch_array($empresa);
 ?>
-<?php $meses=array("1"=>"Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"); ?>
+<?php $meses=array("1"=>"Janeiro","Fevereiro","MarÃ§o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"); ?>
     <form method="post" id="FrmLivro" onsubmit="return ValidaFormulario('txtDataVencimento|txtObs|cmbMes|cmbAno');">
 	<table border="0" align="center" cellpadding="0" cellspacing="1">
 		<tr>
@@ -28,7 +28,7 @@ $dados=mysql_fetch_array($empresa);
                  <table  width="100%">
                     <tr>
                         <td>
-                         Período
+                         PerÃ­odo
                         </td>
                         <td>
 				<?php
@@ -88,7 +88,7 @@ $dados=mysql_fetch_array($empresa);
                             <input type="submit" name="btGerar" value="Gerar Livro" class="botao">
                         </td>
                         <td align="right"> 
-							&nbsp;&nbsp;&nbsp;<font color="#FF0000">*</font>Campos Obrigatórios
+							&nbsp;&nbsp;&nbsp;<font color="#FF0000">*</font>Campos ObrigatÃ³rios
                         </td>
                     </tr>
                 </table>            

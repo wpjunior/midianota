@@ -73,7 +73,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 							<td colspan="5"><?php echo $cadastro['nome'];?></td>
 						</tr>
 						<tr bgcolor="#FFFFFF">
-							<td><b>Razão Social:</b></td>
+							<td><b>RazÃ£o Social:</b></td>
 							<td colspan="5"><?php echo $cadastro['razaosocial'];?></td>
 						</tr>
 						<tr bgcolor="#FFFFFF">
@@ -91,7 +91,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 							<td colspan="5"><?php echo $cadastro['logradouro'];?></td>
 						</tr>
 						<tr bgcolor="#FFFFFF">
-							<td><b>Número: </b></td>
+							<td><b>NÃºmero: </b></td>
 							<td><?php echo $cadastro['numero'];?></td>
 							<td><b>Complemento: </b></td>
 							<td><?php echo verificacampo($cadastro['complemento']);?></td>
@@ -127,12 +127,12 @@ Fith Floor, Boston, MA 02110-1301, USA
 								<input name="btRemover" type="button" value="Remover pedido*" class="botao" 
 								onclick="removerCadastro('<?php echo $codigo;?>','divlistanfe');" />
 							</td>
-							<td colspan="4" align="right"><font color="#FF0000">*</font>Removerá o cadastro</td>
+							<td colspan="4" align="right"><font color="#FF0000">*</font>RemoverÃ¡ o cadastro</td>
 						</tr>
 					</table>
 				<?php
 				}else{
-					echo "<b>Não foram encontrados detalhes sobre este cadastro!<b>";
+					echo "<b>NÃ£o foram encontrados detalhes sobre este cadastro!<b>";
 				}
 			?>
 		</td>

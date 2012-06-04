@@ -41,12 +41,12 @@ Fith Floor, Boston, MA 02110-1301, USA
   <tr>
     <td width="164" >
     <form id="frmServ" method="post" target="_blank" action="inc/relatorios/area.php">
-    	<input name="btPesquisar" type="submit" id="button1" class="botao" value="Lista por Categoria e Serviço"   />
+    	<input name="btPesquisar" type="submit" id="button1" class="botao" value="Lista por Categoria e ServiÃ§o"   />
 	</form>
     </td>
      <td width="179">
      <form id="frmServ" method="post" target="_blank" action="inc/relatorios/categ.php">
-		 <input type="submit" name="btLimpar" id="button2" value="Lista Estatística" class="botao" />
+		 <input type="submit" name="btLimpar" id="button2" value="Lista EstatÃ­stica" class="botao" />
      </form>
      </td> 
   </tr>

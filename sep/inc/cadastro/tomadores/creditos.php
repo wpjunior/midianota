@@ -31,13 +31,13 @@ Fith Floor, Boston, MA 02110-1301, USA
 <table border="0" cellspacing="0" cellpadding="0" bgcolor="#CCCCCC">
   <tr>
     <td width="18" align="left" background="img/form/cabecalho_fundo.jpg"><img src="img/form/cabecalho_icone.jpg" /></td>
-    <td width="800" background="img/form/cabecalho_fundo.jpg" align="left" class="formCabecalho">&nbsp;Tomadores - Créditos</td>  
+    <td width="800" background="img/form/cabecalho_fundo.jpg" align="left" class="formCabecalho">&nbsp;Tomadores - CrÃ©ditos</td>  
     <td width="19" align="right" valign="top" background="img/form/cabecalho_fundo.jpg"><a href=""><img src="img/form/cabecalho_btfechar.jpg" width="19" height="21" border="0" /></a></td>
   </tr>
   <tr>
     <td width="18" background="img/form/lateralesq.jpg"></td>
     <td align="center">
-			<fieldset><legend>Consulta de Créditos</legend>
+			<fieldset><legend>Consulta de CrÃ©ditos</legend>
 				<form method="post">	
 					<input type="hidden" name="include" id="include" value="<?php echo  $_POST['include'];?>" />
 					<table align="left">
@@ -61,7 +61,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 						</tr>
 						<tr align="left">
 							<td><input type="submit" class="botao" name="btConsultaCreditos" value="Consultar" /></td>
-							<td><font color="#FF0000">* Dados obrigatórios</font></td>
+							<td><font color="#FF0000">* Dados obrigatÃ³rios</font></td>
 						</tr>
 					</table>
 				</form>
@@ -102,12 +102,12 @@ Fith Floor, Boston, MA 02110-1301, USA
 									<tr align="center" bgcolor="#999999">
 										<td>CNPJ/CPF do tomador</td>
 										<td>Nome do tomador</td>
-										<td>Crédito acumulado durante o período</td>
+										<td>CrÃ©dito acumulado durante o perÃ­odo</td>
 									</tr>
 									<tr align="center" bgcolor="#FFFFFF">
 										<td><?php echo $cnpjcpf;?></td>
 										<td><?php echo $tomador;?></td>
-										<td><?php if($result == ""){ echo "Não possui creditos"; }else{ echo "R$".DecToMoeda($result); }?></td>
+										<td><?php if($result == ""){ echo "NÃ£o possui creditos"; }else{ echo "R$".DecToMoeda($result); }?></td>
 									</tr>
 								</table>
 							<?php	
@@ -115,7 +115,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 								//mensagem de erro ao tentar verificar um CNPJCPF que nao esteja cadastrado
 								echo "<table width=\"100%\">
 											<tr>
-												<td align=\"center\">Náo nenhum tomador com este CNPJ/CPF</td>
+												<td align=\"center\">NÃ¡o nenhum tomador com este CNPJ/CPF</td>
 											</tr>
 										</table>
 									";

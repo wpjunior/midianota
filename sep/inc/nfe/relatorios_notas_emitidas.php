@@ -22,7 +22,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 $txtDataIni = implode("-",array_reverse(explode("/",$txtDataIni))); // formata a data para o padrao do banco
 $txtDataFim = implode("-",array_reverse(explode("/",$txtDataFim)));
 
-//pega a opção do combobox que o usuario escolheu e transforma em um valor que o banco aceite para a pesquisa sql
+//pega a opÃ§Ã£o do combobox que o usuario escolheu e transforma em um valor que o banco aceite para a pesquisa sql
 
 if($cmbEstado == "Emitida") 
 	{
@@ -148,7 +148,7 @@ elseif($cmbEstado == "Escriturada")
 			$querysql = "";
 		}
 			
-// SQL CONCATENANDO COM A VARIAVEL $querysql QUE ESTÁ DENTRO DE ALGUMA CONDIÇÃO DOS IF'S
+// SQL CONCATENANDO COM A VARIAVEL $querysql QUE ESTÃ DENTRO DE ALGUMA CONDIÃ‡ÃƒO DOS IF'S
 			
 $sql = mysql_query("
 	SELECT 
@@ -167,7 +167,7 @@ if(mysql_num_rows($sql)>0){	//mostra se os resultados existem
 
 
 <form method="post" name="frmRelatorio" id="frmRelatorio" action="inc/nfe/relatorios_notas_emitidas_imprimir.php" target="_blank">
-	<input type="submit" name="btImprimir" value="Imprimir Relatório" class="botao" />
+	<input type="submit" name="btImprimir" value="Imprimir RelatÃ³rio" class="botao" />
 	<input type="hidden" name="txtDataIni" value="<?php echo $_POST["txtDataIni"]; ?>" />
 	<input type="hidden" name="txtDataFim" value="<?php echo $_POST["txtDataFim"]; ?>" />
 	<input type="hidden" name="cmbEstado" value="<?php echo $_POST["cmbEstado"]; ?>" />
@@ -180,9 +180,9 @@ if(mysql_num_rows($sql)>0){	//mostra se os resultados existem
 		<td>
 			<table width="700" style="font-size:14px; font-family:Verdana, Arial, Helvetica, sans-serif">
 				<tr>
-					<td width="50" align="center" bgcolor="#999999"><b>Nº</b></td>
-					<td width="90" align="center" bgcolor="#999999"><b>Cód Verif</b></td>
-					<td width="75" align="center" bgcolor="#999999"><b>D/H Emissão</b></td>
+					<td width="50" align="center" bgcolor="#999999"><b>NÂº</b></td>
+					<td width="90" align="center" bgcolor="#999999"><b>CÃ³d Verif</b></td>
+					<td width="75" align="center" bgcolor="#999999"><b>D/H EmissÃ£o</b></td>
 					<td width="200" align="center" bgcolor="#999999"><b>Nome Emissor</b></td>
 					<td width="200" align="center" bgcolor="#999999"><b>Nome Tomador</b></td>
 					<td align="center" bgcolor="#999999"><b>Estado</b></td>
@@ -194,7 +194,7 @@ if(mysql_num_rows($sql)>0){	//mostra se os resultados existem
 			<?php 
 				while(list($numero, $codverif, $data, $tomador_nome, $estado, $rps, $emissor) = mysql_fetch_array($sql))
 					{
-						switch($estado) //transforma o valor que veio do banco para uma melhor vizualização do usuario na impressão
+						switch($estado) //transforma o valor que veio do banco para uma melhor vizualizaÃ§Ã£o do usuario na impressÃ£o
 							{
 								case "N": $tipo = "Emitida"; 	 break;
 								case "B": $tipo = "Boleto";   	 break;

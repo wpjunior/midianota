@@ -26,7 +26,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 				<td><input type="text" class="texto" name="txtCNPJCPF" onkeypress="return NumbersOnly( event );" onkeyup="CNPJCPFMsk( this );" /></td>
 			</tr>
 			<tr align="left">
-				<td>Número do RPS<font color="#FF0000">*</font></td>
+				<td>NÃºmero do RPS<font color="#FF0000">*</font></td>
 				<td><input type="text" class="texto" name="txtNroRPS" onkeypress="return NumbersOnly( event );" /></td>
 			</tr>
 			<tr align="left">
@@ -37,7 +37,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 			</tr>
 			<tr align="left">
 				<td><input type="submit" class="botao" name="btConsultaRPS" value="Consultar" /></td>
-				<td><font color="#FF0000">* Dados obrigatórios</font></td>
+				<td><font color="#FF0000">* Dados obrigatÃ³rios</font></td>
 			</tr>
 		</table>
 	</form>
@@ -75,10 +75,10 @@ Fith Floor, Boston, MA 02110-1301, USA
 							echo "
 								<table align=\"center\" width=\"100%\">
 									<tr align=\"left\" bgcolor=\"#999999\">
-										<td colspan=\"4\">Recibos Provisórios de Serviço do tomador $tomador</td>
+										<td colspan=\"4\">Recibos ProvisÃ³rios de ServiÃ§o do tomador $tomador</td>
 									</tr>
 									<tr align=\"left\" bgcolor=\"#999999\">
-										<td>Número da Nota</td>
+										<td>NÃºmero da Nota</td>
 										<td>Valor total da Nota</td>
 										<td>Estado da Nota</td>
 										<td>Emissor</td>

@@ -19,7 +19,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 */
 ?>
 <?php
-//seleciona o estado das configurações
+//seleciona o estado das configuraÃ§Ãµes
 $sql_info = mysql_query("SELECT estado, cidade FROM configuracoes");
 list($UF,$CIDADE) = mysql_fetch_array($sql_info);
 	
@@ -28,7 +28,7 @@ if($_POST["btSalvar"] == "Salvar"){
 }
 ?>
 
-<!-- Formulário de insercao de tomadores  --> 
+<!-- FormulÃ¡rio de insercao de tomadores  --> 
 <style type="text/css">
 <!--
 #divBuscaTomadores {
@@ -130,7 +130,7 @@ if($_POST["btSalvar"] == "Salvar"){
 							</td>
 						</tr>
 						<tr>
-							<td align="left">Município<font color="#FF0000">*</font></td>
+							<td align="left">MunicÃ­pio<font color="#FF0000">*</font></td>
 							<td align="left">
 								<div  id="txtInsMunicipioEmpresa">
 									<select name="txtInsMunicipioEmpresa" id="txtInsMunicipioEmpresa" class="combo">
@@ -166,7 +166,7 @@ if($_POST["btSalvar"] == "Salvar"){
 						if($_POST['CODTOMADOR']){
 					?>
 							<input type="submit" value="Salvar"  name="btSalvar" class="botao">
-							<input name="btConsultaCreditos" type="submit" class="botao" value="Consultar Créditos"/>
+							<input name="btConsultaCreditos" type="submit" class="botao" value="Consultar CrÃ©ditos"/>
 					<?php 
 						}
 					?>

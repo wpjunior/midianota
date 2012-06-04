@@ -36,17 +36,17 @@ if(($descricao !="") &&($aliquota !="") &&($aliquotair !=""))
   if(is_numeric($aliquota) || is_numeric($aliquotair))
   {
    $sql=mysql_query("INSERT INTO servicos SET codservico='$codservico', descricao= '$descricao', aliquota= '$aliquota', aliquotair= '$aliquotair',estado='A', codcategoria='$codcategoria',tipopessoa='$tipopessoa',basecalculo='$basecalc',incidencia='$incidencia',datavenc='$venc',docfiscal='$docfiscal',valor_rpa='$valorRPA'");
-   print "<script language=JavaScript> alert('Serviço inserido com sucesso');</script>";   
-   add_logs('Inseriu novo serviço');	
+   print "<script language=JavaScript> alert('ServiÃ§o inserido com sucesso');</script>";   
+   add_logs('Inseriu novo serviÃ§o');	
   }
   else
   {
-   print "<script language=JavaScript> alert('Ambas aliquotas devem ser preenchidas com números e ponto, verifique exemplo');</script>";
+   print "<script language=JavaScript> alert('Ambas aliquotas devem ser preenchidas com nÃºmeros e ponto, verifique exemplo');</script>";
   }
 }
 else
 {
-  print "<script language=JavaScript> alert('Favor preencher campos obrigatórios');</script>";
+  print "<script language=JavaScript> alert('Favor preencher campos obrigatÃ³rios');</script>";
 }
 
 

@@ -41,7 +41,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 					<td>Periodo Inicial</td>
 					<td>
 						<?php
-						$meses=array("1"=>"Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+						$meses=array("1"=>"Janeiro","Fevereiro","MarÃ§o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
 						
 						?>
 						<select name="cmbMesIni" id="cmbMesIni">

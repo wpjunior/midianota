@@ -59,7 +59,7 @@ Fith Floor, Boston, MA 02110-1301, USA
        </tr>
        <tr>
         <td width="135" align="left">
-		 Raz„o Social</td>
+		 Raz√£o Social</td>
         <td colspan="2" align="left">
 	     <input type="text" size="60" maxlength="100" name="txtEditaRazaoSocial" class="texto" value="<?php print $razaosocial;?>">		        </td>
        </tr>	   	       
@@ -105,7 +105,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 		   print("<br /><input type=\"checkbox\" value=\"S\"  name=\"txtSimplesNacional\"/>");
 		  }?>
 		  <font size="-2">
-	        Esta empresa esta enquadrada no Simples Nacional, conforme Lei Complementar n∞123/2006	      
+	        Esta empresa esta enquadrada no Simples Nacional, conforme Lei Complementar n¬∞123/2006	      
 		  </font><br /><br />
 		 </td>
        </tr>
@@ -135,7 +135,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 	  $cont_aux_socios = $contsocios;	  
 	  print("<tr>
 		      <td colspan=4 align=left>
-		       <b>Respos·vel/Socio</b>
+		       <b>Respos√°vel/Socio</b>
 		      </td>
 	         </tr>
 	        ");
@@ -179,7 +179,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 	 
 	 	 <tr>	
 		   <td align="left" colspan="4" align="left"><br><br><br>
-		    <b>ServiÁos</b>	<br />	    
+		    <b>Servi√ßos</b>	<br />	    
 		   </td>     
 		   <td>		   </td>		  
 		 </tr>	
@@ -209,14 +209,14 @@ Fith Floor, Boston, MA 02110-1301, USA
 		  </tr> ");
 		$contservicos--;  
 	  } ?>	
-<!------------------------------ Lista os serviÁos a serem editados FIM--------------------------------------->	  
+<!------------------------------ Lista os servi√ßos a serem editados FIM--------------------------------------->	  
 	     <tr>
 	      <td align="left" colspan="4">
 		    <table width="500" border="0">
              <br><br>	  
              <tr>
               <td colspan="2">
-	           <input type="button" value="Adicionar Respons·vel/SÛcio" name="btEditar" class="botao" onClick="incluirSocio();" />	          </td>
+	           <input type="button" value="Adicionar Respons√°vel/S√≥cio" name="btEditar" class="botao" onClick="incluirSocio();" />	          </td>
              </tr>
 		   <!-- SOCIOS A SEREM INSERIDOS--------------------------------->
 		   <?php include("empresas_socios.php");?>	
@@ -229,7 +229,7 @@ Fith Floor, Boston, MA 02110-1301, USA
             <br><br>	 
             <tr>
              <td colspan="2">
-	          <input type="button" value="Adicionar ServiÁo" name="btEditar" class="botao" onClick="incluirServico();" />	         </td>
+	          <input type="button" value="Adicionar Servi√ßo" name="btEditar" class="botao" onClick="incluirServico();" />	         </td>
             </tr>	      
 		    <?php include("empresas_servicos.php");?>		  
 		    </table>		 </td>			  

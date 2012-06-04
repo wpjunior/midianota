@@ -1,8 +1,8 @@
 <?php
 /*
-LICENÇA PÚBLICA GERAL GNU
-Versão 3, 29 de junho de 2007
-    Copyright (C) <2010>  <PORTAL PÚBLICO INFORMÁTICA LTDA>
+LICENÃ‡A PÃšBLICA GERAL GNU
+VersÃ£o 3, 29 de junho de 2007
+    Copyright (C) <2010>  <PORTAL PÃšBLICO INFORMÃTICA LTDA>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,22 +17,22 @@ Versão 3, 29 de junho de 2007
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-Este programa é software livre: você pode redistribuí-lo e / ou modificar sob os termos da GNU General Public License como publicado pela Free Software Foundation, tanto a versão 3 da Licença, ou (por sua opção) qualquer versão posterior.
+Este programa Ã© software livre: vocÃª pode redistribuÃ­-lo e / ou modificar sob os termos da GNU General Public License como publicado pela Free Software Foundation, tanto a versÃ£o 3 da LicenÃ§a, ouÂ (por sua opÃ§Ã£o) qualquer versÃ£o posterior.
 
-Este programa é distribuído na esperança que possa ser útil, mas SEM QUALQUER GARANTIA, sem mesmo a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM DETERMINADO PROPÓSITO. Veja a GNU General Public License para mais detalhes.
+Este programa Ã© distribuÃ­do na esperanÃ§a que possa ser Ãºtil, mas SEM QUALQUER GARANTIA, sem mesmo a garantia implÃ­cita de COMERCIALIZAÃ‡ÃƒO ou ADEQUAÃ‡ÃƒO A UM DETERMINADO PROPÃ“SITO. Veja a GNU General Public License para mais detalhes.
 
-Você deve ter recebido uma cópia da GNU General Public License  junto com este programa. Se não, veja <http://www.gnu.org/licenses/>.
-
-
-This is an unofficial translation of the GNU General Public License into Portuguese. It was not published by the Free Software Foundation, and does not legally state the distribution terms for software that uses the GNU GPL — only the original English text of the GNU GPL does that. However, we hope that this translation will help Portuguese speakers understand the GNU GPL better.
-
-Esta é uma tradução não oficial em português da Licença Pública Geral GNU (da sigla em inglês GNU GPL). Ela não é publicada pela Free Software Foundation e não declara legalmente os termos de distribuição para softwares que a utilizam — somente o texto original da licença, escrita em inglês, faz isto. Entretanto, acreditamos que esta tradução ajudará aos falantes do português a entendê-la melhor.
+VocÃª deve ter recebido uma cÃ³pia da GNU General Public LicenseÂ Â junto com este programa. Se nÃ£o, veja <http://www.gnu.org/licenses/>.
 
 
-// Originado do Projeto ISS Digital – Portal Público que tiveram colaborações de Vinícius Kampff, 
+This is an unofficial translation of the GNU General Public License into Portuguese. It was not published by the Free Software Foundation, and does not legally state the distribution terms for software that uses the GNU GPL Â— only the original English text of the GNU GPL does that. However, we hope that this translation will help Portuguese speakers understand the GNU GPL better.
+
+Esta Ã© uma traduÃ§Ã£o nÃ£o oficial em portuguÃªs da LicenÃ§a PÃºblica Geral GNU (da sigla em inglÃªs GNU GPL). Ela nÃ£o Ã© publicada pela Free Software Foundation e nÃ£o declara legalmente os termos de distribuiÃ§Ã£o para softwares que a utilizam Â— somente o texto original da licenÃ§a, escrita em inglÃªs, faz isto. Entretanto, acreditamos que esta traduÃ§Ã£o ajudarÃ¡ aos falantes do portuguÃªs a entendÃª-la melhor.
+
+
+// Originado do Projeto ISS Digital Â– Portal PÃºblico que tiveram colaboraÃ§Ãµes de VinÃ­cius Kampff, 
 // Rafael Romeu, Lucas dos Santos, Guilherme Flores, Maikon Farias, Jean Farias e Daniel Bohn
 // Acesse o site do Projeto www.portalpublico.com.br             |
-// Equipe Coordenação Projeto ISS Digital: <informatica@portalpublico.com.br>   |
+// Equipe CoordenaÃ§Ã£o Projeto ISS Digital: <informatica@portalpublico.com.br>   |
 
 */
 ?>
@@ -66,13 +66,13 @@ Esta é uma tradução não oficial em português da Licença Pública Geral GNU (da si
 				<legend>Pesquisar Nota</legend>
 				<table width="100%" border="0" cellspacing="2" cellpadding="2">
 					<tr>
-						<td align="left" width="30%">Número da Nota</td>
+						<td align="left" width="30%">NÃºmero da Nota</td>
 						<td align="left" width="70%">
 							<input name="txtNumeroNota" type="text" size="10" class="texto" />
 						</td>
 					</tr>
 					<tr>
-						<td align="left">Código de Verificação</td>
+						<td align="left">CÃ³digo de VerificaÃ§Ã£o</td>
 						<td align="left">
 							<input name="txtCodigoVerificacao" type="text" size="10" class="texto" style="text-transform:uppercase;" />
 						</td>

@@ -49,7 +49,7 @@
 		
 		NovaJanela("../livro/imprimir_controlearrec.php?livro=$codlivro");
 	}else{
-		Mensagem("Livro deste contribuinte neste perÌodo j· foi gerado anteriormente. Informe outro contribuinte ou outra perÌodo");
+		Mensagem("Livro deste contribuinte neste per√≠odo j√° foi gerado anteriormente. Informe outro contribuinte ou outra per√≠odo");
 	}	
 	
 

@@ -78,7 +78,7 @@ Fith Floor, Boston, MA 02110-1301, USA
                                          ORDER BY codservico");
 		 ?>
 		 <select name="cmbCodigo<?php echo $codcategoria.$contservico; ?>" id="cmbCodigo<?php echo $codcategoria.$contservico; ?>" style="width:440px">
-		   <option value="">Código | Descrição | Aliquota %</option>
+		   <option value="">CÃ³digo | DescriÃ§Ã£o | Aliquota %</option>
 		   <?php
 		   // laco para display das opcoes no combo
 		   while(list($codigo, $codservico, $descricao, $aliquota, $estado) = mysql_fetch_array($sql_servicos)) {

@@ -30,7 +30,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 					<table width="100%">
 						<tr bgcolor="#999999" align="center">
 							<td width="33%">Emissor</td>
-							<td width="33%">Endereço</td>
+							<td width="33%">EndereÃ§o</td>
 							<td width="33%">Email</td>
 						</tr>
 					</table>	

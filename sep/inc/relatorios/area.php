@@ -64,7 +64,7 @@ list($BRASAO) = mysql_fetch_array($sql_brasao);
   </table>
   
     <table width="700px" height="120" border="2" cellspacing="0" class="tabela">
-  <?php  //comando sql que mostrará as categorias e os serviços 
+  <?php  //comando sql que mostrarÃ¡ as categorias e os serviÃ§os 
 
 $sql_descr = mysql_query("SELECT
 						  servicos_categorias.codigo, servicos_categorias.nome, COUNT(servicos_categorias.nome),

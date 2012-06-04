@@ -42,7 +42,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 				<legend>Liberar Cadastro</legend>
 				<table width="100%">
 					<tr>
-						<td width="24%" align="left">Número do Documento: </td>
+						<td width="24%" align="left">NÃºmero do Documento: </td>
 						<td width="76%" align="left">
 							<input type="text" class="texto" name="txtNumero" />
 						</td>

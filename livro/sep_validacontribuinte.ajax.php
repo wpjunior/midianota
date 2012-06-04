@@ -5,14 +5,14 @@ include("../include/conect.php");
 	if(mysql_num_rows($sql)!=0){
 		$dado= mysql_fetch_object($sql);		
 		echo $dado->nome."<br><br>";
-		$meses=array("1"=>"Janeiro","Fevereiro","MarÁo","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");		
+		$meses=array("1"=>"Janeiro","Fevereiro","Mar√ßo","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");		
 		 ?>
          <form name="frmSep" id="frmSep">
          <input type="hidden" name="txtCodCadastro" value="<?php echo $dado->codigo; ?>" id="txtCodCadastro">
 		 <table>
 			<tr>
 				<td>
-				 PerÌodo
+				 Per√≠odo
 				</td>
 				<td>
 				<?php
@@ -77,6 +77,6 @@ include("../include/conect.php");
         </form>
 <?php
 }else{		
-		echo "<font style=\"color:#FF0000\">Contribuinte inv·lido, Informe um Cnpj ou CPF v·lido para gerar o livro do contribuinte</font>";
+		echo "<font style=\"color:#FF0000\">Contribuinte inv√°lido, Informe um Cnpj ou CPF v√°lido para gerar o livro do contribuinte</font>";
 }?>            
 <!--<font style="font-size:10px;font-family:Verdana, Arial, Helvetica, sans-serif"><?php echo $retorno;?></font> -->

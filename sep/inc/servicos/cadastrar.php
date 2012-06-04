@@ -43,11 +43,11 @@ Fith Floor, Boston, MA 02110-1301, USA
 					</select>				</td>
 			</tr>
 			<tr>
-				<td align="left">Cód. Serviço</td>
+				<td align="left">CÃ³d. ServiÃ§o</td>
 				<td align="left"><input type="text" size="20" maxlength="20" name="txtInsCodServico" id="txtInsCodServico" class="texto"></tr>
 			<td align="left"></tr>
 			<tr>
-				<td align="left">Descrição<font color="#FF0000"> *</font></td>
+				<td align="left">DescriÃ§Ã£o<font color="#FF0000"> *</font></td>
 				<td align="left">
 					<textarea cols="40" rows="5" name="txtInsDescServicos" id="txtInsDescServicos" class="texto" style="text-transform: uppercase; "></textarea>				</td>
 			</tr>

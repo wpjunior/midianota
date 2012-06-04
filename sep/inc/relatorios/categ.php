@@ -64,7 +64,7 @@ list($BRASAO) = mysql_fetch_array($sql_brasao);
   </tr>
   </table>
   <table width="700px" height="120" border="2" cellspacing="0" class="tabela">
-  <?php  //comando sql que mostrará as categorias e a quantidade de cada um (Lista Estatística)
+  <?php  //comando sql que mostrarÃ¡ as categorias e a quantidade de cada um (Lista EstatÃ­stica)
 
 echo "<tr bgcolor=\"grey\"><td align=\"center\">Nome da Categoria</td><td align=\"center\">Quantidade</td></tr>";
 $sql_categ = mysql_query("SELECT

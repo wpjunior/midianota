@@ -132,7 +132,7 @@ list($BRASAO) = mysql_fetch_array($sql_brasao);
        <tr >
 <?php
 
-//Comando sql que selecionar· do banco a quantidade de prestadores por estado
+//Comando sql que selecionar√° do banco a quantidade de prestadores por estado
 $sql = mysql_query ("
 	SELECT 
 		uf , 
@@ -173,7 +173,7 @@ $cont++;
 		<td width="34%" valign="top">
 			<table>
             <?php 
-			//Comando sql que selecionar· do banco os tipos de declaracoes e quantidade de cada
+			//Comando sql que selecionar√° do banco os tipos de declaracoes e quantidade de cada
 			$sql_tipodec = mysql_query("SELECT declaracoes.declaracao, COUNT(*)
 										FROM
 										  declaracoes 
@@ -186,7 +186,7 @@ $cont++;
 										GROUP BY
 										  declaracoes.declaracao");
 			
-			echo "<b><center>Tipos de DeclaraÁıes</center></b> <br>";  
+			echo "<b><center>Tipos de Declara√ß√µes</center></b> <br>";  
 										  
 			$qtdtotal=0;							  
 			while(list($declaracoes,$qtd)=mysql_fetch_array ($sql_tipodec)){
@@ -245,7 +245,7 @@ $cont++;
 		$str_where .= " AND cadastro.razaosocial LIKE '%$razao%'";
 	}
 	
-//Sql buscando as informaÁıes que o usuario pediu e com o limit estipulado pela funÁ„o
+//Sql buscando as informa√ß√µes que o usuario pediu e com o limit estipulado pela fun√ß√£o
 	$query = ("
 			SELECT
 			  `cadastro`.`razaosocial`, `cadastro`.`cnpj`, `cadastro`.`cpf`,
@@ -287,13 +287,13 @@ if(mysql_num_rows($sql_pesquisa)){
 		$tipos_extenso = array(
 			"prestador"              => "Prestador",
 			"empreiteira"            => "Empreiteira",
-			"instituicao_financeira" => "InstituiÁ„o Financeira",
-			"cartorio"               => "CartÛrio",
-			"operadora_credito"      => "Operadora de CrÈdito",
-			"grafica"                => "Gr·fica",
+			"instituicao_financeira" => "Institui√ß√£o Financeira",
+			"cartorio"               => "Cart√≥rio",
+			"operadora_credito"      => "Operadora de Cr√©dito",
+			"grafica"                => "Gr√°fica",
 			"contador"               => "Contador",
 			"tomador"                => "Tomador",
-			"orgao_publico"          => "Org„o P˙blico",
+			"orgao_publico"          => "Org√£o P√∫blico",
 			"simples"                => "Simples"
 		);
 		while($dados_pesquisa = mysql_fetch_array($sql_pesquisa)){
@@ -318,8 +318,8 @@ if(mysql_num_rows($sql_pesquisa)){
 </table>
 <?php
  }else{
- //caso n„o encontre resultados, a mensagem 'N„o h· resultados!' ser· mostrada na tela
-	echo "<center><b><font class=\"fonte\">N„o h· resultados!</font></b></center>";
+ //caso n√£o encontre resultados, a mensagem 'N√£o h√° resultados!' ser√° mostrada na tela
+	echo "<center><b><font class=\"fonte\">N√£o h√° resultados!</font></b></center>";
 	
 }
 

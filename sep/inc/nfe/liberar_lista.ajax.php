@@ -57,11 +57,11 @@ Fith Floor, Boston, MA 02110-1301, USA
 ?>
 	<table width="100%">
         <tr bgcolor="#999999">
-            <td width="102" align="center">Número</td>
+            <td width="102" align="center">NÃºmero</td>
             <td width="102" align="center">Tipo</td>
             <td width="767" align="center">Nome</td>
             <td width="192" align="center">Cnpj</td>
-            <td width="202" align="center">Ações</td>
+            <td width="202" align="center">AÃ§Ãµes</td>
         </tr>
 		<?php
 			while(list($codigo,$nome,$cnpj,$cpf,$codtipo) = mysql_fetch_array($sql_pedidos)){
@@ -69,7 +69,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 			switch($codtipo){
 				case $codprest 	  : $codtipo = "Prestador"; break;
 				case $codsimples  : $codtipo = "Simples";   break;
-				case $codgraf 	  : $codtipo = "Gráfica";   break;
+				case $codgraf 	  : $codtipo = "GrÃ¡fica";   break;
 				case $codcontador : $codtipo = "Contador";  break;
 			}
 			$nome_curto = ResumeString($nome,60);
@@ -94,7 +94,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 			echo "
 				<table width=\"\">
 					<tr>
-						<td align=\"center\"><label>Não há solicitações de ativação</label></td>
+						<td align=\"center\"><label>NÃ£o hÃ¡ solicitaÃ§Ãµes de ativaÃ§Ã£o</label></td>
 					</tr>
 				</table>
 			";

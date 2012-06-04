@@ -24,9 +24,9 @@ Fith Floor, Boston, MA 02110-1301, USA
 	}else{
 		if($_POST['excluir']){
 			$codigo = $_POST['excluir'];
-			//Mensagem('Serviço excluido!');
+			//Mensagem('ServiÃ§o excluido!');
 			mysql_query("DELETE FROM servicos WHERE codigo='$codigo'");
-			add_logs('Excluiu um Serviço');
+			add_logs('Excluiu um ServiÃ§o');
 			unset($codigo);
 		}
 	?>
@@ -61,8 +61,8 @@ Fith Floor, Boston, MA 02110-1301, USA
 				<td>
 					<select name="cmbTipoPessoa" id="cmbTipoPessoa" class="combo">
 						<option value=""></option>
-						<option value="PJ">Pessoa Jurídica</option>
-						<option value="PF">Pessoa Física</option>
+						<option value="PJ">Pessoa JurÃ­dica</option>
+						<option value="PF">Pessoa FÃ­sica</option>
 						<option value="PJPF">Ambas</option>
 					</select>
 				</td>

@@ -18,12 +18,12 @@
 				
                 <div id="container-1">
                     <ul>
-                        <li><a href="#fragment-1"><span>Controle ArrecadaÁ„o</span></a></li>
+                        <li><a href="#fragment-1"><span>Controle Arrecada√ß√£o</span></a></li>
                         <li><a href="#fragment-2"><span>Notas Emitidas</span></a></li>
                         <li><a href="#fragment-3"><span>Notas Tomadas</span></a></li>
                     </ul>
                     <div id="fragment-1">
-						Impress„o do documento de arrecadaÁ„o						
+						Impress√£o do documento de arrecada√ß√£o						
 						<a href="../livro/imprimir_controlearrec.php?livro=<?php echo $_GET['cod'];?>" target="_blank">
             				<img width="30" height="30" src="../sep/img/botao_imprimir.jpg" title="Imprimir" style="border:none;"/>
 			            </a>
@@ -31,14 +31,14 @@
 						<?php //include("dados_controlearrec.php");?>
                     </div>
                     <div id="fragment-2">
-                    	Impress„o do documento de Notas Emitidas					
+                    	Impress√£o do documento de Notas Emitidas					
 						<a href="../livro/imprimir_nfeemitidas.php?livro=<?php echo $_GET['cod'];?>" target="_blank">
             				<img width="30" height="30" src="../sep/img/botao_imprimir.jpg" title="Imprimir" style="border:none;"/>
 			            </a>
                         <?php //include("livro/dados_notasemitidas.php");?>
                     </div>
                     <div id="fragment-3">
-                    	Impress„o do documento de Notas Tomadas					
+                    	Impress√£o do documento de Notas Tomadas					
 						<a href="../livro/imprimir_nfetomadas.php?livro=<?php echo $_GET['cod'];?>" target="_blank">
             				<img width="30" height="30" src="../sep/img/botao_imprimir.jpg" title="Imprimir" style="border:none;"/>
 			            </a>

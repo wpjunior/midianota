@@ -22,7 +22,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 $sql_municipio=mysql_query("SELECT cidade, estado FROM configuracoes");
 $dados_municipio=mysql_fetch_array($sql_municipio);
 
-//Verifica se foi inserido alguma empresa nova, se for vai para o arquivo de inserÁ„o
+//Verifica se foi inserido alguma empresa nova, se for vai para o arquivo de inser√ß√£o
  if(($_POST['btCadastrar'] =="Salvar")&&($_POST['hdAtualizar'] ==''))
  {   
    include("inserir.php");
@@ -55,7 +55,7 @@ $dados_municipio=mysql_fetch_array($sql_municipio);
 		}
 	}
 </script>
-<!-- Formul·rio de inserÁ„o de empresa  -->
+<!-- Formul√°rio de inser√ß√£o de empresa  -->
 <style type="text/css">
 <!--
 #divBusca {
@@ -122,7 +122,7 @@ input[type*="text"]{
 		list($nome_responsavel,$cpf_responsavel) = mysql_fetch_array($sql_resp);
 		
 		
-		//Busca as informaÁıes que s„o extra para cada tipo de prestador
+		//Busca as informa√ß√µes que s√£o extra para cada tipo de prestador
 		$sql_info_instituicoes = mysql_query("SELECT agencia, codbanco FROM inst_financeiras WHERE codcadastro = '$codigo'");
 		list($agencia_inst,$codbanco_inst) = mysql_fetch_array($sql_info_instituicoes);
 		
@@ -177,7 +177,7 @@ input[type*="text"]{
 					 >				</td>
 			</tr>
 			<tr>
-				<td align="left" style="text-indent:5px"> Raz„o Social<font color="#FF0000">*</font> </td>
+				<td align="left" style="text-indent:5px"> Raz√£o Social<font color="#FF0000">*</font> </td>
 				<td colspan="3" align="left">
 					<input type="text" size="70" maxlength="100" name="txtInsRazaoSocial" id="txtInsRazaoSocial" class="texto" value="<?php if(isset($razaosocial)){echo $razaosocial;} ?>"
 					>				</td>
@@ -235,7 +235,7 @@ input[type*="text"]{
 			<tr>
 				<td colspan="4">
 					
-					<!-- Tabela instituiÁ„o e operadoras -->
+					<!-- Tabela institui√ß√£o e operadoras -->
 					
 					<table width="100%" border="0" cellspacing="1" cellpadding="2" align="left" id="tbl_inst_opr" style="display:none; margin:0px">
 						<?php
@@ -243,7 +243,7 @@ input[type*="text"]{
 						?>
 					</table>
 					
-					<!-- Tabela C·rtorios -->
+					<!-- Tabela C√°rtorios -->
 					
 					<table width="100%" border="0" cellspacing="1" cellpadding="2" align="left" id="tbl_cart" style="display:none; margin:0px">
 						<?php
@@ -278,7 +278,7 @@ input[type*="text"]{
 				<td colspan="2"><input name="txtPISPASEP" class="texto" type="text" maxlength="20" value="<?php echo $pispasep;?>" /></td>
 			</tr>
 			<tr>
-				<td align="left" style="text-indent:5px">MunicÌpio<font color="#FF0000">*</font></td>
+				<td align="left" style="text-indent:5px">Munic√≠pio<font color="#FF0000">*</font></td>
 				<td colspan="3" align="left">
 					<div  id="txtInsMunicipioEmpresa">
 						<select name="txtInsMunicipioEmpresa" id="txtInsMunicipioEmpresa" class="combo">
@@ -309,12 +309,12 @@ input[type*="text"]{
 			<tr>
 				<td align="left"></td>
 				<td align="left" colspan="3">
-					<input name="btGerar" value="Gerar senha" class="botao" type="submit" <?php if(!$email){ echo "disabled=\"disabled\"";}?> /><?php if(!$email){?><b>… necessario ter um e-mail para gerar a senha</b><?php }?>
+					<input name="btGerar" value="Gerar senha" class="botao" type="submit" <?php if(!$email){ echo "disabled=\"disabled\"";}?> /><?php if(!$email){?><b>√â necessario ter um e-mail para gerar a senha</b><?php }?>
 				</td>
 			</tr>
 			<?php }?>
 			<tr>
-				<td align="left" style="text-indent:5px">Tipo de <br />&nbsp;declaraÁ„o<font color="#FF0000">*</font></td>
+				<td align="left" style="text-indent:5px">Tipo de <br />&nbsp;declara√ß√£o<font color="#FF0000">*</font></td>
 				<td colspan="3" align="left" id="tdTipoDec">
 					<select name="cmbTipoDec" id="cmbTipoDec" class="combo">
 						<option value=""></option>
@@ -363,7 +363,7 @@ input[type*="text"]{
 					$cont_aux_socios = $contsocios;	  
 					print("<tr>
 							  <td colspan=4 align=left>
-							   <b>Respons·vel/SÛcio</b>
+							   <b>Respons√°vel/S√≥cio</b>
 							  </td>
 							 </tr>
 							");
@@ -386,17 +386,17 @@ input[type*="text"]{
 			</tr>
 			<tr>
 				<td colspan="4" align="left">
-					<!-- bot„o que chama a funÁ„o JS e mostra + um sÛcio-->
-					<input type="button" value="Adicionar Respons·vel/SÛcio" name="btAddSocio" class="botao" onclick="incluirSocio()" />
+					<!-- bot√£o que chama a fun√ß√£o JS e mostra + um s√≥cio-->
+					<input type="button" value="Adicionar Respons√°vel/S√≥cio" name="btAddSocio" class="botao" onclick="incluirSocio()" />
 					<font color="#FF0000">*</font></td>
 			</tr>
 			<tr>
 				<td colspan="4" align="center">
-					<!--CAMPO S”CIOS --------------------------------------------------------------------------->
+					<!--CAMPO S√ìCIOS --------------------------------------------------------------------------->
 					<table width="100%" border="0" cellspacing="1" cellpadding="2">
 						<?php include("socios.php")?>
 					</table>
-					<!-- CAMPO S“CIOS FIM -->				</td>
+					<!-- CAMPO S√íCIOS FIM -->				</td>
 			</tr>
 			<tr>
 				<td colspan="4" align="left">
@@ -405,7 +405,7 @@ input[type*="text"]{
 				<table width="100%" border="0" cellspacing="1" cellpadding="2" id="tblServicos">
 					<tr>
 						<td align="left" colspan="4">
-							<b>ServiÁos</b> <br />						</td>					
+							<b>Servi√ßos</b> <br />						</td>					
 						<td></td>
 					</tr>
 					<!---------------- LISTAGEM DOS SERVICOS A SEREM EDITADOS ------------------------------------------------------->
@@ -448,8 +448,8 @@ input[type*="text"]{
 			
 			<tr id="trBotao">
 				<td colspan="4" align="left">
-					<!-- bot„o que chama a funÁ„o JS e mostra + um serviÁo-->
-					<input type="button" value="Adicionar ServiÁos" name="btAddServicos" class="botao" onclick="incluirServico()" />
+					<!-- bot√£o que chama a fun√ß√£o JS e mostra + um servi√ßo-->
+					<input type="button" value="Adicionar Servi√ßos" name="btAddServicos" class="botao" onclick="incluirServico()" />
 					<font color="#FF0000">*</font></td>
 			</tr>
 			<tr id="trCombos">
@@ -495,7 +495,7 @@ input[type*="text"]{
 		<td align="right" background="img/form/rodape_fundo.jpg"><img src="img/form/rodape_cantodir.jpg" /></td>
 	</tr>
 </table>
-<!-- Formul·rio de inserÁ„o de serviÁos Fim-->
+<!-- Formul√°rio de inser√ß√£o de servi√ßos Fim-->
 <script>
 	if(document.getElementById('cmbCodtipo')){
 		alternaCampos('cmbCodtipo');
