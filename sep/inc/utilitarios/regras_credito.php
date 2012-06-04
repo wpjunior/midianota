@@ -34,7 +34,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 			add_logs('Inseriu uma Regra');
 			Mensagem("Regra inserida com sucesso!");
 		}else{
-			Mensagem("Preencha os campos obrigatórios!");
+			Mensagem("Preencha os campos obrigatÃ³rios!");
 		}		
 	}
 	
@@ -47,7 +47,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 		$estadoedit     = $_POST['cmbEstadoEdit'];
 		mysql_query("UPDATE nfe_creditos SET credito = '$creditoedit', tipopessoa = '$tipopessoaedit', issretido = '$issretidoedit', valor = '$valoredit', estado = '$estadoedit' WHERE codigo = '$codigoedit'");
 		add_logs('Atualizou uma regra');
-		Mensagem("Informações da regra atualizadas!");
+		Mensagem("InformaÃ§Ãµes da regra atualizadas!");
 	}
 	
 	if($_POST['btExcluir'] != ""){
@@ -74,7 +74,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 <table border="0" cellspacing="0" cellpadding="0" bgcolor="#CCCCCC">
 	<tr>
 		<td width="18" align="left" background="img/form/cabecalho_fundo.jpg"><img src="img/form/cabecalho_icone.jpg" /></td>
-		<td width="500" background="img/form/cabecalho_fundo.jpg" align="left" class="formCabecalho">&nbsp;Regras de crédito</td>
+		<td width="500" background="img/form/cabecalho_fundo.jpg" align="left" class="formCabecalho">&nbsp;Regras de crÃ©dito</td>
 		<td width="19" align="right" valign="top" background="img/form/cabecalho_fundo.jpg"><a href=""><img src="img/form/cabecalho_btfechar.jpg" width="19" height="21" border="0" /></a></td>
 	</tr>
 	<tr>
@@ -83,13 +83,13 @@ Fith Floor, Boston, MA 02110-1301, USA
 			<form method="post">
 				<input type="hidden" name="include" id="include" value="<?php echo $_POST["include"];?>" />
 				<fieldset>
-				<legend>Sistema de Créditos</legend>
+				<legend>Sistema de CrÃ©ditos</legend>
 					<table>
 						<tr>
-							<td>Ativar sistema de créditos</td>
+							<td>Ativar sistema de crÃ©ditos</td>
 							<td>
 								<label><input type="radio" name="rbCreditos" id="rbCreditosS" value="sim" <?php if($ativar_creditos=='s'){echo 'checked="checked"';}?> /> Sim</label>
-								<label><input type="radio" name="rbCreditos" id="rbCreditosN" value="nao" <?php if($ativar_creditos=='n'){echo 'checked="checked"';}?> /> Não</label>
+								<label><input type="radio" name="rbCreditos" id="rbCreditosN" value="nao" <?php if($ativar_creditos=='n'){echo 'checked="checked"';}?> /> NÃ£o</label>
 							</td>
 						</tr>
 						<tr>
@@ -100,7 +100,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 			</form>
 			<form method="post" name="frmCreditos" id="frmCreditos">
 				<input type="hidden" name="include" id="include" value="<?php echo $_POST["include"];?>" />
-				<fieldset><legend>Inserção de regras de créditos</legend>
+				<fieldset><legend>InserÃ§Ã£o de regras de crÃ©ditos</legend>
 					<table width="100%">
 						<tr>
 							<td width="17%" align="left">Tipo Pessoa<font color="#FF0000">*</font></td>
@@ -108,7 +108,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 								<select name="cmbTipoPessoa" id="cmbTipoPessoa" class="combo">
 									<option value=""></option>
 									<option value="PF"<?php if($tipopessoa == "PF"){ echo "selected=selected";}?>>Pessoa Fisica</option>
-									<option value="PJ"<?php if($tipopessoa == "PJ"){ echo "selected=selected";}?>>Pessoa Jurídica</option>
+									<option value="PJ"<?php if($tipopessoa == "PJ"){ echo "selected=selected";}?>>Pessoa JurÃ­dica</option>
 									<option value="PFPJ"<?php if($tipopessoa == "PFPJ"){ echo "selected=selected";}?>>Ambas</option>
 								</select>
 							</td>
@@ -119,7 +119,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 								<select name="cmbISSRetido" id="cmbISSRetido" class="combo">
 									<option value=""></option>
 									<option value="S"<?php if($issretido == "S"){ echo "selected=selected";}?>>Sim</option>
-									<option value="N"<?php if($issretido == "N"){ echo "selected=selected";}?>>Não</option>
+									<option value="N"<?php if($issretido == "N"){ echo "selected=selected";}?>>NÃ£o</option>
 								</select>
 							</td>
 						</tr>
@@ -127,7 +127,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 							<td align="left">Valor<font color="#FF0000">*</font></td>
 							<td width="23%" align="left">
 							<input type="text" name="txtValor" id="txtValor" size="15" onkeyup="MaskMoeda(this)" class="texto" value="<?php echo DecToMoeda($valor);?>" ></td>
-							<td width="10%" align="left">Crédito<font color="#FF0000">*</font></td>
+							<td width="10%" align="left">CrÃ©dito<font color="#FF0000">*</font></td>
 							<td width="50%" align="left">
 							<input type="text" name="txtCredito" id="txtCredito" size="6" onkeyup="MaskPercent(this)" class="texto" value="<?php echo $credito;?>" ></td>
 						</tr>

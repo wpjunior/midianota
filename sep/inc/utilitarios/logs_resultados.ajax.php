@@ -56,10 +56,10 @@ if($result>0){
 ?>
 	<table width="100%">
 		<tr bgcolor="#999999"> 
-			<td width="180" align="center">Usu·rio</td>
+			<td width="180" align="center">Usu√°rio</td>
 			<td width="80" align="center">IP</td>
 			<td width="140" align="center">Data e hora</td>
-			<td align="center">AÁ„o</td>   
+			<td align="center">A√ß√£o</td>   
 		</tr>
 		<?php
 		while(list($user, $ip, $data, $acao) = mysql_fetch_array($sql_logs)){
@@ -82,7 +82,7 @@ if($result>0){
 	?>
 	<table width="100%">
 		<tr>
-			<td><b>N„o h· nenhum log</b></td>
+			<td><b>N√£o h√° nenhum log</b></td>
 		</tr>
 	</table>
 	<?php

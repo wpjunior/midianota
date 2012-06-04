@@ -21,7 +21,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 <table width="800" bgcolor="#CCCCCC">
 	<tr>
 		<td>
-			<fieldset><legend>Relatórios Creditos</legend>
+			<fieldset><legend>RelatÃ³rios Creditos</legend>
 				<form method="post" id="frmRelatorioCred" name="frmRelatorioCred" target="_blank" action="inc/creditos/imprimir.php">
 					<table width="100%">
 						<tr>
@@ -40,7 +40,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 								<select name="cmbISSretido" id="cmbISSretido" class="combo" onchange="testaValor('cmbTipo','cmbISSretido')">
 									<option value="">Selecione</option>
 									<option value="S">Sim</option>
-									<option value="N">Não</option>
+									<option value="N">NÃ£o</option>
 								</select>
 							</td>
 						</tr>
@@ -53,7 +53,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 							</td>
 						</tr>
 						<tr>
-							<td><br /><label title="Imprimir regra de crédito"><input name="btRelatorio" type="submit" class="botao" value="Relatório" /></label></td>
+							<td><br /><label title="Imprimir regra de crÃ©dito"><input name="btRelatorio" type="submit" class="botao" value="RelatÃ³rio" /></label></td>
 							<td><br /><label title="Limpar"><input name="btRelatorio" type="reset" class="botao" value="Limpar" /></label></td>
 						</tr>
 					</table> 

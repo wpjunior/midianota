@@ -31,12 +31,12 @@ Fith Floor, Boston, MA 02110-1301, USA
 					elseif(($baixo == "")&&($medio == "")){$valor = "A";}
 					$sql = mysql_query("UPDATE menus_prefeitura SET nivel='$valor' WHERE codigo='$codigo'");
 				}
-			add_logs('Atualizou o NÌvel de Usu·rios');
+			add_logs('Atualizou o N√≠vel de Usu√°rios');
 			echo "<script>alert('Dados alterados com sucesso');</script>";
 		}
 ?>
-<fieldset><legend>Defina as opÁıes do menu para cada nÌvel de usu·rio</legend>
-	<p align="center">Os us·rios com nÌvel de permiss„o Alto tem acesso a todos os menus </p>
+<fieldset><legend>Defina as op√ß√µes do menu para cada n√≠vel de usu√°rio</legend>
+	<p align="center">Os us√°rios com n√≠vel de permiss√£o Alto tem acesso a todos os menus </p>
 	<?php
 		$sql = mysql_query("SELECT codigo, menu, nivel FROM menus_prefeitura WHERE menu<>'Sair' AND menu<>'Manuais de Ajuda' ORDER BY ordem");
 		$x=0;
@@ -52,7 +52,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 					<tr>
 						<td align=\"left\">$menu</td>
 						<td align=\"left\">
-							<input type=\"checkbox\" id=\"medio$x\" name=\"medio$x\" value=\"M\" />MÈdio
+							<input type=\"checkbox\" id=\"medio$x\" name=\"medio$x\" value=\"M\" />M√©dio
 							<input type=\"hidden\" name=\"txtCodigo$x\" value=\"$codigo\" />
 						</td>
 						<td align=\"left\">

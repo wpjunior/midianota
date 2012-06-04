@@ -35,7 +35,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 		echo "<script>alert('Ordem dos menus alterada!');</script>";
 	}
 ?>
-<fieldset><legend>Defina a ordem em que os menus ir„o aparecer</legend>
+<fieldset><legend>Defina a ordem em que os menus ir√£o aparecer</legend>
 <?php
 $sql = mysql_query("
 	SELECT 

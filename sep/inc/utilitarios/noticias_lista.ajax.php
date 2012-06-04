@@ -18,7 +18,7 @@ www.softwarepublico.gov.br, ou escreva para a Fundacao do Software Livre Inc., 5
 Fith Floor, Boston, MA 02110-1301, USA
 */
 ?>
-<fieldset><legend>Notícias Inseridas</legend>
+<fieldset><legend>NotÃ­cias Inseridas</legend>
 <?php
 	// Conexao ao banco MySQL e consulta
 	require_once("../conect.php");
@@ -32,10 +32,10 @@ Fith Floor, Boston, MA 02110-1301, USA
     <table width="100%">
         <tr bgcolor="#999999">
             <td width="32%" align="center">
-                <b>Título</b>
+                <b>TÃ­tulo</b>
 			</td>
             <td width="45%" align="center">
-                <b>Notícia</b>						
+                <b>NotÃ­cia</b>						
 			</td>
             <td width="10%" align="center">
                 <b>Data</b>						
@@ -57,10 +57,10 @@ Fith Floor, Boston, MA 02110-1301, USA
             <td align="left"><?php echo $titulo;?></td>
             <td align="center"><?php echo $textreduzido;?></td>
             <td align="center"><?php echo DataPt($data);?></td>
-            <td align="center"><input name="btVer" id="btLupa" value="" title="Ver Conteúdo completo" 
+            <td align="center"><input name="btVer" id="btLupa" value="" title="Ver ConteÃºdo completo" 
             	onclick="VisualizarNovaLinha('<?php echo $codigo;?>','tdnoticia<?php echo $x;?>',this,'inc/utilitarios/noticias_ver.ajax.php');" />
     			<input name="btExcluir" id="btX" value=" " class="botao" type="submit" 
-				onclick="document.getElementById('hdCodNt').value = <?php echo $codigo;?>;return confirm('Deseja Excluir esta Notícia?')" />
+				onclick="document.getElementById('hdCodNt').value = <?php echo $codigo;?>;return confirm('Deseja Excluir esta NotÃ­cia?')" />
 			</td>
 		</tr>
         <tr>

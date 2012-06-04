@@ -38,7 +38,7 @@ if($combo){
 <fieldset><legend>Logs <?php echo $legend;?></legend>
 	<table width="100%">
 		<tr>
-		  <td width="91">Usu·rio:</td>
+		  <td width="91">Usu√°rio:</td>
 		  <td width="1286"><input name="txtNome" id="txtNome" type="text" class="texto" size="30" /></td>
 		</tr>
 		<tr>

@@ -17,7 +17,7 @@ if($_POST["btBoleto"] == "Boleto"){
 <table border="0" cellspacing="0" cellpadding="0" bgcolor="#CCCCCC">
   <tr>
     <td width="18" align="left" background="img/form/cabecalho_fundo.jpg"><img src="img/form/cabecalho_icone.jpg" /></td>
-    <td width="700" background="img/form/cabecalho_fundo.jpg" align="left" class="formCabecalho">&nbsp;Utilit&aacute;rios - Configurações</td>  
+    <td width="700" background="img/form/cabecalho_fundo.jpg" align="left" class="formCabecalho">&nbsp;Utilit&aacute;rios - ConfiguraÃ§Ãµes</td>  
     <td width="19" align="right" valign="top" background="img/form/cabecalho_fundo.jpg"><a href=""><img src="img/form/cabecalho_btfechar.jpg" width="19" height="21" border="0" /></a></td>
   </tr>
   <tr>
@@ -25,10 +25,10 @@ if($_POST["btBoleto"] == "Boleto"){
     <td align="center">
 		<form method="post" id="frmConfiguracoes" enctype="multipart/form-data">
 			<input name="include" id="include" type="hidden" value="<?php echo $_POST["include"];?>" />
-			<fieldset><legend>Configurações</legend>
+			<fieldset><legend>ConfiguraÃ§Ãµes</legend>
 				<table width="100%">
 					<tr align="left">
-						<td width="91" align="left"><label for="txtEndereco">Endereço:</label></td>
+						<td width="91" align="left"><label for="txtEndereco">EndereÃ§o:</label></td>
 						<td width="218"><input name="txtEndereco" id="txtEndereco" type="text" class="texto" value="<?php echo $endereco;?>" ></td>
 						<td width="244"><label for="txtCidade">Cidade: </label></td>
 						<td colspan="2"><input name="txtCidade" id="txtCidade" type="text" class="texto" value="<?php echo $cidade;?>" ></td>
@@ -54,7 +54,7 @@ if($_POST["btBoleto"] == "Boleto"){
 					<tr align="left">
 						<td><label for="txtSecretaria">Secretaria:</label></td>
 						<td><input name="txtSecretaria" id="txtSecretaria" type="text" class="texto" value="<?php echo $secretaria;?>" ></td>
-						<td><label for="txtSecretario">Secretário:</label></td>
+						<td><label for="txtSecretario">SecretÃ¡rio:</label></td>
 						<td colspan="2"><input name="txtSecretario" id="txtSecretario" type="text" class="texto" value="<?php echo $secretario;?>" ></td>
 					</tr>
 					<tr align="left">
@@ -64,22 +64,22 @@ if($_POST["btBoleto"] == "Boleto"){
 						<td colspan="2"><input name="txtJuros" id="txtJuros" type="text" class="texto" size="6" value="<?php echo $taxajuros;?>" onkeyup="MaskPercent(this)" ></td>
 					</tr>
 					<tr align="left">
-						<td><label for="txtTaxaCorrecao">Taxa correção:</label></td>
+						<td><label for="txtTaxaCorrecao">Taxa correÃ§Ã£o:</label></td>
 						<td>
 							<input name="txtTaxaCorrecao" id="txtTaxaCorrecao" type="text" class="texto" size="6" value="<?php echo $taxacorrecao;?>" 
 							onkeyup="MaskPercent(this)" >
 						</td>
-						<td><label for="txtData">Dia tributação:</label></td>
+						<td><label for="txtData">Dia tributaÃ§Ã£o:</label></td>
 						<td colspan="2">
 							<input name="txtData" id="txtData" maxlength="2" size="3" type="text"  class="texto" value="<?php echo $data_tributacao;?>" />
-							<label><input name="ckbData" type="checkbox" id="ckbData" onclick="DesabilitarDataTributo()" />Último dia do mês</label>
+							<label><input name="ckbData" type="checkbox" id="ckbData" onclick="DesabilitarDataTributo()" />Ãšltimo dia do mÃªs</label>
 						</td>
 					</tr>
 					<tr align="left">
-						<td><label for="flBrasao">Brasão</label></td>
+						<td><label for="flBrasao">BrasÃ£o</label></td>
 						<td><input name="flBrasao" id="flBrasao" type="file" class="texto" ></td>
 						<td>
-							<label>Gerar guia para declarações pelo site</label>
+							<label>Gerar guia para declaraÃ§Ãµes pelo site</label>
 						</td>
 						<td>
 							<label><input type="radio" name="rbGuias" id="rbGuiasS" value="t" <?php if($gerar_guia_site=='t'){echo 'checked="checked"';}?> /> Todas</label>
@@ -91,7 +91,7 @@ if($_POST["btBoleto"] == "Boleto"){
 					<tr align="left">
 						<td><label for="flTopo">Topo:</label></td>
 						<td><input name="flTopo" id="flTopo" type="file" class="texto" ></td>
-						<td><label>Permitir Declarações atrasadas pelo site:</label></td>
+						<td><label>Permitir DeclaraÃ§Ãµes atrasadas pelo site:</label></td>
 						<td width="151">
 							<label><input type="radio" name="rbDec" id="rbDecS" value="s" <?php if($declaracoes_atrazadas=='s'){echo 'checked="checked"';}?> /> Sim</label>
 						</td>
@@ -102,7 +102,7 @@ if($_POST["btBoleto"] == "Boleto"){
 					<tr>
 						<td><label for="flLogo">Logo: </label></td>
 						<td><input name="flLogo" id="flLogo" type="file" class="texto" ></td>
-						<td style="visibility:hidden">Tipo de serviço: </td>
+						<td style="visibility:hidden">Tipo de serviÃ§o: </td>
 						<td style="visibility:hidden"><label><input name="rbTipoServico" value="CNAE" type="radio" /> CNAE</label></td>
 						<td width="139" style="visibility:hidden">
 							<label><input name="rbTipoServico" value="LC 116" type="radio" /> LC 116</label>
@@ -116,7 +116,7 @@ if($_POST["btBoleto"] == "Boleto"){
 						<td colspan="4"><label>Ver imagem atual de: </label>						
 							<select name="cmbImagem" class="combo" onchange="acessoAjax('inc/utilitarios/configuracoes_imagens.ajax.php','frmConfiguracoes','divconfiguracoes')">
 								<option value=""></option>
-								<option value="B">Brasão</option>
+								<option value="B">BrasÃ£o</option>
 								<option value="L">Logo</option>
 								<option value="T">Topo</option>
 							</select>

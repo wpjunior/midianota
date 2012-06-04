@@ -33,10 +33,10 @@ Fith Floor, Boston, MA 02110-1301, USA
 				<table width="100%">
 					<tr>
 						<td width="38%" align="right">
-							<input type="submit" class="botao" name="btUsuarios" value="Usuários" />
+							<input type="submit" class="botao" name="btUsuarios" value="UsuÃ¡rios" />
 						</td>
 						<td width="24%" align="center">
-							<input type="submit" class="botao" name="btNivel" value="Níveis de Permissão" />
+							<input type="submit" class="botao" name="btNivel" value="NÃ­veis de PermissÃ£o" />
 						</td>
 						<td width="38%" align="left">
 							<input type="submit" class="botao" name="btOrdem" value="Ordem dos menus" />
@@ -46,9 +46,9 @@ Fith Floor, Boston, MA 02110-1301, USA
 			</fieldset>
 		</form>
 			<?php
-				if($_POST["btUsuarios"] == "Usuários"){
+				if($_POST["btUsuarios"] == "UsuÃ¡rios"){
 					include("inc/utilitarios/usuarios_inserir.php");
-				}elseif($_POST["btNivel"] == "Níveis de Permissão"){
+				}elseif($_POST["btNivel"] == "NÃ­veis de PermissÃ£o"){
 					include("inc/utilitarios/usuarios_niveis.php");
 				}elseif($_POST["btOrdem"] == "Ordem dos menus"){
 					include("inc/utilitarios/menus_ordem.php");

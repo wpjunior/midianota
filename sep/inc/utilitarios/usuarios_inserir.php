@@ -41,20 +41,20 @@ Fith Floor, Boston, MA 02110-1301, USA
 		//atualiza os campos do banco
 		
 		mysql_query("UPDATE usuarios SET nome = '$nome', login = '$login', $str nivel = '$nivel' WHERE codigo = '$codedit'");
-		add_logs('Atualizou ConfiguraÁıes de um Usu·rio');
+		add_logs('Atualizou Configura√ß√µes de um Usu√°rio');
 		Mensagem("Usuario atualizado");
 	}//fim if
 	if($_POST["btDeletar"] == "Excluir"){
 		$coddel = $_POST["hdCodDel"];
 		mysql_query("DELETE FROM usuarios WHERE codigo = '$coddel'");
-		add_logs('Excluiu ConfiguraÁıes de um Usu·rio');
+		add_logs('Excluiu Configura√ß√µes de um Usu√°rio');
 		Mensagem("Usuario excluido");
 	}//fim if
 ?>
 <form method="post" id="frmUsuario" name="frmUsuario">
 	<input type="hidden" name="include" id="include" value="<?php echo $_POST["include"];?>" />
 	<input type="hidden" name="btUsuarios" value="<?php echo $_POST["btUsuarios"];?>">
-	<fieldset><legend>Cadastro de Usu·rios</legend>
+	<fieldset><legend>Cadastro de Usu√°rios</legend>
 		<table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
 			<tr>
 				<td align="left" width="20%">Nome<font color="#FF0000">*</font></td>
@@ -66,15 +66,15 @@ Fith Floor, Boston, MA 02110-1301, USA
 			</tr>
 			<tr>
 				<td align="left">Senha<font color="#FF0000">*</font></td>
-				<td align="left"><input type="password" size="10" maxlength="10" name="txtSenha" id="txtSenha" class="texto">&nbsp;No m·ximo 10 caracteres</td>
+				<td align="left"><input type="password" size="10" maxlength="10" name="txtSenha" id="txtSenha" class="texto">&nbsp;No m√°ximo 10 caracteres</td>
 			</tr>
 			<tr>
-				<td align="left">NÌvel de permiss„o</td>
+				<td align="left">N√≠vel de permiss√£o</td>
 				<td align="left">
 					<select name="cmbNivel" id="cmbNivel">
 						<option value=""></option>
 						<option value="A">Alto</option>
-						<option value="M">MÈdio</option>
+						<option value="M">M√©dio</option>
 						<option value="B">Baixo</option>
 					</select>
 				</td>
@@ -91,14 +91,14 @@ Fith Floor, Boston, MA 02110-1301, USA
 	$result = mysql_num_rows($sql);
 	if($result>0){
 ?>
-	<!-- cabeÁalho da pesquisa --> 
-	<fieldset><legend>Usu·rios Cadastrados: <?php echo $result; ?></legend>
+	<!-- cabe√ßalho da pesquisa --> 
+	<fieldset><legend>Usu√°rios Cadastrados: <?php echo $result; ?></legend>
 		<table width="100%">  
 			<tr bgcolor="#999999">
 				<td width="136" align="center">Nome</td>
 				<td width="138" align="center">Login</td>
-				<td width="49" align="center">NÌvel</td>
-				<td width="126" align="center">⁄lt login</td>
+				<td width="49" align="center">N√≠vel</td>
+				<td width="126" align="center">√ölt login</td>
 				<td width="49" align="center"></td>
 				<td align="center"></td>
 			</tr>

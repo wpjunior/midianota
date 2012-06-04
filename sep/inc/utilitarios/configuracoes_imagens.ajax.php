@@ -57,7 +57,7 @@ if($combo){
 	}else{?>
 <table width="100%">
 	<tr>
-		<td><font color="#FF0000"><b>Não possui imagem!</b></font></td>
+		<td><font color="#FF0000"><b>NÃ£o possui imagem!</b></font></td>
 	</tr>
 </table>
 <?php

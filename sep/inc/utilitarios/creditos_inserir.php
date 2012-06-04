@@ -27,8 +27,8 @@ Fith Floor, Boston, MA 02110-1301, USA
 	$Valor = 	  $_POST['txtValor'];
 		if(($ValorNota)	&& ($Valor)){
 			mysql_query("INSERT INTO nfe_creditos SET credito='$Valor',tipopessoa='$TipoPessoa',issretido='$ISSRetido',valor='$ValorNota'");
-			add_logs('Inseriu uma Nota de Crédito');
-			Mensagem("Crédito Cadastrado com sucesso !!");
+			add_logs('Inseriu uma Nota de CrÃ©dito');
+			Mensagem("CrÃ©dito Cadastrado com sucesso !!");
 		}else{
 			Mensagem("Informe o valor da nota");
 		}
@@ -46,15 +46,15 @@ Fith Floor, Boston, MA 02110-1301, USA
 		<td width="23%" align="left">	      Tipo de Pessoa:		 </td>
    <td align="left">  
 		   <input type="hidden" name="btRegra" value="Inserir Regra">
-		   <input type="radio" name="rdTipoPessoa" id="rdTipoPessoa" value="PF">Pessoa Física&nbsp;		
-		   <input type="radio" name="rdTipoPessoa" id="rdTipoPessoa" value="PJ" checked="checked">Pessoa Jurídica&nbsp;
+		   <input type="radio" name="rdTipoPessoa" id="rdTipoPessoa" value="PF">Pessoa FÃ­sica&nbsp;		
+		   <input type="radio" name="rdTipoPessoa" id="rdTipoPessoa" value="PJ" checked="checked">Pessoa JurÃ­dica&nbsp;
 		</td>	
 	</tr>
 	<tr>
 		<td width="23%" align="left">	      Iss Retido:		</td>  
    <td align="left">
 		   <input type="radio" name="rdISSRetido" id="rdISSRetido" value="S">Sim&nbsp;
-		   <input type="radio" name="rdISSRetido" id="rdISSRetido" value="N" checked="checked">Não&nbsp;
+		   <input type="radio" name="rdISSRetido" id="rdISSRetido" value="N" checked="checked">NÃ£o&nbsp;
 		</td>	
 	</tr>
 	<tr>
@@ -64,7 +64,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 		   <em>(somente n&uacute;meros)</em> </td>	
 	</tr>
 	<tr>
-		<td width="23%" align="left">	      % de crédito </td>	
+		<td width="23%" align="left">	      % de crÃ©dito </td>	
    <td align="left">
 		   <input type="text" name="txtValor" id="txtValor" size="5" class="texto" onBlur="ControlePercentatagem('txtValor')">&nbsp;<em>(Exemplo: 2.5 %)
         </em></td>	

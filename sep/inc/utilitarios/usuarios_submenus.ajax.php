@@ -50,7 +50,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 				<td align="left">
 					<label>
 						<input type="checkbox" id="medio<?php echo $x;?>" name="medio<?php echo $x;?>" 
-						value="M" <?php if($nivel_sub == "M"){ echo "checked";}elseif($nivel_sub == "B"){ echo "checked disabled";}?> />Médio
+						value="M" <?php if($nivel_sub == "M"){ echo "checked";}elseif($nivel_sub == "B"){ echo "checked disabled";}?> />MÃ©dio
 					</label>
 					<input type="hidden" name="txtCodigo<?php echo $x;?>" value="<?php echo $cod_sub;?>" />
 				</td>

@@ -41,7 +41,7 @@ $valor     = $_POST["cmbValor"];
 					if(mysql_num_rows($sql)){
 				?>
 				<tr>
-					<td align="center" width="20%">Crédito( % )</td>
+					<td align="center" width="20%">CrÃ©dito( % )</td>
 					<td align="center" width="20%">Tipo</td>
 					<td align="center" width="27%">ISS retido</td>
 					<td align="center" width="33%">Valor</td>
@@ -53,7 +53,7 @@ $valor     = $_POST["cmbValor"];
 						while(list($credito,$tipopessoa,$issretido,$valor) = mysql_fetch_array($sql)){
 							switch($issretido){
 								case "S": $issretido = "Sim"; break;
-								case "N": $issretido = "Não"; break;
+								case "N": $issretido = "NÃ£o"; break;
 							}
 							switch($tipopessoa){
 								case "PF": $tipopessoa = "Pessoa fisica";   break;

@@ -24,16 +24,16 @@ Fith Floor, Boston, MA 02110-1301, USA
 	$texto  = $_POST["txtText"];
 	if($_POST["btInserir"] == "Inserir Nova"){
 		mysql_query("INSERT INTO noticias SET titulo = '$titulo', texto = '$texto', data = NOW()");
-		add_logs('Inseriu uma Notícia');
-		Mensagem("Notícia inserida");
+		add_logs('Inseriu uma NotÃ­cia');
+		Mensagem("NotÃ­cia inserida");
 	}//fim if
 	 if($_POST["btExcluir"] == " "){
 		$cod_nt= $_POST['hdCodNt'];
 		$sql_busca_nt = mysql_query("SELECT texto FROM noticias WHERE codigo = '$cod_nt'");
 		list($exc_nt) = mysql_fetch_array($sql_busca_nt);
 		mysql_query("DELETE FROM noticias WHERE codigo ='$cod_nt'"); 
-		add_logs('Excluiu uma Notícia');
-		Mensagem("Notícia excluida!");
+		add_logs('Excluiu uma NotÃ­cia');
+		Mensagem("NotÃ­cia excluida!");
 		}		
 ?>
 <div id="divnoticias" style="position:absolute; left:30%; top:40%; display:none"></div>
@@ -48,14 +48,14 @@ Fith Floor, Boston, MA 02110-1301, USA
     <td align="center">
 		<form method="post" id="frmNoticias">
 			<input name="include" id="include" type="hidden" value="<?php echo $_POST["include"];?>" />
-				<fieldset><legend>Notícias</legend>
+				<fieldset><legend>NotÃ­cias</legend>
 					<table width="100%">
 						<tr>
-							<td width="12%" align="left">Título</td>
+							<td width="12%" align="left">TÃ­tulo</td>
 							<td width="88%" align="left"><input type="text" name="txtTitulo" id="txtTitulo" size="50" class="texto" /></td>
 						</tr>
 						<tr>
-							<td colspan="2" align="left">Conteúdo</td>
+							<td colspan="2" align="left">ConteÃºdo</td>
 						</tr>
 						<tr>
 							<td>&nbsp;</td>

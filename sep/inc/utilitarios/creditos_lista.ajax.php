@@ -29,11 +29,11 @@ Fith Floor, Boston, MA 02110-1301, USA
 ?>
 	<table width="100%">
 		<tr bgcolor="#999999">
-			<td width="3%" align="center">N°</td>
+			<td width="3%" align="center">NÂ°</td>
 			<td width="22%" align="center">Tipo Pessoa</td>
 			<td width="13%" align="center">ISS Retido</td>
 			<td width="15%" align="center">Valor</td>
-			<td width="17%" align="center">Crédito</td>
+			<td width="17%" align="center">CrÃ©dito</td>
 			<td width="14%" align="center">Estado</td>
 			<td width="16%" align="center">Editar/Excluir</td>
 		</tr>
@@ -45,7 +45,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 						$tipopessoa = "Pessoa Fisica";
 					  break;
 					case "PJ":
-						$tipopessoa = "Pessoa Jurídica";
+						$tipopessoa = "Pessoa JurÃ­dica";
 					  break;
 					case "PFPJ":
 						$tipopessoa = "Ambas";
@@ -56,7 +56,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 						$issretido = "Sim";
 					  break;
 					case "N":
-						$issretido = "Não";
+						$issretido = "NÃ£o";
 					  break;
 				}
 				switch($estado){
@@ -94,7 +94,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 	</table>
 	<?php
 	}else{
-		echo "<center><b>Não foi encontrado nenhuma regra de crédito!</b></center>";
+		echo "<center><b>NÃ£o foi encontrado nenhuma regra de crÃ©dito!</b></center>";
 	}
 	?>
 </fieldset>

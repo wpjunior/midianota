@@ -43,7 +43,7 @@ mysql_query("
 ");
 
  
-add_logs('Atualizou um Boleto Banc·rio');
+add_logs('Atualizou um Boleto Banc√°rio');
 Mensagem("Dados atualizados");
 
 

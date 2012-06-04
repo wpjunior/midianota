@@ -78,7 +78,7 @@ if($_POST["btInserir"] == "Inserir"){
 			Mensagem("Lei inserida!");
 		}//fim if
 	}else{
-		Mensagem("Preencher todos os campos para realizar a inserÁ„o");	
+		Mensagem("Preencher todos os campos para realizar a inser√ß√£o");	
 	}//fim else   
 }//fim if
 
@@ -106,7 +106,7 @@ if($_POST["btDeletar"] == "Excluir"){
 		<form method="post" id="frmLegislacao" enctype="multipart/form-data">
 			<input type="hidden" name="include" id="include" value="<?php echo $_POST["include"];?>" />
 			<input type="hidden" name="hdTipo" value="nfe" />
-			<fieldset><legend>InserÁ„o de Lei</legend>
+			<fieldset><legend>Inser√ß√£o de Lei</legend>
 				<table border="0" cellspacing="2" cellpadding="2" width="95%">
 					<tr>
 						<td width="12%" align="left">Titulo</td>
@@ -121,12 +121,12 @@ if($_POST["btDeletar"] == "Excluir"){
 						<td align="left">
                         	<input type="file" name="txtArq" id="txtArq" size="31" class="texto"/>
                             	<font color="#FF0000">
-                                	<br />O arquivo PDF n„o poder· estar nomeado com acentos , Á e caracteres especias.
+                                	<br />O arquivo PDF n√£o poder√° estar nomeado com acentos , √ß e caracteres especias.
                                 </font>
                         </td>
 					</tr>     
 					<tr>
-						<td align="left" colspan="2">DescriÁ„o:</td>
+						<td align="left" colspan="2">Descri√ß√£o:</td>
 					</tr>
 					<tr>
 						<td>&nbsp;</td>

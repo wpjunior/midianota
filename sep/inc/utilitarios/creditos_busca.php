@@ -85,7 +85,7 @@ elseif($_POST['btExcluirRegra'])
 <form method="post"> 
 <table width="100%" border="0">	
 	<tr>
-		<td align="center" width="13%">		  Crédito (%) </td>
+		<td align="center" width="13%">		  CrÃ©dito (%) </td>
     <td align="center" width="20%">	    Tipo Pessoa		</td>
     <td align="center" width="15%">	    ISS Retido		</td>
     <td align="center" width="20%">	    Valor	(R$)	</td>
@@ -116,8 +116,8 @@ elseif($_POST['btExcluirRegra'])
    $cont=0;
    while(list($codigo,$credito,$tipopessoa,$issretido,$valor)=mysql_fetch_array($sql))      
    {
-     $issretidodisplay = $issretido=="S"?"Sim":"Não";     
-	 $tipopessoadisplay = $tipopessoa == 'PF' ? 'Pessoa Física' : 'Pessoa Jurídica';   
+     $issretidodisplay = $issretido=="S"?"Sim":"NÃ£o";     
+	 $tipopessoadisplay = $tipopessoa == 'PF' ? 'Pessoa FÃ­sica' : 'Pessoa JurÃ­dica';   
 	  echo"
 	   
 	   <div style=\"display:block\" id=\"DivBusca$cont\">	       

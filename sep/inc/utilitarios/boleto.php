@@ -52,7 +52,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 <table border="0" cellspacing="0" cellpadding="0" bgcolor="#CCCCCC">
   <tr>
     <td width="18" align="left" background="img/form/cabecalho_fundo.jpg"><img src="img/form/cabecalho_icone.jpg" /></td>
-    <td width="700" background="img/form/cabecalho_fundo.jpg" align="left" class="formCabecalho">&nbsp;Utilit&aacute;rios - Configurações</td>  
+    <td width="700" background="img/form/cabecalho_fundo.jpg" align="left" class="formCabecalho">&nbsp;Utilit&aacute;rios - ConfiguraÃ§Ãµes</td>  
     <td width="19" align="right" valign="top" background="img/form/cabecalho_fundo.jpg"><a href=""><img src="img/form/cabecalho_btfechar.jpg" width="19" height="21" border="0" /></a></td>
   </tr>
   <tr>
@@ -82,7 +82,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 				</td>
 					
 					<tr>
-						<td colspan="4"><label>Instruções para Recebimento</label><br />
+						<td colspan="4"><label>InstruÃ§Ãµes para Recebimento</label><br />
 						<textarea name="txtInstrucoes" cols="60" rows="3" id="txtInstrucoes"><?php echo $instrucoes; ?></textarea>
 						</td>
 					</tr>
@@ -90,12 +90,12 @@ Fith Floor, Boston, MA 02110-1301, USA
 			</tr>
 			</table>
 			
-			<div id = "febraban"><table align="left"><tr><td>Código Febraban:</td>
+			<div id = "febraban"><table align="left"><tr><td>CÃ³digo Febraban:</td>
 				<td><input name="txtCodfebraban"  type="text" class="texto" value="<?php echo $codfebraban;?>"  ></td></tr></table></div>		
 					
 	<div id = "dadosbanco">
 				<table width="100%" align="left">
-				<td>Código do Banco: </td>
+				<td>CÃ³digo do Banco: </td>
 				<td><select name="cmbCodBanco" class="combo">
 										<?php 
 										while(list($codigob, $banco)= mysql_fetch_array($sql_banco)){
@@ -107,13 +107,13 @@ Fith Floor, Boston, MA 02110-1301, USA
 			</tr>
 			
 			<tr align="left">
-				<td align="left">Agência:</td>
+				<td align="left">AgÃªncia:</td>
 				<td><input name="txtAgencia" type="text" class="texto" value="<?php echo $agencia;?>" ></td>
 				<td>Conta Corrente</td>
 				<td><input name="txtContaCorrente" type="text" class="texto" value="<?php echo $contacorrente;?>" ></td>
 			</tr>
 			<tr align="left">
-				<td align="left">Convênio:</td>
+				<td align="left">ConvÃªnio:</td>
 				<td><input name="txtConvenio" type="text" class="texto" value="<?php echo $convenio;?>" ></td>
 				<td>Contrato:</td>
 				<td><input name="txtContrato" type="text" class="texto" value="<?php echo $contrato; ?>" ></td>

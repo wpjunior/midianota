@@ -88,6 +88,6 @@ Fith Floor, Boston, MA 02110-1301, USA
 </fieldset>
 <?php
 	}else{
-		echo "<center><b>N„o h· nenhuma lei cadastrada</b></center>";
+		echo "<center><b>N√£o h√° nenhuma lei cadastrada</b></center>";
 	}
 ?>
