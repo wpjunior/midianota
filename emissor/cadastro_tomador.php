@@ -38,7 +38,6 @@ if (!(isset($_SESSION["empresa"]))) {
                                     <td width="170" align="left" background="../img/menus/menu_fundo.jpg" valign="top">
                                     <?php include("inc/menu.php"); ?></td>
                                     <td width="590"bgcolor="#FFFFFF" valign="top">
-                                        <img src="../img/cabecalhos/notas.jpg" />
 
                                         <!-- frame central lateral direita inicio -->	
 
