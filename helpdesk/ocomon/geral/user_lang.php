@@ -1,21 +1,5 @@
-<?php  /*                        Copyright 2005 Fl�vio Ribeiro
-
-         This file is part of OCOMON.
-
-         OCOMON is free software; you can redistribute it and/or modify
-         it under the terms of the GNU General Public License as published by
-         the Free Software Foundation; either version 2 of the License, or
-         (at your option) any later version.
-
-         OCOMON is distributed in the hope that it will be useful,
-         but WITHOUT ANY WARRANTY; without even the implied warranty of
-         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-         GNU General Public License for more details.
-
-         You should have received a copy of the GNU General Public License
-         along with Foobar; if not, write to the Free Software
-         Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-  */session_start();
+<?php   
+        session_start();
 
 	include ("../../includes/include_geral.inc.php");
 	include ("../../includes/include_geral_II.inc.php");
@@ -84,7 +68,6 @@
 		$execQry = mysql_query($qry) or die ($qry);
 
 		$_SESSION['s_language'] = $_POST['lang'];
-		//print "<script>mensagem('Tema carregado com sucesso! Tecle F5 para atualizar a p�gina!'); window.opener.location.reload(); window.self.close(); </script>";
 		print "<script>mensagem('".TRANS('MSG_LANG_LOAD_SUCESS','sucesso',0)."'); window.open('../../index.php','_parent','');  </script>"; //?LOAD=ADMIN
 
 	}

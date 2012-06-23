@@ -1,31 +1,10 @@
-<?php
-/*
-COPYRIGHT 2008 - 2010 DO PORTAL PUBLICO INFORMATICA LTDA
-
-Este arquivo e parte do programa E-ISS / SEP-ISS
-
-O E-ISS / SEP-ISS e um software livre; voce pode redistribui-lo e/ou modifica-lo
-dentro dos termos da Licenca Publica Geral GNU como publicada pela Fundacao do
-Software Livre - FSF; na versao 2 da Licenca
-
-Este sistema e distribuido na esperanca de ser util, mas SEM NENHUMA GARANTIA,
-sem uma garantia implicita de ADEQUACAO a qualquer MERCADO ou APLICACAO EM PARTICULAR
-Veja a Licenca Publica Geral GNU/GPL em portugues para maiores detalhes
-
-Voce deve ter recebido uma copia da Licenca Publica Geral GNU, sob o titulo LICENCA.txt,
-junto com este sistema, se nao, acesse o Portal do Software Publico Brasileiro no endereco
-www.softwarepublico.gov.br, ou escreva para a Fundacao do Software Livre Inc., 51 Franklin St,
-Fith Floor, Boston, MA 02110-1301, USA
-*/
-?>
 <?php						
 $regra_cred_rpa = "'$cred_pf_n','$val_pf_n','$cred_pf_s','$val_pf_s','$cred_pj_n','$val_pj_n','$cred_pj_s','$val_pj_s'";
 
-//isso nao aparece na pagina, serve para o dreamweaver mostrar o layout desse arquivo direito
 if(false){?><table><?php }
 ?>
   <tr>
-    <td align="left">Valor Total das DeduÁıes</td>
+    <td align="left">Valor Total das Dedu√ß√µes</td>
     <td align="left">R$ 
 	    <input name="txtValorDeducoes" type="text" size="12" class="texto" id="txtValorDeducoes"  style="text-align:right;" value="0"
     	 onkeydown="MaskMoeda(this); return NumbersOnly(event);" <?php print "onblur=\"ValorIssRPA($regra_cred_rpa)\"";?> > 		
@@ -34,7 +13,7 @@ if(false){?><table><?php }
 
 
   <tr>
-    <td align="left">Base de C·lculo<font color="#FF0000">*</font></td>
+    <td align="left">Base de C√°lculo<font color="#FF0000">*</font></td>
     <td align="left">R$
 		<?php print("<input name=\"txtBaseCalculo\" type=\"text\" size=\"10\" class=\"texto\" id=\"txtBaseCalculo\" style=\"text-align:right;\" onkeyup=\"MaskMoeda(this);\" onkeydown=\"return NumbersOnly(event);\" value=\"0\"
 		onblur=\"ValorIssRPA($regra_cred_rpa)\">");?>
@@ -49,15 +28,12 @@ if(false){?><table><?php }
 		<fieldset><legend><b>ISS</b></legend>
 			<table width="100%">
 				<tr>
-					<td align="left">CÛdigo do ServiÁo</td>
+					<td align="left">C√≥digo do Servi√ßo</td>
 					<td align="left">	  
-						<?php
-						//variaveis das regras de credito para usar na funÁ„o de ValorIssRPA()
-						?>
 						<!-- busca a relacao dos servicos por empresa -->
 						<select name="cmbCodServico" size="1" style="width:295px;" id="cmbCodServico" onchange="MostraValorRPA(); 
 						<?php print "ValorIssRPA($regra_cred_rpa)";?>" >
-						<option value="0">Selecione o ServiÁo</option>	   	        
+						<option value="0">Selecione o Servi√ßo</option>	   	        
 						<?php while(list($codigo_empresas_servicos,$codigo,$codservico,$descricao,$aliquota,$issretido,$valor_rpa)=mysql_fetch_array($sql_servicos))
 						{	   
 							print("<option value=\"$valor_rpa|$codigo|$issretido\"> $descricao </option>");
@@ -65,13 +41,10 @@ if(false){?><table><?php }
 						?>
 						</select>
 					</td>
-				</tr><tr>
-				    <td align="left">ISS Retido</td>
-				    <td align="left">ISS Retido</td>
 				</tr>
 				<tr style="display:none;">    	
 					<td align="left">
-						AlÌquota
+						Al√≠quota
 					</td>
 					<td align="left">	
 						 <input  id="txtAliquota" name="txtAliquota" type="text" size="5" class="texto" readonly="yes" style="text-align:right;" value="0.00">
@@ -107,7 +80,7 @@ if(false){?><table><?php }
 		  	<table width="100%">
 				<tr>
 					<td width="31%" align="left">
-						 <font color="#FF0000">**</font>% base de calculo
+						 <font color="#FF0000">**</font>% base de c√°lculo
 					</td>
 					<td width="69%">
 						<input name="txtINSSBCpct" id="txtINSSBCpct" type="text" size="4" class="texto" onblur="baseCalcPct('INSS')" onkeyup="MaskPercent(this)" /> % 
@@ -116,7 +89,7 @@ if(false){?><table><?php }
 					</td>
 				</tr>
 				<tr>
-					<td>INSS sobre a base de calculo</td>
+					<td>INSS sobre a base de c√°lculo</td>
 					<td align="left">	
 						<input name="txtAliquotaINSS" id="txtAliquotaINSS" type="text" size="4" class="texto" style="text-align:right;" disabled="disabled" onkeyup="MaskPercent(this)" 
 						onblur="document.getElementById('txtBaseCalculo').onblur();" > %
@@ -151,7 +124,7 @@ if(false){?><table><?php }
 					</tr>
 					<tr>
 						<td width="31%" align="left">
-							AlÌquota de IRRF
+							Al√≠quota de IRRF
 						</td>
 						<td width="69%" align="left">	
 
@@ -164,7 +137,7 @@ if(false){?><table><?php }
 					</tr>
 					<tr>
 						<td width="31%" align="left">
-							DeduÁ„o de 
+							Dedu√ß√£o de 
 						</td>
 						<td width="69%" align="left">	
 							R$
@@ -196,13 +169,12 @@ if(false){?><table><?php }
   <tr>
     <td>
 		<?php
-		//variaveis das regras de credito para usar na funÁ„o de ValorIssRPA()
 		$regra_cred_rpa = "'$cred_pf_n','$val_pf_n','$cred_pf_s','$val_pf_s','$cred_pj_n','$val_pj_n','$cred_pj_s','$val_pj_s'";
 		?>
 		<!-- busca a relacao dos servicos por empresa -->
 		<select name="cmbCodServico" size="1" style="width:295px;" id="cmbCodServico" onchange="MostraValorRPA(); 
 		<?php print "ValorIssRPA($regra_cred_rpa)";?>" >
-		<option value="0">Selecione o ServiÁo</option>	   	        
+		<option value="0">Selecione o Servi√ßo</option>	   	        
 		<?php while(list($codigo_empresas_servicos,$codigo,$codservico,$descricao,$aliquota,$issretido,$valor_rpa)=mysql_fetch_array($sql_servicos))
 		{	   
 			print("<option value=\"$valor_rpa|$codigo|$issretido\"> $descricao </option>");
@@ -223,7 +195,7 @@ if(false){?><table><?php }
   <tr>    
   <tr>
     <td align="left">
-	  AlÌquota de INSS
+	  Al√≠quota de INSS
 	</td>
     <td align="left">	
  	 <input name="txtAliquotaINSS" id="txtAliquotaINSS" type="text" size="5" class="texto" style="text-align:right;" onkeyup="MaskPercent(this)" 
@@ -236,7 +208,7 @@ if(false){?><table><?php }
   </tr> 
   <tr>
     <td align="left">
-	  AlÌquota de IRRF
+	  Al√≠quota de IRRF
 	</td>
     <td align="left">	
  	 <input name="txtIRRF" id="txtIRRF" type="text" size="5" class="texto" style="text-align:right;" onkeyup="MaskPercent(this)" 
@@ -300,13 +272,13 @@ if(false){?><table><?php }
 	}
   ?>
   <tr <?php echo $display;?>>
-    <td align="left">CrÈdito p/ Abatimento</td>
+    <td align="left">Cr√©dito p/ Abatimento</td>
     <td align="left">R$ <input name="txtCredito" id="txtCredito" type="text" size="10" class="texto" readonly="yes" style="text-align:right" ></td>
   </tr>
   <tr>
     <td align="left"><b>Valor Total da Nota</b></td>
     <td align="left">R$ <input name="txtValTotal" id="txtValTotal" type="text" size="10" class="texto" readonly="yes" style="text-align:right;" >
-	Valor total da retenÁ„o R$ <input name="txtValTotalRetencao" id="txtValTotalRetencao" type="text" class="texto" size="10" readonly="readonly" style="text-align:right" />
+	Valor total da reten√ß√£o R$ <input name="txtValTotalRetencao" id="txtValTotalRetencao" type="text" class="texto" size="10" readonly="readonly" style="text-align:right" />
 	</td>
   </tr>
   <tr>
@@ -314,8 +286,8 @@ if(false){?><table><?php }
 		<input name="btInserirNota" type="submit" value="Emitir" class="botao" onclick="return ValidaFormulario('txtBaseCalculo|txtTomadorCNPJ|txtTomadorNome')" >
 	</td>
 	<td align="right">
-		<font color="#FF0000">*</font>Campos obrigatÛrios<br />
-		<font color="#FF0000">**</font>Percentual da base de calculo a qual ser· afetada pelo imposto
+		<font color="#FF0000">*</font>Campos obrigat√≥rios<br />
+		<font color="#FF0000">**</font>Percentual da base de c√°lculo a qual ser√° afetada pelo imposto
 	</td>
   </tr>  
 </table>

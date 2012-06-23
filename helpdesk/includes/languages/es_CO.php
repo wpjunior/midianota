@@ -197,9 +197,9 @@ HNT: HINT
 CAD: CADASTRAR
 VIS: VISUALIZAR
 CON: CONSULTAR
-HIST: HIST�RICO
-CONF: CONFIGURA��ES
-TLT: T�TULOS
+HIST: HISTÓRICO
+CONF: CONFIGURAÇÕES
+TLT: TÍTULOS
 ERR: ERROS
 */
 
@@ -474,11 +474,11 @@ $TRANS['_RECORDSIN_SYSTEM'] = "Registro(s) en el sistema";
 
 
 /************************************
-*       MENSAGENS DE ERRO                 *rea e n�mero do chamado (padr�o).
+*       MENSAGENS DE ERRO                 
 *                                                            *
 ************************************/
 
-$TRANS['ERR_LOGON'] = "Usuario, clave o permiso no v&aacute;lido";
+$TRANS['ERR_LOGON'] = "Usuário, clave o permiso no v&aacute;lido";
 $TRANS['ERR_DEL'] = "ERROR INTENTANDO BORRAR EL REGISTROS!";
 $TRANS['ERR_EDIT'] = "ERROR INTENTANDO EDITAR LA INFORMACI&Oacute;N!";
 $TRANS['ERR_INSERT'] = "ERROR INTENTANDO INSERTAR EL REGISTRO!";
@@ -495,7 +495,6 @@ $TRANS['BT_EDIT'] = "EDITAR";
 $TRANS['REP_PROB_AREA'] = "Problemas por &Aacute;rea";
 
 
-//POR FL�VIO
 $TRANS['ADM_PROBS']="Administraci&oacute;n de tipos de problema";
 $TRANS['ADM_STATUS']="Administraci&oacute;n de Estado";
 $TRANS['ADM_PRIORITIES']= "Administraci&oacute;n de Niveles de Respuesta";//"Administraci&oacute;n de prioridades";

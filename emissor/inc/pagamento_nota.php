@@ -1,23 +1,3 @@
-<?php
-/*
-COPYRIGHT 2008 - 2010 DO PORTAL PUBLICO INFORMATICA LTDA
-
-Este arquivo e parte do programa E-ISS / SEP-ISS
-
-O E-ISS / SEP-ISS e um software livre; voce pode redistribui-lo e/ou modifica-lo
-dentro dos termos da Licenca Publica Geral GNU como publicada pela Fundacao do
-Software Livre - FSF; na versao 2 da Licenca
-
-Este sistema e distribuido na esperanca de ser util, mas SEM NENHUMA GARANTIA,
-sem uma garantia implicita de ADEQUACAO a qualquer MERCADO ou APLICACAO EM PARTICULAR
-Veja a Licenca Publica Geral GNU/GPL em portugues para maiores detalhes
-
-Voce deve ter recebido uma copia da Licenca Publica Geral GNU, sob o titulo LICENCA.txt,
-junto com este sistema, se nao, acesse o Portal do Software Publico Brasileiro no endereco
-www.softwarepublico.gov.br, ou escreva para a Fundacao do Software Livre Inc., 51 Franklin St,
-Fith Floor, Boston, MA 02110-1301, USA
-*/
-?>
 <?php $login=$_SESSION['login']; ?>
 
    <!-- Formulario de pesquisa de pagamento  --->   
@@ -28,13 +8,13 @@ Fith Floor, Boston, MA 02110-1301, USA
   <form  method="post" name="frmPagamento">   
   <table width="100%" border="0" align="center" cellpadding="2" cellspacing="2">	       
    <tr>
-	<td align="left" width="30%">Período do Imposto</td>
+	<td align="left" width="30%">PerÃ­odo do Imposto</td>
 	<td align="left" width="70%">
 	<select name="cmbMes" id="cmbMes" class="combo">
-	  <option value="">== Mês ==</option>
+	  <option value="">== MÃªs ==</option>
 	  <option value="01">Janeiro</option>
 	  <option value="02">Fevereiro</option>
-	  <option value="03">Março</option>
+	  <option value="03">MarÃ§o</option>
 	  <option value="04">Abril</option>
 	  <option value="05">Maio</option>
 	  <option value="06">Junho</option>
@@ -73,7 +53,7 @@ Fith Floor, Boston, MA 02110-1301, USA
    <tr>	  
 	<td colspan="2" align="center">
 	 <input type="hidden" name="btOp" value="Gerar Guia"/>
-	 <input type="submit" value="Pesquisar" name="btPesquisar" class="botao" onclick="return ValidaFormulario('cmbMes|cmbAno','Defina o mês e o ano')"></td>
+	 <input type="submit" value="Pesquisar" name="btPesquisar" class="botao" onclick="return ValidaFormulario('cmbMes|cmbAno','Defina o mÃªs e o ano')"></td>
    </tr>   
   </table>   
   </form>

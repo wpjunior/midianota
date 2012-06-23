@@ -66,12 +66,12 @@ function buscaCidades(campo, resultado, cadastro) {
 	}
 }
 
-//Fun��o que verifica o CNPJ no banco de dados
+//Funo que verifica o CNPJ no banco de dados
 /*function ValidaCNPJ(obj,idretorno){
 	var form = obj.form.id;
 	acessoAjax('inc/verifica_cnpj.ajax.php',form,idretorno);
 }*/
-//Fun��o que verifica o CNPJ no banco de dados
+//Funo que verifica o CNPJ no banco de dados
 function ValidaCNPJ(obj,idretorno){
 	var form = obj.form.id;
 	var cnpj = id('txtCNPJ').value;
@@ -85,7 +85,7 @@ function ValidaCNPJ(obj,idretorno){
 }
 
 
-//Fun��o que valida se o CNPJ foi inserido corretamente ou n�o
+//Funo que valida se o CNPJ foi inserido corretamente ou no
 function ConfereCNPJ(obj){
 	if(document.getElementById('hdCNPJ')){
 		alert('Verifique os campos!');
@@ -102,14 +102,14 @@ function ValidaSenha(campo1,campo2){
 	if(senha){
 		if(confirmacao){
 			if(senha != confirmacao){
-				alert('As senhas n�o conferem');
+				alert('As senhas não conferem!');
 				document.getElementById(campo1).value = '';
 				document.getElementById(campo2).value = '';
 				document.getElementById(campo1).focus();
 				return false;
 			}
 		}else{
-			alert('Digite a confirma��o da senha');	
+			alert('Digite a confirmação da senha!');	
 			document.getElementById(campo2).focus();
 			return false;
 		}
@@ -194,12 +194,12 @@ function LimpaCampos(form){
 
 /**
  * Parametros em objeto com chaves separados por virgula
- * a ordem dos parametros n�o altera o resultado, e os opcionais n�o precisam ser chamados
+ * a ordem dos parametros no altera o resultado, e os opcionais n precisam ser chamados
  * 
  * @url: string, obrigatorio
  * @tipo: string, GET ou POST, padrao GET
  * @parametros: string, se for POST, exemplo "var=1&cont=2&nome=alguem"
- * @espera: function, o que vai acontecer enquanto espera a resposta, se vazio n�o acontece nada
+ * @espera: function, o que vai acontecer enquanto espera a resposta, se vazio no acontece nada
  * @sucesso: function, o que vai acontecer quando retornar o resultado, a resposta esta na variavel global respostaAjax
  * @erro: function, em caso de erro executa essa funcao
  * @assincrona: boolean, se for false o browser vai esperar resposta, usuario nao podera mexer, padrao TRUE;
@@ -217,7 +217,7 @@ function ajax(p) {
 		return;
 	var url = p.url;
 	var tipo = p.tipo || "GET"; //se nao for informado usa o padrao GET
-	var param = p.parametros || null; // se nao for informado n�o sera utilizado
+	var param = p.parametros || null; // se nao for informado no sera utilizado
 	var a = p.assincrona || true; // se nao for informado padrao TRUE
 	var espera = p.espera;
 	var sucesso = p.sucesso;
@@ -236,14 +236,14 @@ function ajax(p) {
 	
 	req.open(tipo, p.url, a);
 
-	// Quando o objeto recebe o retorno, chamamos a seguinte fun��o;
+	// Quando o objeto recebe o retorno, chamamos a seguinte fun;
 	req.onreadystatechange = function() {
 
 		// enquanto carrega
 		if (req.readyState == 1&& espera) {
 			espera();
 		}
-		// Verifica se o Ajax realizou todas as opera��es corretamente
+		// Verifica se o Ajax realizou todas as operae corretamente
 		if (req.readyState == 4 && req.status == 200) {
 			// Resposta retornada pelo ajax
 			respostaAjax="";
@@ -286,17 +286,17 @@ function acessoAjax(url,form,retorno){
 	}	
    	var url= url+'?'+parametros;	
 	req.open("Get", url, true);		 
-	// Quando o objeto recebe o retorno, chamamos a seguinte fun��o;
+	// Quando o objeto recebe o retorno, chamamos a seguinte funo
 	req.onreadystatechange = function(){			
 		if(req.readyState == 1&&retorno){				
   	      //document.getElementById('').innerHTML = '<font color="gray">Verificando...</font>';
 		  document.getElementById(retorno).innerHTML = 'Pesquisando...';
 		}
-		// Verifica se o Ajax realizou todas as opera��es corretamente (essencial)
+		// Verifica se o Ajax realizou todas as operae corretamente (essencial)
 		if(req.readyState == 4 && req.status == 200){			
 			// Resposta retornada pelo validacao.php
 			var resposta = req.responseText;			
-			// Abaixo colocamos a resposta na div do campo que fez a requisi��o	
+			// Abaixo colocamos a resposta na div do campo que fez a requisio
 		 	if(retorno){
 				document.getElementById(retorno).innerHTML = resposta;
 			}
@@ -407,7 +407,7 @@ function acessoAjax(url,form,retorno){
 	
 	
 	/*
-	*Fun��o que trata a porcentagem
+	*Funo que trata a porcentagem
 	*/
 	function MaskPercent(campo){
 		campo.maxLength = 6;
@@ -517,7 +517,7 @@ function acessoAjax(url,form,retorno){
 	
 	function ValidaFormulario(inputs,mensagem)
 	{
-		var msg = mensagem === undefined ? "Favor preencher todos os campos obrigat�rios!" : mensagem;
+		var msg = mensagem === undefined ? "Favor preencher todos os campos obrigatórios!" : mensagem;
     	var aux;
         var falso=0;
 		var aux= inputs.split("|");		
@@ -683,7 +683,7 @@ function convertDate(data)
         d=new date();
     return d
 }
-/* Valida��es */
+/* Validas */
 function FmtValorMonetario(Dado)
 {
       var Result, i;
@@ -899,7 +899,7 @@ function isCpf(elem, msgbox)
 	var digitos = dvCpfCnpj(base, false);
 	var algUnico, i;
 
-	// Valida d�gitos verificadores
+	// Valida dgitos verificadores
 	
 	if (numero != base + digitos) {
 	    if (msgbox)
@@ -908,7 +908,7 @@ function isCpf(elem, msgbox)
 		return false;
 	}
 
-	/* N�o ser�o considerados v�lidos os seguintes CPF:
+	/* No ser considerados vos os seguintes CPF:
 	 * 000.000.000-00, 111.111.111-11, 222.222.222-22, 333.333.333-33, 444.444.444-44,
 	 * 555.555.555-55, 666.666.666-66, 777.777.777-77, 888.888.888-88, 999.999.999-99.
 	 */
@@ -951,7 +951,7 @@ function isCnpj(elem, msgbox)
 	var digitos = dvCpfCnpj(base + ordem, true);
 	var algUnico;
 
-	// Valida d�gitos verificadores
+	// Valida dgitos verificadores
 	if (numero != base + ordem + digitos)
 	{
 	    if (msgbox)
@@ -961,10 +961,6 @@ function isCnpj(elem, msgbox)
 	}
 
 
-	/* N�o ser�o considerados v�lidos os CNPJ com os seguintes n�meros B�SICOS:
-	 * 11.111.111, 22.222.222, 33.333.333, 44.444.444, 55.555.555,
-	 * 66.666.666, 77.777.777, 88.888.888, 99.999.999.
-	 */
 	
 	algUnico = numero.charAt(0) != '0';
 	for (i=1; i<NUM_DGT_CNPJ_BASE; i++)
@@ -980,9 +976,6 @@ function isCnpj(elem, msgbox)
 	}
 
 
-	/* N�o ser� considerado v�lido CNPJ com n�mero de ORDEM igual a 0000.
-	 * Esta cr�tica n�o ser� feita quando o B�SICO do CNPJ for igual a 00.000.000.
-	*/ 
 	if (ordem == "0000")
 	{
 	    if (msgbox)
@@ -991,14 +984,6 @@ function isCnpj(elem, msgbox)
 		return false;
 	}
 	
-/*	if (!(base == "00000000" || base.substring(0, 3) != "000"))
-	{
-		alert ('CNPJ (' + pCnpj + ') inv�lido.');
-		alert('base : ' + base);
-		elem.value = "";
-		return false;
-	}
-*/
     return true;
 }
 
@@ -1098,7 +1083,7 @@ function validaCnpj(source, args)
 }
 
 
-/* M�scaras */
+/* Máscaras */
 function strip( str, c ) {
 	var tmp = str.split( c );
 	return tmp.join("");
@@ -1235,12 +1220,6 @@ function VerificacaoMsk( aWidget )
    }
 
 
-/*Exemplo de utiliza��o:
-<input type="text" name="valor"  onKeyPress="return(MascaraMoeda(this,'.',',',event))">*/
-
-
-
-
 function backspace2(obj,e){
 var whichCode = (window.event) ? e.keyCode : e.which;
 var parte1;
@@ -1263,8 +1242,8 @@ function MascaraMoeda(objTextBox, SeparadorMilesimo, SeparadorDecimal, e){
     var aux = aux2 = '';
     var whichCode = (window.event) ? e.keyCode : e.which;
     if ((whichCode == 13)||(whichCode == 8)||(whichCode == 0)) return true;
-    key = String.fromCharCode(whichCode); // Valor para o c�digo da Chave
-    if (strCheck.indexOf(key) == -1) return false; // Chave inv�lida
+    key = String.fromCharCode(whichCode); // Valor para o código da Chave
+    if (strCheck.indexOf(key) == -1) return false; // Chave inválida
     len = objTextBox.value.length;
     for(i = 0; i < len; i++)
         if ((objTextBox.value.charAt(i) != '0') && (objTextBox.value.charAt(i) != SeparadorDecimal)) break;
@@ -1447,7 +1426,7 @@ function FormataValor1(campo,tammax,teclapres)
 // -------------------------------- Money 2 ----------------------------------
 
 function diasDecorridos(dt1, dt2){
-	// vari�veis auxiliares
+	// variáveis auxiliares
 	var minuto = 60000; 
 	var dia = minuto * 60 * 24;
 	var horarioVerao = 0;
@@ -1460,11 +1439,11 @@ function diasDecorridos(dt1, dt2){
 	dt2.setMinutes(0);
 	dt2.setSeconds(0);
 	
-	// determina o fuso hor�rio de cada objeto Date
+	// determina o fuso horário de cada objeto Date
 	var fh1 = dt1.getTimezoneOffset();
 	var fh2 = dt2.getTimezoneOffset(); 
 	
-	// retira a diferen�a do hor�rio de ver�o
+	// retira a diferença do horário de verão
 	if(dt2 > dt1){
 	  horarioVerao = (fh2 - fh1) * minuto;
 	} 
@@ -1583,7 +1562,7 @@ function cancelaAction(formid,formaction,formtarget)
 	document.getElementById(formid).submit();
 }
 
-var hdtd = ''; //variavel que ser� usada na fun�ao VisualizarNovaLinha()
+var hdtd = ''; //variavel que será usada na funao VisualizarNovaLinha()
 function VisualizarNovaLinha(cod,area,obj,url){
 	if(hdtd){         										//verifica se o hidden da td ja tem valor
 		var idtd = hdtd;									//recebe o valor da do input hidden com o id da td e manda para a variavel
@@ -1667,10 +1646,10 @@ function NovaLinha(obj,areaid,url,codigo,cont){
 }
 
 function cancelarDeclaracao(codigo,nome,url,form,retorno,hdcanc){
-	if(confirm('Deseja cancelar a declaracao N�'+codigo+' de '+nome+'?')){
+	if(confirm('Deseja cancelar a declaracao N°'+codigo+' de '+nome+'?')){
 		document.getElementById(hdcanc).value = codigo;
 		acessoAjax(url,form,retorno);
-		alert('Declara��o cancelada!');
+		alert('Declaração cancelada!');
 	}
 }
 
@@ -1719,7 +1698,7 @@ function loadEvent(func){
 	//alert(func);
 }
 
-//Fun��o para desbilitar o text
+//Fu para desbilitar o text
 var diatributo;
 
 function DesabilitarDataTributo(txtData) {	

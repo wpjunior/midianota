@@ -1,27 +1,7 @@
-<?php
-/*
-COPYRIGHT 2008 - 2010 DO PORTAL PUBLICO INFORMATICA LTDA
-
-Este arquivo e parte do programa E-ISS / SEP-ISS
-
-O E-ISS / SEP-ISS e um software livre; voce pode redistribui-lo e/ou modifica-lo
-dentro dos termos da Licenca Publica Geral GNU como publicada pela Fundacao do
-Software Livre - FSF; na versao 2 da Licenca
-
-Este sistema e distribuido na esperanca de ser util, mas SEM NENHUMA GARANTIA,
-sem uma garantia implicita de ADEQUACAO a qualquer MERCADO ou APLICACAO EM PARTICULAR
-Veja a Licenca Publica Geral GNU/GPL em portugues para maiores detalhes
-
-Voce deve ter recebido uma copia da Licenca Publica Geral GNU, sob o titulo LICENCA.txt,
-junto com este sistema, se nao, acesse o Portal do Software Publico Brasileiro no endereco
-www.softwarepublico.gov.br, ou escreva para a Fundacao do Software Livre Inc., 51 Franklin St,
-Fith Floor, Boston, MA 02110-1301, USA
-*/
-?>
 <table border="0" align="center" cellpadding="0" cellspacing="1">
     <tr>
       <td width="10" height="10" bgcolor="#FFFFFF"></td>
-	  <td width="170" align="center" bgcolor="#FFFFFF" rowspan="3">Arquivo para Importação</td>
+	  <td width="170" align="center" bgcolor="#FFFFFF" rowspan="3">Arquivo para ImportaÃ§Ã£o</td>
       <td width="400" bgcolor="#FFFFFF"></td>
 	</tr>
 	<tr>
@@ -42,13 +22,12 @@ Fith Floor, Boston, MA 02110-1301, USA
 	<tr>
 		<td>
 			<?php
-			//SELECIONA A ULTIMA NOTA INSERIDA PELA EMPRESA
 			$sql_ultimanota = mysql_query("SELECT ultimanota, notalimite FROM cadastro WHERE codigo = '$CODIGO_DA_EMPRESA'");
 			list($ultimanota,$notalimite)=mysql_fetch_array($sql_ultimanota);
 			$proximaNota = $ultimanota + 1;
-			//Verifica se o prestador pode ou não emitir notas
+
 			if(($proximaNota > $notalimite) && ($notalimite != 0)){ 
-			  echo "<center><font color=\"#000000\"><b>Você excedeu o limite de AIDFe, por favor solicite um limite maior!</b></font></center>";
+			  echo "<center><font color=\"#000000\"><b>VocÃª excedeu o limite de AIDFe, por favor solicite um limite maior!</b></font></center>";
 			?>
 			
 			<?php		
@@ -61,7 +40,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 							$restante = $notalimite - $ultimanota;
 					?>
 					<tr>
-						<td align="left"><font color="#FF0000">Você ainda pode gerar:</font> </td>
+						<td align="left"><font color="#FF0000">VocÃª ainda pode gerar:</font> </td>
 						<td align="left"><b><?php echo $restante;?></b> <font color="#FF0000"><?php if($restante == 1){ echo "nota"; }else{ echo "notas";}?></font>.</td>
 					</tr>
 					<?php
@@ -98,7 +77,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 <table border="0" align="center" cellpadding="0" cellspacing="1">
     <tr>
       <td width="10" height="10" bgcolor="#FFFFFF"></td>
-	  <td width="170" align="center" bgcolor="#FFFFFF" rowspan="3">Gerar Relatório</td>
+	  <td width="170" align="center" bgcolor="#FFFFFF" rowspan="3">Gerar RelatÃ³rio</td>
       <td width="400" bgcolor="#FFFFFF"></td>
 	</tr>
 	<tr>
@@ -118,26 +97,26 @@ Fith Floor, Boston, MA 02110-1301, USA
 <form action="inc/importar_gerarelatorio.php" method="post" name="frmGeraRelatorio" target="_blank" id="frmGeraRelatorio">
     <table width="100%" border="0" align="center" cellpadding="2" cellspacing="2">
         <tr>
-            <td align="left" width="30%"> Defina o período: </td>
+            <td align="left" width="30%"> Defina o perÃ­odo: </td>
             <td align="left" width="70%">
                 <select name="cmbMes" class="combo">
-                    <option value=""> selecione mês </option>
-                    <option value="01">janeiro</option>
-                    <option value="02">fevereiro</option>
-                    <option value="03">março</option>
-                    <option value="04">abril</option>
-                    <option value="05">maio</option>
-                    <option value="06">junho</option>
-                    <option value="07">julho</option>
-                    <option value="08">agosto</option>
-                    <option value="09">setembro</option>
-                    <option value="10">outubro</option>
-                    <option value="11">novembro</option>
-                    <option value="12">dezembro</option>
+                    <option value="">Selecione o MÃªs </option>
+                    <option value="01">Janeiro</option>
+                    <option value="02">Fevereiro</option>
+                    <option value="03">MarÃ§o</option>
+                    <option value="04">Abril</option>
+                    <option value="05">Maio</option>
+                    <option value="06">Junho</option>
+                    <option value="07">Julho</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
                 </select>
                 /
                 <select name="cmbAno" class="combo" id="cmbAno">
-                    <option value=""> selecione ano </option>
+                    <option value=""> Selecione o Ano </option>
                     <?php
                         $ano = date("Y");
                         for($x=0; $x<=4; $x++)
@@ -167,7 +146,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 <table border="0" align="center" cellpadding="0" cellspacing="1">
     <tr>
       <td width="10" height="10" bgcolor="#FFFFFF"></td>
-	  <td width="170" align="center" bgcolor="#FFFFFF" rowspan="3">Padrão XML</td>
+	  <td width="170" align="center" bgcolor="#FFFFFF" rowspan="3">PadrÃ£o XML</td>
       <td width="400" bgcolor="#FFFFFF"></td>
 	</tr>
 	<tr>
@@ -186,7 +165,7 @@ Fith Floor, Boston, MA 02110-1301, USA
 
 <table width="100%" border="0" align="center" cellpadding="2" cellspacing="2">
     <tr>
-        <td align="center"> Documento referencial do arquivo XML, para importação do Sistema NF-e da Prefeitura Municipal.<br />
+        <td align="center"> Documento referencial do arquivo XML, para importaÃ§Ã£o do Sistema NF-e da Prefeitura Municipal.<br />
             <br />
             <a href="xml/padraoxml.pdf" target="_blank">Download</a> </td>
     </tr>

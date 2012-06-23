@@ -252,3 +252,31 @@ notas_inserir.php
 notas_inserir.php
 notas_inserir.php
 exportar.php
+
+*** These modified files were found in JOE when it aborted on Tue Jun  5 11:26:20 2012
+*** JOE was aborted by UNIX signal 15
+
+*** File '(Unnamed)'
+upload
+include_path
+upload
+include_path
+upload
+safe
+safe_mode
+safe
+Discriminao dos Servis e/ou Dedues
+Discrimi
+
+*** File '(Unnamed)'
+notas_inserir.php
+notas_inserir.php
+notas_inserir.php
+exportar_principal.php
+/etc/phpmyadmin/config-db.php
+config.inc.php
+config.inc.php
+config.inc.php
+my.cnf
+/etc/phpmyadmin/config-db.php
+login.php

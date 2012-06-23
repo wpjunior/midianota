@@ -31,7 +31,10 @@ list($BRASAO) = mysql_fetch_array($sql_brasao);
 
 
 ?>
-<title>Listagem por &Aacute;rea de Atua&ccedil;&atilde;o</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<title>Listagem por Área de Atuação</title>
 
 <style type="text/css">
 
@@ -53,7 +56,7 @@ list($BRASAO) = mysql_fetch_array($sql_brasao);
     </center></td>
     <td width="584" height="33" colspan="2"><span class="style1">
       <center>
-             <p>LISTA DE SERVI&Ccedil;OS POR CATEGORIA E SERVI&Ccedil;O</p>
+             <p>LISTA DE SERVIÇOS POR CATEGORIA E SERVIÇO</p>
              <p>PREFEITURA MUNICIPAL DE <?php print strtoupper($CONF_CIDADE); ?> </p>
              <p><?php print strtoupper($CONF_SECRETARIA); ?> </p>
       </center>

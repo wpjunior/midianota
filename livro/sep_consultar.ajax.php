@@ -1,23 +1,3 @@
-<?php
-/*
-COPYRIGHT 2008 - 2010 DO PORTAL PUBLICO INFORMATICA LTDA
-
-Este arquivo e parte do programa E-ISS / SEP-ISS
-
-O E-ISS / SEP-ISS e um software livre; voce pode redistribui-lo e/ou modifica-lo
-dentro dos termos da Licenca Publica Geral GNU como publicada pela Fundacao do
-Software Livre - FSF; na versao 2 da Licenca
-
-Este sistema e distribuido na esperanca de ser util, mas SEM NENHUMA GARANTIA,
-sem uma garantia implicita de ADEQUACAO a qualquer MERCADO ou APLICACAO EM PARTICULAR
-Veja a Licenca Publica Geral GNU/GPL em portugues para maiores detalhes
-
-Voce deve ter recebido uma copia da Licenca Publica Geral GNU, sob o titulo LICENCA.txt,
-junto com este sistema, se nao, acesse o Portal do Software Publico Brasileiro no endereco
-www.softwarepublico.gov.br, ou escreva para a Fundacao do Software Livre Inc., 51 Franklin St,
-Fith Floor, Boston, MA 02110-1301, USA
-*/
-?>
 <fieldset><legend>Resultado</legend>
 <?php
 require_once("../sep/inc/conect.php");
@@ -42,7 +22,6 @@ if ($mes_fim && $ano_fim) {
 	$sql_where[] = "l.periodo <= '$ano_fim-$mes_fim'";
 }
 
-//testa se tem algum filtro do where
 if ($sql_where) {
 	$WHERE = 'WHERE ' . implode(' AND ', $sql_where);
 } else {
@@ -74,23 +53,23 @@ $query = ("
 $sql = Paginacao($query,'frmLivro','dvResultdoLivro');
 
 if (mysql_num_rows($sql) == 0) {
-	?><strong><center>Nenhum resultado encontrado.</center></strong><?php
+	?><strong><center>Nenhum resultado encontrado!</center></strong><?php
 } else {
 	?>
 	<table width="100%" border="0" cellspacing="2" cellpadding="2">
 		<tr>
-			<td bgcolor="#999999" align="center">C&oacute;digo</td>
-			<td bgcolor="#999999" align="center">Per&iacute;odo</td>
+			<td bgcolor="#999999" align="center">Código</td>
+			<td bgcolor="#999999" align="center">Período</td>
 			<td bgcolor="#999999" align="center">CNPJ prestador</td>
-			<td bgcolor="#999999" align="center">Base de calculo</td>
-			<td bgcolor="#999999" align="center">Iss</td>
-			<td bgcolor="#999999" align="center">Iss retido</td>
-			<td bgcolor="#999999" align="center">Iss total</td>
-			<td bgcolor="#999999" align="center">A&ccedil;&atilde;o</td>
+			<td bgcolor="#999999" align="center">Base de cálculo</td>
+			<td bgcolor="#999999" align="center">ISS</td>
+			<td bgcolor="#999999" align="center">ISS retido</td>
+			<td bgcolor="#999999" align="center">ISS total</td>
+			<td bgcolor="#999999" align="center"></td>
 		</tr>
 		<?php
 		while ($dados = mysql_fetch_array($sql)) {
-		//junta o cnpj com o cpf para ficar no mesmo campo
+
 		$dados['cnpj'] .= $dados['cpf'];
 		?>
 		<tr>
@@ -111,6 +90,6 @@ if (mysql_num_rows($sql) == 0) {
 		?>
 	</table>
 <?php
-}//fim else se tem resultado
+}
 ?>
 </fieldset>

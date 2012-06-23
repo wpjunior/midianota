@@ -56,7 +56,8 @@ if (mysql_num_rows($sql) <= 0) {
 ?>
 <html>
 <head>
-<title>Relat&oacute;rio de Notas escrituradas</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Relatório de Notas escrituradas</title>
 <style type="text/css">
 @media print {
 	#DivImprimir {
@@ -82,7 +83,7 @@ if (mysql_num_rows($sql) <= 0) {
 <table>
 	<?php if($_POST["txtNossonumero"]){?>
 	<tr>
-		<td><strong>Nosso N&uacute;mero:</strong></td>
+		<td><strong>Nosso Número:</strong></td>
 		<td><?php echo $_POST["txtNossonumero"]; ?></td>
 	</tr>
 	<?php } if($_POST["txtDataIni"]){ ?>
@@ -107,7 +108,7 @@ if (mysql_num_rows($sql) <= 0) {
 </table>
 <table width="100%" class="relatorio">
 	<tr>
-		<td align="center"><b>N&ordm;</b></td>
+		<td align="center"><b>Nº</b></td>
 		<td align="center"><b>Data de emiss&atilde;o</b></td>
 		<td align="center"><b>CNPJ/CPF</b></td>
 		<td align="center"><b>Tomador</b></td>

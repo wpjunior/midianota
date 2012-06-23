@@ -1,28 +1,4 @@
-<?php
-/*
-COPYRIGHT 2008 - 2010 DO PORTAL PUBLICO INFORMATICA LTDA
-
-Este arquivo e parte do programa E-ISS / SEP-ISS
-
-O E-ISS / SEP-ISS e um software livre; voce pode redistribui-lo e/ou modifica-lo
-dentro dos termos da Licenca Publica Geral GNU como publicada pela Fundacao do
-Software Livre - FSF; na versao 2 da Licenca
-
-Este sistema e distribuido na esperanca de ser util, mas SEM NENHUMA GARANTIA,
-sem uma garantia implicita de ADEQUACAO a qualquer MERCADO ou APLICACAO EM PARTICULAR
-Veja a Licenca Publica Geral GNU/GPL em portugues para maiores detalhes
-
-Voce deve ter recebido uma copia da Licenca Publica Geral GNU, sob o titulo LICENCA.txt,
-junto com este sistema, se nao, acesse o Portal do Software Publico Brasileiro no endereco
-www.softwarepublico.gov.br, ou escreva para a Fundacao do Software Livre Inc., 51 Franklin St,
-Fith Floor, Boston, MA 02110-1301, USA
-*/
-?>
 <?php 
-//trata as letras acentuadas para nao causar erros, 
-//serve se tiver comparacao de strings com acentuacao,
-//assim reduz muita a chance de dar um erros,
-//e isso esta aki no util porque tem que estar em todas as paginas
 setlocale(LC_CTYPE, 'pt_BR');
 
 function ResumeString($var,$quantidade){
@@ -33,7 +9,6 @@ function ResumeString($var,$quantidade){
 	return $string;
 }
 
-// verifica se e cpf ou se e cnpj
 function tipoPessoa($cnpjcpf){
     if(strlen($cnpjcpf)==14){
         $campo="cpf";
@@ -43,13 +18,11 @@ function tipoPessoa($cnpjcpf){
     return $campo;
 }
 
-// escapa as aspas e apostrofes e retira todas as tags html
 function trataString($texto){
     return addslashes(strip_tags(trim($texto)));
 }
 
 
-// Alert
 function Mensagem($texto){
 	echo "<script type=\"text/javascript\">
 			alert('$texto');
@@ -172,7 +145,6 @@ function diasDecorridos($dataInicio,$dataFim){
 	return $dias_diferenca; 
 }
 
-//GERA O CÓDIGO DE VERIFICAÇÃO
 function gera_codverificacao(){
 	$CaracteresAceitos = 'ABCDEFGHIJKLMNOPQRXTUVWXYZ';
 	$max = strlen($CaracteresAceitos)-1;
@@ -234,17 +206,15 @@ function calculaMultaDes($diasDec,$valor){
 }
 
 function listaRegrasMultaDes(){
-	//pega o dia pra tributacao do mes da tabela configucacoes
 	$sql_data_trib = mysql_query("SELECT data_tributacao FROM configuracoes");
 	
 	list($dia_mes)=mysql_fetch_array($sql_data_trib);
 	campoHidden("hdDia",$dia_mes);
-	//echo "<input type=\"hidden\" name=\"hdDia\" id=\"hdDia\" value=\"$dia_mes\" />";
+
 	
 	$dataatual = date("d/m/Y");
 	campoHidden("hdDataAtual",$dataatual);
-	//echo "<input type=\"hidden\" name=\"hdDataAtual\" id=\"hdDataAtual\" value=\"$dataatual\" />\n";
-	//pega a regra de multas do banco
+
 	$sql_multas = mysql_query(" SELECT codigo, dias, multa, juros_mora
 								FROM des_multas_atraso 
 								WHERE estado='A'
@@ -297,10 +267,9 @@ function coddeclaracao($dec){
 function verificacampo($campo){
 	if($campo == ""){$campo = "<b>Não Informado</b>";}
 return $campo;
-}//verifica o resultado do banco se esta vazio, se estiver, acrescenta informação
+}
 
-//redireciona para o link indicado sem os parametros de get adicionais
-//e criando um form com hiddens baseado nos parametros de get
+
 function RedirecionaPost($url,$target=NULL){
 	if($target==NULL)$target="_parent";
 	$url_full=explode("?",$url,2);
@@ -314,39 +283,36 @@ function RedirecionaPost($url,$target=NULL){
 	$redir.="</form>";
 	$redir.="<script>document.getElementById('redirPost').submit();</script>";
 	echo $redir;
-}//fim function RedirecionaPost()
+}
 
 
 function Uploadimagem($campo,$destino,$cod=NULL,$redimensionar=NULL){
 	if($campo != ""){
-		//Mensagem($_FILES[$campo]['type']);
-		//pega o nome da imagem
+
 		$imagem['nome'] = $_FILES[$campo]['name'];
-		//pega o nome temporario
+
 		$imagem['temp'] = $_FILES[$campo]['tmp_name'];
 		
 		$imagem['destino'] = $destino;
 		
-		//especifica  quais extensoes serao permitidas
 		$extpermitidas = array("jpg","JPG","jpeg","JPEG","gif","GIF","png","PNG");
 		$imagem['extensao'] = strtolower(end(explode('.', $_FILES[$campo]['name'])));
-		//varre o array verificando se a variavel extensao entra na condicional
+
 		if(array_search($imagem['extensao'], $extpermitidas) === false){
 			Mensagem("Por favor, envie arquivos com as seguintes extensões: jpeg, jpg, gif");
 		}else{
-			//Verifica qual metodo de upload veio pelo parametro
 			if($cod == "rand"){
 				$rand = rand(00000,99999);
 				$imagem['nome'] = $rand.".".$imagem['extensao'];
 			}elseif($cod){	
 				$imagem['nome'] = $cod.".".$imagem['extensao'];
 			}
-			//move o arquivo para o destino informado
+
 			if($redimensionar == 1){
 				list($w,$h) = getimagesize($_FILES[$campo]['tmp_name']);
 				if(($w<=100)&&($h<=100)){
 					$destiny = $destino.$imagem['nome'];
-					//resize($_FILES[$campo],$destiny);
+
 					 move_uploaded_file($imagem['temp'],$imagem['destino'].$imagem['nome']);
 				}else{
 					return NULL;
@@ -363,19 +329,19 @@ function Uploadimagem($campo,$destino,$cod=NULL,$redimensionar=NULL){
 
 
 function UploadGenerico($destino,$campo,$extensoes=NULL){
-	// Pasta onde o arquivo vai ser salvo
+
 	$array_upload['pasta'] = $destino;
 	 
-	// Tamanho maximo do arquivo (em Bytes)
+
 	$array_upload['tamanho'] = 1024 * 1024 * 2; // 2Mb limite do propio php
 	 
-	 //testa se a variavel extensoes recebeu algum valor se tiver valor recebe esse valor no array
+
 	 if($extensoes){
-		// Array com as extensoes permitidas
+
 		$array_upload['extensoes'] = explode("|",$extensoes);
-	}//fim if
+	}
 	 
-	// Array com os tipos de erros de upload do PHP
+
 	$array_upload['erros'][0] = 'Não houve erro';
 	$array_upload['erros'][1] = 'O arquivo no upload é maior do que o limite do PHP';
 	$array_upload['erros'][2] = 'O arquivo ultrapassa o limite de tamanho especifiado no HTML';
@@ -401,8 +367,7 @@ function UploadGenerico($destino,$campo,$extensoes=NULL){
 		elseif($array_upload['tamanho'] < $_FILES[$campo]['size']){
 			Mensagem("O arquivo enviado é muito grande, envie arquivos de até 2Mb.");
 		}else{ 
-			// O arquivo passou em todas as verificações, agora tenta movelo para a pasta
-			//acrescenta numeros randomicos ao nome do arquivo
+
 			$rand = rand(00000,99999);
 			$ext = explode(".",$_FILES[$campo]['name']);
 			$nome_final = $rand.".".$ext[1];
@@ -514,8 +479,8 @@ function UltDiaUtil($mes,$ano){
   	$dia_semana = date("w", $ultimo);
   
   	// domingo = 0;
-  	// sÃ¡bado = 6;
-  	// verifica sÃ¡bado e domingo
+  	// sábado = 6;
+  	// verifica sábado e domingo
   
   	if($dia_semana == 0){
     	$dia--;
@@ -531,11 +496,11 @@ function UltDiaUtil($mes,$ano){
 	switch($dia_semana){  
 		case"0": $dia_semana = "Domingo";       break;  
 		case"1": $dia_semana = "Segunda-Feira"; break;  
-		case"2": $dia_semana = "TerÃ§a-Feira";   break;  
+		case"2": $dia_semana = "Terça-Feira";   break;  
 		case"3": $dia_semana = "Quarta-Feira";  break;  
 		case"4": $dia_semana = "Quinta-Feira";  break;  
 		case"5": $dia_semana = "Sexta-Feira";   break;  
-		case"6": $dia_semana = "SÃ¡bado";        break;  
+		case"6": $dia_semana = "Sábado";        break;  
 	}
 	*/
 
@@ -633,7 +598,7 @@ function notificaTomador($codigo_empresa,$ultimanota){
 	return $tomador_email_enviado;
 	
 }
-//resize($_FILES['input'],'img/logo.jpg',350);
+
 function resize($arquivo,$caminho,$largura=NULL){
 	list($w,$h) = getimagesize($arquivo['tmp_name']);
 	if($largura !== NULL){

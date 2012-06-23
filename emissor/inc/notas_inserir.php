@@ -1,12 +1,11 @@
 <?php 
 
-if($_POST["btInserirNota"] == "Emitir"){
+if(isset($_POST['txtTomadorCNPJ'])){
     include("notas_inserir_nova.php");
 }
 
-$tipopessoa = tipoPessoa($_SESSION['login']);//pega o tipo do prestador, se for cpf usa calculo de RPA
+$tipopessoa = tipoPessoa($_SESSION['login']);
 
-//SELECIONA A ULTIMA NOTA INSERIDA PELA EMPRESA
 $sql = mysql_query("SELECT ultimanota, codtipo, codtipodeclaracao FROM cadastro WHERE codigo = '$CODIGO_DA_EMPRESA'");
 list($ultimanota,$codtipo,$codtipodec)=mysql_fetch_array($sql);
 $ultimanota += 1;
@@ -17,7 +16,6 @@ if($notalimite == 0){
 	$notalimite = "Liberado";
 }
 
-//GERA O CÓDIGO DE VERIFIÇÃO
 $CaracteresAceitos = 'ABCDEFGHIJKLMNOPQRXTUVWXYZ';
 $max = strlen($CaracteresAceitos)-1;
 $password = null;
@@ -54,9 +52,8 @@ while(list($nfe_cred,$nfe_tipo_pessoa,$nfe_issretido,$nfe_valor) = mysql_fetch_a
 
 $regras_credito = implode("-",$array_regras_credito);
 
-//Verifica se o prestador pode ou não emitir notas
 if(($ultimanota > $notalimite) && ($notalimite != 0)){ 
-  echo "<center><font color=\"#000000\"><b>Voc&ecirc; excedeu o limite de AIDFe, por favor, solicite um limite maior!</b></font></center>";
+  echo "<center><font color=\"#000000\"><b>Você excedeu o limite de AIDFe, por favor, solicite um limite maior!</b></font></center>";
 ?>
 <center><a href="aidf.php"><font color="#000099"><b><u>Solicitar mais AIDFe</u></b></font></a></center>
 <?php		
@@ -87,7 +84,7 @@ if(($ultimanota > $notalimite) && ($notalimite != 0)){
 
 <table width="100%" border="0" cellspacing="2" cellpadding="2" align="center">
   <tr>    
-	<td  align="left" colspan="3"><font color="#FF0000" size="-2">OBS: Não utilizar a tecla Enter para alternar entre os campos.</font>  </td>
+	<td  align="left" colspan="3"><font color="#FF0000" size="-2"></font>  </td>
   </tr>
   <tr>
     <td colspan="3"><strong><br />
@@ -119,7 +116,7 @@ if(($ultimanota > $notalimite) && ($notalimite != 0)){
   <tr>
     <td align="left">Data do RPS</td>
 	<td align="left" colspan="2"><input name="txtDataRps" onkeydown="return NumbersOnly( event );"  style="text-align:center;" type="text" size="10" maxlength="10" class="texto">
-	(dd/mm/aaaa) <em>Somente números</em></td>
+	(dd/mm/aaaa)</td>
   </tr>
 </table><br />
 
@@ -190,7 +187,7 @@ if(($ultimanota > $notalimite) && ($notalimite != 0)){
                     $sql_municipio = mysql_query("SELECT nome FROM municipios WHERE uf = '$uf_busca'");
                     while(list($nome_municipio) = mysql_fetch_array($sql_municipio)){
                         echo "<option value=\"$nome_municipio\"";if(strtolower($nome_municipio) == strtolower($NOME_MUNICIPIO)){ echo "selected=selected";} echo ">$nome_municipio</option>";
-                    }//fim while 
+                    }
                 ?>
             </select>
         </div>
@@ -222,11 +219,38 @@ if(($ultimanota > $notalimite) && ($notalimite != 0)){
      </td>
   </tr>
   <tr>
+     <td>
+        <p align="left">ISS Retido:
+            <input type="radio" name="necessita_iss_retido" id="necessita_iss_retido" label="Sim" value="1" checked="1">Sim 
+            <input type="radio" name="necessita_iss_retido" id="necessita_iss_retido" label="Não" value="2"> Não
+        </p>    
+     </td>
+  </tr>
+  <tr>
+     <td>
+        <p align="left">Município onde o serviço foi prestado:
+            <select name="txtmunicipio_servico_prestado" id="txtmunicipio_servico_prestado">
+                <option value=""></option>
+                <?php
+                    $sqlcidades=mysql_query("SELECT concat(nome,'-',uf) as descricao, cod_ibge FROM municipios ORDER BY uf, nome");
+                    while(list($uf_busca, $cod_ibge_busca)=mysql_fetch_array($sqlcidades)){
+                        
+                        
+                        echo "<option value=\"$cod_ibge_busca\"";if($uf_busca == $UF_MUNICIPIO){ echo "selected=selected"; }echo ">$uf_busca</option>";
+                    
+                        
+                    }
+                ?>
+            </select>
+        </p>    <br><br><br><br>
+     </td>
+  </tr>
+  <tr>
     <td><strong>Discriminação dos Serviços e/ou Deduções</strong></td>
   </tr>
   <tr>
-   <td align="center">
-	<textarea name="txtNotaDiscriminacao" cols="53" rows="5" class="texto" ></textarea>
+   <td align="left">
+       <textarea name="txtNotaDiscriminacao" cols="80" rows="5" class="texto" ></textarea>
    </td>
   </tr>
 </table>
@@ -238,17 +262,13 @@ if(($ultimanota > $notalimite) && ($notalimite != 0)){
   	<td colspan="8">
     <?php
 	$codtipodec_teste = coddeclaracao('Simples Nacional');
-	//echo $codtipodec."<br>";
-	//echo $codtipodec_teste;
-	//if($tipopessoa == 'cpf'){
-		// include("calculos_nota_inserir_rpa.php");
-	if($codtipodec == $codtipodec_teste){
+	
+        if($codtipodec == $codtipodec_teste){
 		include("calculos_nota_inserir_simplesnacional.php");	
 	}else{
 		include("calculos_nota_inserir.php");
 	}
-	
-	?>
+  ?>
 	</td>
   </tr>
 	  
@@ -256,5 +276,10 @@ if(($ultimanota > $notalimite) && ($notalimite != 0)){
     	<td height="1" colspan="3" bgcolor="#CCCCCC"></td>
 	</tr>
 </table>
-</td></tr></table></form>
+</td>
+</tr>
+
+</table>
+
+</form>
 <?php } ?>

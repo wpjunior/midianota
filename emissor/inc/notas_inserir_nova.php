@@ -1,6 +1,4 @@
 <?php
-
-	//Variaveis com os valores preenchidos da nota
 	$tomadorCnpj             = $_POST['txtTomadorCNPJ'];
 	$tomadorNome             = $_POST['txtTomadorNome'];
 	$tomadorInscMunic        = $_POST['txtTomadorIM'];
@@ -11,14 +9,12 @@
 	$tomadorCep              = $_POST['txtTomadorCEP'];
 	$naturezaOperacao        = $_POST['txtnaturezaoperacao'];
         
-        
-        
-        
 	if(!empty($_POST['txtTomadorMunicipio'])){
 		$tomadorMunicipio = $_POST['txtTomadorMunicipio'];
 	}elseif(!empty($_POST['txtInsMunicipioEmpresa'])){
 		$tomadorMunicipio = $_POST['txtInsMunicipioEmpresa'];
 	}
+        
 	$tomadorUF               = $_POST['txtTomadorUF'];
 	$tomadorEmail            = $_POST['txtTomadorEmail'];
 	$notaRpsNumero           = $_POST['txtRpsNum'];
@@ -30,7 +26,6 @@
 	$notaObservacao          = $_POST['txtObsNota'];
 	$notaValorDeducoes       = MoedaToDec($_POST['txtValorDeducoes']);
 	$notaTotalBasedeCalculo  = MoedaToDec($_POST['txtBaseCalculo']);
-	//$notaAliquota            = MoedaToDec($_POST['txtAliquota']);
 	$notaTotalValorISS       = MoedaToDec($_POST['txtISS']);
 	$notaTotalValorISSRetido = MoedaToDec($_POST['txtIssRetido']);
 	$notaAliquotaINSS        = $_POST['txtAliquotaINSS'];
@@ -41,17 +36,19 @@
 	$notaValorTotalRetencoes = MoedaToDec($_POST['txtValTotalRetencao']);
 	$notaCredito             = MoedaToDec($_POST['txtCredito']);
 	$notaValorTotal          = MoedaToDec($_POST['txtValTotal']);
+	$cofins                   = MoedaToDec($_POST['txtCofins1']);
+	$txtmunicipio_servico_prestado   = ($_POST['txtmunicipio_servico_prestado']);
+	$necessita_iss_retido            = ($_POST['necessita_iss_retido']);
+        
+
 	
-	//Seleciona a ultima nota inserida pela empresa
 	$sql = mysql_query("SELECT ultimanota FROM cadastro WHERE codigo = '$CODIGO_DA_EMPRESA'");
 	list($ultimanota)=mysql_fetch_array($sql);
 	$ultimanota ++;
 	
-	//busca o limite de notas desse emissor
 	$sql=mysql_query("SELECT notalimite FROM cadastro WHERE codigo = $CODIGO_DA_EMPRESA");
 	list($notalimite)=mysql_fetch_array($sql);
 	
-	//testa se o numero de notas limites ja foi ultrapassado se ja tiver ultrapassado avisa-o
 	if(($ultimanota>$notalimite)&&($notalimite!=0)) {
 	
 		Mensagem('Voce nao pode emitir NFe por que ultrapassou seu limite estabelecido pelo AIDF. Entre em contato com a prefeitura.');
@@ -65,12 +62,9 @@
 			$notaEmissaoHora = $aux[1].":00";
 			
 	
-			//Faz uma busca pelo tomador
 			$sql = mysql_query("SELECT * FROM cadastro WHERE cnpj='$tomadorCnpj' or cpf='$tomadorCnpj'");
-			//Testa se o tomador o pessoa fisica ou pessoa juridica
 			$campo = tipoPessoa($tomadorCnpj);
 						
-			//Testa se o tomador existe caso nao exista cria-o no banco
 			if(mysql_num_rows($sql)<=0){
 			
 				$codtipo = codtipo('tomador');
@@ -98,7 +92,6 @@
 				");
 			}
 		
-			//Sql que insere os dados da nota emitida no banco
 			$sql = mysql_query("
 				INSERT INTO 
 					notas 
@@ -135,14 +128,15 @@
 					deducao_irrf = '$notaDeducaoIRRF', 
 					total_retencao = '$notaValorTotalRetencoes',
 					observacao = '$notaObservacao',
-                                        natureza_operacao = '$naturezaOperacao'    
+                                        natureza_operacao = '$naturezaOperacao',
+                                        cofins = '$cofins',
+                                        municipio_prestacao_servico = '$txtmunicipio_servico_prestado',
+                                        necessita_iss_retido = '$necessita_iss_retido'
 			");   
 			
 			
-			
-			//Variaveis com relecao aos servicos da nota
-			$quantidadeInputs = $_POST['hdInputs']; //numero de inputs de servicos
-			$codigoUltimaNota = mysql_insert_id(); //ultimo codigo que foi inserido no mysql
+			$quantidadeInputs = $_POST['hdInputs'];
+			$codigoUltimaNota = mysql_insert_id(); 
 			$cont = 1;
 			
 			while($cont <= $quantidadeInputs){
@@ -168,24 +162,18 @@
 			$sql = mysql_query("UPDATE cadastro SET ultimanota= '$ultimanota' WHERE codigo = '$CODIGO_DA_EMPRESA'");
 			add_logs('Emitiu nota fiscal');
 			
-			//Envia o email informando o tomador que foi inserida uma nfe
 			if($tomadorEmail){
-			
 				$email_enviado = "";				
-				//Chama a funcao que envia o email para o tomador
 				$email_enviado = notificaTomador($CODIGO_DA_EMPRESA,$ultimanota);
-			
 			}
-			//------------------------------------------------------------
 			
 			if($email_enviado){
-			
-				print("<script language=JavaScript>alert('Nota Emitida com sucesso e tomador notificado!!')</script>");
+				print("<script language=JavaScript>alert('Nota emitida com sucesso e tomador notificado!')</script>");
 			}else{
-				print("<script language=JavaScript>alert('Nota Emitida com sucesso!!')</script>");
+				print("<script language=JavaScript>alert('Nota emitida com sucesso!')</script>");
 			}
 		}else{
-			print("<script language=JavaScript>alert('Favor preencher campos obrigat�rios')</script>");
+			print("<script language=JavaScript>alert('Favor preencher campos obrigatórios!')</script>");
 		}
 	}
 ?>

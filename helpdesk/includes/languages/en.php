@@ -197,9 +197,9 @@ HNT: HINT
 CAD: CADASTRAR
 VIS: VISUALIZAR
 CON: CONSULTAR
-HIST: HIST�RICO
-CONF: CONFIGURA��ES
-TLT: T�TULOS
+HIST: HISTÓRICO
+CONF: CONFIGURAÇÕES
+TLT: TÍTULOS
 ERR: ERROS
 */
 
@@ -474,7 +474,7 @@ $TRANS['RECORDS_IN_SYSTEM'] = "record(s) in the system";
 
 
 /************************************
-*       MENSAGENS DE ERRO                 *rea e n�mero do chamado (padr�o).
+*       MENSAGENS DE ERRO                 
 *                                                            *
 ************************************/
 
@@ -495,7 +495,6 @@ $TRANS['BT_EDIT'] = "EDIT";
 $TRANS['REP_PROB_AREA'] = "Problems by area";
 
 
-//BY FL�VIO
 $TRANS['ADM_PROBS']="Management of problem types";
 $TRANS['ADM_STATUS']="Management of State";
 $TRANS['ADM_PRIORITIES']= "Management of Response Levels";//"Management of priorities";
@@ -643,7 +642,7 @@ $TRANS['OCO_OCORRENCIA']="ticket";
 
 $TRANS['OCO_FIELD_OPEN']="Open";
 
-/******** M�DULO OCORR�NCIAS *******/
+/******** MÓDULO OCORRÊNCIAS *******/
 
 //OCORRENCIAS.PHP
 $TRANS['MSG_OCCO_NOT_FOUND'] = "No tickets found.";
@@ -667,7 +666,7 @@ $TRANS['LOAD_EQUIP_LOCAL'] = "Load the location of this equipment!";
 $TRANS['CONS_CALL_EQUIP'] = "Search for other tickets for this equipment";
 $TRANS['CONS_CONFIG_EQUIP'] = "Search the equipment configuration!";
 $TRANS['MSG_NOT_IMAGE_SELECT'] = "NENHUMA IMAGEM FOI SELECIONADA!";
-$TRANS['MSG_NOT_TO_TIE_OCCOR'] = "N�o foi poss�vel vincular a ocorr�ncia como depend�ncia!";
+$TRANS['MSG_NOT_TO_TIE_OCCOR'] = "Não foi possível vincular a ocorrência como dependência!";
 $TRANS['CONS_EQUIP_LOCAL'] = "Search for the equipments for this location!";
 
 //CONSULTAR.PHP
@@ -732,7 +731,7 @@ $TRANS['MSG_DEL_NOTICE'] = "Deleted: notice";
 $TRANS['MSG_DEL_NOTICE_OK'] = "Notice deleted successfully!";
 $TRANS['MSG_INSERT_NOTICE_OK'] = "Notice recorded successfully!";
 
-//RELAT�RIOS.PHP
+//RELATÓRIOS.PHP
 $TRANS['TLT_REPORTS'] = "Reports";
 $TRANS['TLT_REPORTS_SOON'] = "Choose one of the ready reports or click";
 $TRANS['TLT_REPORTS_SOON_2'] = "for a general report";
@@ -763,16 +762,16 @@ $TRANS['TLT_CALL_FINISH_PROB_AREA'] = "Closed tickets - PROBLEMS X AREAS";
 $TRANS['COL_AMOUNT'] = "TOTAL";
 $TRANS['COL_SECTOR'] = "LOCAL";
 //$TRANS['COL_SECTOR_FACTORY'] = "SETOR";
-$TRANS['COL_SECTOR_FACTORY'] = "F�BRICA";
+$TRANS['COL_SECTOR_FACTORY'] = "FÁBRICA";
 
 $TRANS['COL_ATTEN_AREA'] = "AREA";
 $TRANS['COL_OVERALL'] = "TOTAL";
 $TRANS['TTL_PERIOD_FROM'] = "PERIOD FROM";
 $TRANS['COL_PROB'] = "PROBLEM";
 
-//RELAT�RIO_SETORES_AREA.PHP
-//$TRANS['TLT_CALL_CLOSE_SECTOR'] = "CHAMADOS FECHADOS - SETORES X �REAS DE ATENDIMENTO";
-$TRANS['TLT_CALL_CLOSE_SECTOR'] = "CLOSED TICKETS - F�BRICA X AREAS";
+//RELATÓRIO_SETORES_AREA.PHP
+//$TRANS['TLT_CALL_CLOSE_SECTOR'] = "CHAMADOS FECHADOS - SETORES X ÁREAS DE ATENDIMENTO";
+$TRANS['TLT_CALL_CLOSE_SECTOR'] = "CLOSED TICKETS - FÁBRICA X ÁREAS";
 
 //RELATORIO_GERAL.PHP
 $TRANS['REP_GENERAL'] = "General report";
@@ -861,7 +860,7 @@ $TRANS['FIELD_AREA'] = "AREA";
 $TRANS['FIELD_AVERAGE_EQUIPMENT'] = "EQUIPMENT RATE";
 
 //RELATORIO_OPERADOR_AREA.PHP
-//$TRANS['TTL_OPERATOR_AREA_ATTEND'] = "OPERADORES X �REAS DE ATENDIMENTO";
+//$TRANS['TTL_OPERATOR_AREA_ATTEND'] = "OPERADORES X ÁREAS DE ATENDIMENTO";
 $TRANS['TTL_OPERATOR_AREA_ATTEND'] = "TECHNICIAN X TICKETS";
 
 //RELATORIO_USARIOS_AREA.PHP
@@ -950,7 +949,7 @@ $TRANS['FIELD_ATTACH_IMAGE'] = "Attach file";
 $TRANS['HNT_SENDMAIL_AREA_SEL_CALL'] = "Send e-mail to the queued area";
 $TRANS['HNT_SENDMAIL_OPERATOR_SEL_CALL'] = "Send e-mail to the selected user/operator";
 $TRANS['HNT_NOT_MARK_OPT_FIRST_REPLY_CALL'] = "Uncheck this option if this asset was not a first response for this ticket";
-$TRANS['FIELD_FIRST_REPLY'] = "1.� Response";
+$TRANS['FIELD_FIRST_REPLY'] = "1. Response";
 $TRANS['MSG_ERR_NOT_ACCESS_INFO_CONFIG'] = "IT WAS NOT POSSIBLE TO GET CONFIGURATION INFORMATION, THE CONF TABLE WAS CREATED?";
 $TRANS['MSG_ERR_NOT_ATTACH_FILE'] = "IT WAS NOT POSSIBLE TO ATTACH THE FILE!";
 $TRANS['MSG_ERR_RESCUE_INFO_USER'] = "ERROR TRYING TO GET THE USER INFORMATION!";
@@ -1004,7 +1003,7 @@ $TRANS['MSG_ERR_CONSUL'] = "ERROR IN THE SEARCH!";
 $TRANS['TXT_SOLUT_CRITE_LAST'] = "possible solutions for the search criterions.";
 $TRANS['TXT_ONLY_ONE_SOLUT_CRITE_LAST'] = "Only one ticket found for the search criterions";
 
-/******** M�DULO ADMIN *******/
+/******** MÓDULO ADMIN *******/
 
 //LOCAIS.PHP
 $TRANS['TTL_ADMIN_LOCAL_SECTORS'] = "Management of locals/departments";
@@ -1115,7 +1114,7 @@ $TRANS['SUBTTL_EDIT_COMP'] = "Edition of components";
 $TRANS['FIELD_DESC_MODEL'] = "Description/model";
 $TRANS['FIELD_SUFIX'] = "Sufix";
 
-/******** M�DULO ADMIN - INVMON *******/
+/******** MÓDULO ADMIN - INVMON *******/
 
 //FABRICANTES.PHP
 $TRANS['TTL_ADMIN_MANUFAC'] = "Management of Manufacturers";
@@ -1161,7 +1160,7 @@ $TRANS['SUBTTL_EDIT_ITEM_SUPPLY'] = "Edit suply item";
 $TRANS['SEL_MODEL'] = "Select the model";
 $TRANS['SEL_TYPE_ITEM'] = "Select the item type";
 
-/******** M�DULO HOME *******/
+/******** MÓDULO HOME *******/
 
 //HOME.PHP
 $TRANS['MSG_ERR_TOTAL_OCCO'] = "ERROR COUNTING THE TICKETS!";
@@ -1199,7 +1198,7 @@ $TRANS['TTL_THEME'] = "THEMES";
 $TRANS['FIELD_THEME'] = "Theme:";
 $TRANS['SEL_NONE'] = "No one";
 
-/******** M�DULO INVENTARIO *******/
+/******** MÓDULO INVENTARIO *******/
 
 //INCLUIR_COMPUTADOR.PHP
 $TRANS['TTL_CAD_EQUIP_SYSTEM'] = "Cadastre of equipments";

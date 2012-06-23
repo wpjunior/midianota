@@ -1,28 +1,8 @@
-<?php
-/*
-COPYRIGHT 2008 - 2010 DO PORTAL PUBLICO INFORMATICA LTDA
-
-Este arquivo e parte do programa E-ISS / SEP-ISS
-
-O E-ISS / SEP-ISS e um software livre; voce pode redistribui-lo e/ou modifica-lo
-dentro dos termos da Licenca Publica Geral GNU como publicada pela Fundacao do
-Software Livre - FSF; na versao 2 da Licenca
-
-Este sistema e distribuido na esperanca de ser util, mas SEM NENHUMA GARANTIA,
-sem uma garantia implicita de ADEQUACAO a qualquer MERCADO ou APLICACAO EM PARTICULAR
-Veja a Licenca Publica Geral GNU/GPL em portugues para maiores detalhes
-
-Voce deve ter recebido uma copia da Licenca Publica Geral GNU, sob o titulo LICENCA.txt,
-junto com este sistema, se nao, acesse o Portal do Software Publico Brasileiro no endereco
-www.softwarepublico.gov.br, ou escreva para a Fundacao do Software Livre Inc., 51 Franklin St,
-Fith Floor, Boston, MA 02110-1301, USA
-*/
-?>
 <?php 
- //Recebe a variavel com o codigo do banco selecionado pelo usuario
+
  $codbanco01 = $_POST["cmbBanco"];
  
- $sql=mysql_query("SELECT codigo,numero,tomador_nome,valoriss,estado FROM notas 
+ $sql=mysql_query("SELECT codigo, numero, tomador_nome, valoriss, estado FROM notas 
 WHERE SUBSTRING(datahoraemissao,1,4) = '$cmbAno' AND SUBSTRING(datahoraemissao,6,2) = '$cmbMes' AND codemissor='$CODIGO_DA_EMPRESA' AND estado != 'C' AND estado != 'E'");
 
  $sql01=mysql_query("SELECT bancos.banco FROM bancos INNER JOIN boleto ON boleto.codbanco = bancos.codigo WHERE codbanco = '$codbanco01'");
@@ -30,7 +10,7 @@ WHERE SUBSTRING(datahoraemissao,1,4) = '$cmbAno' AND SUBSTRING(datahoraemissao,6
  
  if($BANCOMONETARIO =="")
  {
-  print("<center>a Prefeitura n„o definiu qual o banco monet·rio, favor entre em contato com a prefeitura</center>");
+  print("<center>a Prefeitura n√£o definiu qual o banco monet√°rio, favor entre em contato com a prefeitura</center>");
  } 
  elseif(mysql_num_rows($sql) =="")
  {

@@ -62,7 +62,7 @@ $sql_notas = mysql_query("
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Livro Digital - NFEletr&ocirc;nicas Tomadas</title>
+<title>Livro Digital - NFEletrônicas Tomadas</title>
 <link href="../css/livrodigital.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 <!--
@@ -106,7 +106,7 @@ $sql_notas = mysql_query("
 <table border="0" cellpadding="5" cellspacing="0">
   <tr>
     <td width="150" rowspan="4" align="center"><?php echo $livro->codcadastro; ?><?php if($topo==NULL){echo 'sem imagem';} else{echo "<img src=../img/logos/$topo->logo>";}; ?></td>
-    <td width="800" colspan="4" align="center" class="titulo1">REGISTRO E APURA&Ccedil;&Atilde;O DO ISS </td>
+    <td width="800" colspan="4" align="center" class="titulo1">REGISTRO E APURAÇÃO DO ISS </td>
     <td width="150" rowspan="4" align="center"><?php if($CONF_BRASAO ==NULL) {echo 'sem imagem';} else {echo "<img src=../img/brasoes/$CONF_BRASAO>";} ?>&nbsp;</td>
   </tr>
   <tr>
@@ -116,7 +116,7 @@ $sql_notas = mysql_query("
   <tr>
     <td class="field1">CNPJ/CPF:</td>
     <td width="250"><?php echo $topo->cnpj; ?>&nbsp;</td>
-    <td width="150" class="field1">Per&iacute;odo:</td>
+    <td width="150" class="field1">Período:</td>
     <td width="250"><?php
 			$periodof = substr($topo->periodo,5,2); 
 			$periodof = $periodof."/".substr($topo->periodo,0,4);
@@ -127,11 +127,11 @@ $sql_notas = mysql_query("
     <td colspan="3" class="field1"><?php echo $topo->inscrmunicipal; ?>&nbsp;</td>
     </tr>
   <tr>
-    <td class="field1">Observa&ccedil;&otilde;es:</td>
+    <td class="field1">Observações:</td>
     <td colspan="5"><?php echo $topo->obs; ?>&nbsp;</td>
     </tr>
   <tr>
-    <td class="field1">Data da Gera&ccedil;&atilde;o: </td>
+    <td class="field1">Data da Geração: </td>
     <td colspan="5"><?php echo $topo->geracao; ?>&nbsp;</td>
     </tr>
 </table>
@@ -142,23 +142,23 @@ $sql_notas = mysql_query("
 	<div id="divIss">
 <table width="1100" border="0" cellpadding="5" cellspacing="0">
   <tr>
-    <td colspan="11" align="center" class="titulo1">NOTAS FISCAIS ELETR&Ocirc;NICAS TOMADAS </td>
+    <td colspan="11" align="center" class="titulo1">NOTAS FISCAIS ELETRÔNICAS TOMADAS </td>
     </tr>
   <tr>
-    <td colspan="3"  width="30%" align="center" class="field2">NFEletr&ocirc;nica</td>
+    <td colspan="3"  width="30%" align="center" class="field2">NFEletrônica</td>
     <td colspan="3" width="20%" align="center" class="field2">Prestador Emissor </td>
     <td colspan="5" align="center" class="field2">Servi&ccedil;os</td>
     </tr>
   <tr align="center">
     <td width="4%">Data</td>
-    <td width="6%">N&uacute;mero</td>
+    <td width="6%">Número</td>
     <td width="8%">Canc.</td>
     <td width="7%">CNPJ/CPF</td>
     <td width="15%">Inscr. Municipal </td>
     <td width="15%">Nome</td>
     <td width="20%" colspan="2">Atividade Operacional </td>
     <td>Valor Servi&ccedil;os </td>
-    <td width="15%">ISS Pr&oacute;prio </td>
+    <td width="15%">ISS Próprio </td>
     <td width="10%">ISS Retido </td>
   </tr>
 <?php while($notas = mysql_fetch_object($sql_notas)) { ?>

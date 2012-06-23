@@ -2,12 +2,9 @@
 include("../include/conect.php");
 include("../funcoes/util.php");
 
-// variaveis globais vindas do conect.php
-// $CODPREF,$PREFEITURA,$USUARIO,$SENHA,$BANCO,$TOPO,$FUNDO,$SECRETARIA,$LEI,$DECRETO,$CREDITO,$UF	
-// descriptografa o codigo
+
 $CODIGO = base64_decode($_GET['cod']);
 
-// sql feito na nota
 $sql = mysql_query("
 SELECT
   `notas`.`codigo`, 
@@ -68,7 +65,7 @@ $empresa_cnpjcpf = $empresa_cnpj . $empresa_cpf;
 
 //nao tem soh endereco agora tem logradouro e numero com complemento
 $tomador_endereco = "$tomador_logradouro, $tomador_numero";
-//se tiver complemento, adiciona para a string de endere�o
+//se tiver complemento, adiciona para a string de endereço
 if ($tomador_complemento) {
     $tomador_endereco.=", $tomador_complemento";
 }
@@ -197,7 +194,7 @@ if ($empresa_logo != "") {
 
                             <table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
                                 <tr>
-                                    <td colspan="3" class="cab03" align="center">TOMADOR DE SERVI�OS</td>
+                                    <td colspan="3" class="cab03" align="center">TOMADOR DE SERVIÇOS</td>
                                 </tr>
                                 <tr>
                                     <td colspan="3" align="left">&nbsp;&nbsp;Nome/Razão Social: <strong><?php print verificaCampo($tomador_nome); ?></strong></td>
@@ -268,8 +265,8 @@ $servicos_sql = mysql_query("
                                                 <th align="center">Serviço</th>
                                                 <th align="center">Alíquota (%)</th>
                                                 <th align="center">Base de Calculo (R$)</th>
-                                                <th align="center">Iss retido (R$)</th>
-                                                <th align="center">Iss (R$)</th>
+                                                <th align="center">ISS retido (R$)</th>
+                                                <th align="center">ISS (R$)</th>
                                             </tr>
 <?php
 $totalALiquota = 0;
@@ -344,9 +341,7 @@ if ($observacao) {
                     <tr>
                         <td colspan="5" class="cab03" align="center" style="border:#000000 1px solid">VALOR TOTAL DA NOTA = R$ <?php print DecToMoeda($valortotal); ?></td>
                     </tr>
-                  <!--<tr>
-                    <td colspan="5" align="left" style="border:#000000 1px solid">C�digo do Servi�o<br /><strong><?php print $servico_codservico . " - " . $servico_descricao; ?></strong></td>
-                    </tr>-->
+                  
                     <tr>
                         <td style="border:#000000 1px solid">Valor Total das Deduções (R$)<br /><div align="right"><strong><?php print DecToMoeda($valordeducoes); ?></strong></div></td>
                         <td style="border:#000000 1px solid">Base de Cálculo (R$)<br /><div align="right"><strong><?php print DecToMoeda($basecalculo); ?></strong></div></td>
@@ -401,7 +396,7 @@ if ($observacao) {
                     </tr>
                     <tr>
                         <td colspan="5" style="border:#000000 1px solid" align="left">
-                            - Esta NF-e foi emitida com respaldo na Lei n&ordm; <?php print $lei; ?> e no Decreto n&ordm; <?php print $decreto; ?><br />
+                            - Esta NF-e foi emitida com respaldo na Lei n° <?php print $lei; ?> e no Decreto n° <?php print $decreto; ?><br />
 <?php
 if ($codtipodec == $codtipoSN) {
     echo "- Esta NF-e não gera créditos, pois a empresa prestadora de serviços é optante pelo Simples Nacional<br> ";
@@ -417,7 +412,7 @@ if (($CONF_CIDADE != $tomador_municipio) && ($codtipodec != $codtipoSN)) {
 } // fim if	
 if ($rps_numero) {
     ?>
-                                - Esta NF-e substitui o RPS N&ordm; <?php print $rps_numero; ?>, emitido em <?php print (substr($rps_data, 8, 2) . "/" . substr($rps_data, 5, 2) . "/" . substr($rps_data, 0, 4)); ?><br />
+                                - Esta NF-e substitui o RPS N° <?php print $rps_numero; ?>, emitido em <?php print (substr($rps_data, 8, 2) . "/" . substr($rps_data, 5, 2) . "/" . substr($rps_data, 0, 4)); ?><br />
                                 <?php
                             }//fim if rps
                             //$valorinss,$aliqinss,$valorirrf,$aliqinss

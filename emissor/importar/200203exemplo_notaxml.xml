@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <importacao>
 	<nota>
 		<rps_numero>40</rps_numero> 
@@ -14,8 +14,8 @@
 		<tomador_municipio>MUNICIPIO</tomador_municipio>
 		<tomador_uf>UF</tomador_uf>
 		<tomador_email>tomador@mail.com</tomador_email>
-		<discriminacao>Discriminação da nota</discriminacao>
-		<observacao>Observação da nota</observacao>
+		<discriminacao>DiscriminaÃ§Ã£o da nota</discriminacao>
+		<observacao>ObservaÃ§Ã£o da nota</observacao>
 		<aliqinss>1.00</aliqinss>
 		<aliqirrf>2.00</aliqirrf>
 		<deducaoirrf>1.50</deducaoirrf>

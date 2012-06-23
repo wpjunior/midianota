@@ -1,6 +1,5 @@
 <?php 
 
-// inicia a sessão verificando se jah esta com o usuario logado, se estiver entra na página admin
 session_name("emissor");
 session_start();
 header("Cache-Control: no-cache, must-revalidate");
