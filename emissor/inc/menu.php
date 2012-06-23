@@ -6,10 +6,10 @@ $codtipodec = coddeclaracao('Simples Nacional');
 
 if ($codtipodeclaracao == $codtipodec) {
     $menu = array("Notas Eletrônicas", "Cadastro", "Contador", "Tomadores", "Livro Digital", "AIDF Eletrônico", "Importar RPS", "Exportar Notas", "Ouvidoria", "Utilitários", "Sair");
-    $links = array("notas.php", "empresas.php", "definir_contador.php", "cadastro_tomador", "livro.php", "aidf.php", "importar.php", "exportar.php", "reclamacoes.php", "utilitarios.php", "logout.php");
+    $links = array("notas.php", "empresas.php", "definir_contador.php", "cadastro_tomador.php", "livro.php", "aidf.php", "importar.php", "exportar.php", "reclamacoes.php", "utilitarios.php", "logout.php");
 } else {
-    $menu = array("Notas Eletrônicas", "Cadastro", "Contador",  "cadastro_tomador", "Livro Digital", "AIDF Eletrônico", "Importar RPS", "Exportar Notas", "Ouvidoria", "Utilitários", "Sair");
-    $links = array("notas.php", "empresas.php", "definir_contador.php", "livro.php", "aidf.php", "importar.php", "exportar.php", "reclamacoes.php", "utilitarios.php", "logout.php");
+    $menu = array("Notas Eletrônicas", "Cadastro", "Contador",  "Tomadores", "Livro Digital", "AIDF Eletrônico", "Importar RPS", "Exportar Notas", "Ouvidoria", "Utilitários", "Sair");
+    $links = array("notas.php", "empresas.php", "definir_contador.php", "cadastro_tomador.php", "livro.php", "aidf.php", "importar.php", "exportar.php", "reclamacoes.php", "utilitarios.php", "logout.php");
 }
 $cont = count($menu);
 $aux = 0;
