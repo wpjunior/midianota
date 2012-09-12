@@ -85,13 +85,15 @@
 											while(list($nome_municipio) = mysql_fetch_array($sql_municipio)){
 												echo "<option value=\"$nome_municipio\"";if((strtolower($nome_municipio) == strtolower($CIDADE)) || (strtolower($nome_municipio) == strtolower($municipio))){ echo "selected=selected";} echo ">$nome_municipio</option>";
 											}//fim while 
+											
+											echo $nome_municipio;
 										?>
 									</select>
 								</div>
 							</td>
 						</tr>
 						<tr>
-							<td align="left">E-mail</td>
+							<td align="left">E-mail:</td>
 							<td align="left"><input name="txtEmail" id="txtEmail" type="text" class="texto" size="30" maxlength="100" value="<?php if(isset($email)){echo $email;} ?>"><em>Informar somente 01(um)  e-mail</em></td>
 						</tr>
 						<tr>
@@ -107,11 +109,11 @@
 					</table>
 				</fieldset>
 				<fieldset>
-					<input type="button" value="Pesquisar" name="btAcao" class="botao" onclick="document.getElementById('divBuscaTomadores').style.visibility='visible'" />
+					<!--<input type="button" value="Pesquisar" name="btAcao" class="botao" onclick="document.getElementById('divBuscaTomadores').style.visibility='visible'" />-->
 					<?php 
 						if($_POST['CODTOMADOR']){
 					?>
-							<input type="submit" value="Salvar"  name="btSalvar" class="botao">
+		                                        <input type="submit" value="Salvar"  name="btSalvar" class="botao">
 							<input name="btConsultaCreditos" type="submit" class="botao" value="Consultar Créditos"/>
 					<?php 
 						}
