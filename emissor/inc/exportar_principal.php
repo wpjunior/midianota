@@ -1,5 +1,9 @@
 <?php
 
+function gera_xml($cadastro) {
+  return "k";
+};
+
 if ($btExportar != "") {
     if (($cmbMes != "") || ($cmbAno != "")) {
         if ($cmbMes <= 9) {
@@ -92,7 +96,7 @@ if ($btExportar != "") {
             cadastro.codtipo = 1
         and datahoraemissao LIKE '%$periodo%' AND notas.codemissor = '$CODIGO_DA_EMPRESA' ORDER BY datahoraemissao ");
 
-        $arquivo = $CODIGO_DA_EMPRESA . "arquivo2012.csv";
+        $arquivo = $CODIGO_DA_EMPRESA . "arquivo2012.xml";
         $fp = fopen("tmp/" . $arquivo, "w");
         $cabecario = "assinatura;numero_nfe;codigo_verificacao;data_emissao_nfe;".
                     "competencia;numero_nfe_substituida;natureza_da_operacao;regime_especial_tributacao;".
@@ -111,8 +115,8 @@ if ($btExportar != "") {
         fwrite($fp, $cabecario);
 
         while ($cadastro = mysql_fetch_array($sql)) {
-          
-             $registros = $cadastro["assinatura"] . ";"
+          fwrite($fp, gera_xml($cadastro));
+          /*$registros = $cadastro["assinatura"] . ";"
                         . $cadastro["numero_nfe"] . ";"
                         . $cadastro["codigo_verificacao"] . ";"
                         . $cadastro["data_emissao_nfe"] . ";"
@@ -178,7 +182,7 @@ if ($btExportar != "") {
                         . $cadastro["codigo_obra"] . ";"
                         . $cadastro["art"] . ";\n";
 
-            fwrite($fp, $registros);
+                        fwrite($fp, $registros);*/
         }
         fclose($fp);
     } else {
