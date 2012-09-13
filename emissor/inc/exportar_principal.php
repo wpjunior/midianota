@@ -103,6 +103,13 @@ if ($btExportar != "") {
         $dom->preserveWhiteSpace = false;
         $dom->formatOutput = true;
 
+        $root = $dom->createElement("EnviarLoteRpsEnvio");
+        $root->setAttribute("xmlns", "http://www.issnetonline.com.br/webserviceabrasf/vsd/servico_enviar_lote_rps_envio.xsd");
+        $root->setAttribute("xmlns:tc", "http://www.issnetonline.com.br/webserviceabrasf/vsd/tipos_complexos.xsd");
+
+        $LoteRps = $dom->createElement("LoteRps");
+        $root->appendChild($LoteRps);
+
         while ($cadastro = mysql_fetch_array($sql)) {
           
           /*$registros = $cadastro["assinatura"] . ";"
@@ -173,6 +180,8 @@ if ($btExportar != "") {
 
                         fwrite($fp, $registros);*/
         }
+
+        $dom->appendChild($root);
         fwrite($fp, $dom->saveXML());
         fclose($fp);
     } else {
