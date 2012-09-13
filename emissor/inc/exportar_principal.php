@@ -99,9 +99,12 @@ if ($btExportar != "") {
         $arquivo = $CODIGO_DA_EMPRESA . "arquivo2012.xml";
         $fp = fopen("tmp/" . $arquivo, "w");
         
+        $dom = new DOMDocument("1.0", "ISO-8859-1");
+        $dom->preserveWhiteSpace = false;
+        $dom->formatOutput = true;
 
         while ($cadastro = mysql_fetch_array($sql)) {
-          fwrite($fp, "oi");
+          
           /*$registros = $cadastro["assinatura"] . ";"
                         . $cadastro["numero_nfe"] . ";"
                         . $cadastro["codigo_verificacao"] . ";"
@@ -170,6 +173,7 @@ if ($btExportar != "") {
 
                         fwrite($fp, $registros);*/
         }
+        fwrite($fp, $dom->saveXML());
         fclose($fp);
     } else {
         print("<script language=JavaScript>alert('Selecione um mês e um ano!!')</script>");
