@@ -54,26 +54,140 @@ $infNfse->appendChild($servico);
 
 
 $infNfse->appendChild($dom->createElement("tc:ValorCredito", 59)); //TODO: ajustar para o valor das outras retenções
-/*
-  <xsd:element name="IdentificacaoPrestador" type="tcIdentificacaoPrestador" minOccurs="1" maxOccurs="1"/>
-  <xsd:element name="RazaoSocial" type="ts:tsRazaoSocial" minOccurs="1" maxOccurs="1"/>
-  <xsd:element name="NomeFantasia" type="ts:tsNomeFantasia" minOccurs="0" maxOccurs="1"/>
-  <xsd:element name="Endereco" type="tcEndereco" minOccurs="1" maxOccurs="1"/>
-  <xsd:element name="Contato" type="tcContato" minOccurs="0" maxOccurs="1"/>
-*/
+
 $tcDadosPrestador = $dom->createElement("tc:PrestadorServico");
+
+$tcIdentificacaoPrestador = $dom->createElement("tc:IdentificacaoPrestador");
+
+$tcCpfCnpj = $dom->createElement("tc:CpfCnpj");
+$tcCpfCnpj->appendChild($dom->createElement("tc:Cnpj", 5920100)); //TODO CNPJ ou CPF
+$tcCpfCnpj->appendChild($dom->createElement("tc:Cpf", 5920100)); //TODO CNPJ ou CPF
+$tcIdentificacaoPrestador->appendChild($tcCpfCnpj);
+$tcIdentificacaoPrestador->appendChild($dom->createElement("tc:InscricaoMunicipal", 5920100)); //TODO Inscrição Municipal
+
+
+$tcDadosPrestador->appendChild($tcIdentificacaoPrestador);
+$tcDadosPrestador->appendChild($dom->createElement("tc:RazaoSocial", 5920100));
+$tcDadosPrestador->appendChild($dom->createElement("tc:NomeFantasia", 5920100));
+
+$tcEndereco = $dom->createElement("tc:Endereco");
+$tcEndereco->appendChild($dom->createElement("tc:Endereco", "Rua 02 de Julho"));
+$tcEndereco->appendChild($dom->createElement("tc:Numero", 28));
+$tcEndereco->appendChild($dom->createElement("tc:Complemento", 28));
+$tcEndereco->appendChild($dom->createElement("tc:Bairro", 28));
+$tcEndereco->appendChild($dom->createElement("tc:Cidade", 28));
+$tcEndereco->appendChild($dom->createElement("tc:Estado", 28));
+$tcEndereco->appendChild($dom->createElement("tc:Cep", 28));
+
+$tcDadosPrestador->appendChild($tcEndereco);
+
+$tcContato = $dom->createElement("tc:Contato");
+$tcContato->appendChild($dom->createElement("tc:Telefone", "6230994110"));
+$tcContato->appendChild($dom->createElement("tc:Email", "wilsonpjunior@gmail.com"));
+$tcDadosPrestador->appendChild($tcContato);
+
 $infNfse->appendChild($tcDadosPrestador);
 
-/*
-<xsd:element name="PrestadorServico" type="tcDadosPrestador" minOccurs="1" maxOccurs="1"/>
-<xsd:element name="TomadorServico" type="tcDadosTomador" minOccurs="1" maxOccurs="1"/>
-<xsd:element name="IntermediarioServico" type="tcIdentificacaoIntermediarioServico" minOccurs="0" maxOccurs="1"/>
-<xsd:element name="OrgaoGerador" type="tcIdentificacaoOrgaoGerador" minOccurs="1" maxOccurs="1"/>
-<xsd:element name="ContrucaoCivil" type="tcDadosConstrucaoCivil" minOccurs="0" maxOccurs="1"/>
-*/
 
+$tcDadosTomador = $dom->createElement("tc:TomadorServico");
+
+$tcIdentificacaoTomador = $dom->createElement("tc:IdentificacaoTomador");
+
+$tcCpfCnpj = $dom->createElement("tc:CpfCnpj");
+$tcCpfCnpj->appendChild($dom->createElement("tc:Cnpj", 5920100)); //TODO CNPJ ou CPF
+$tcCpfCnpj->appendChild($dom->createElement("tc:Cpf", 5920100)); //TODO CNPJ ou CPF
+$tcIdentificacaoTomador->appendChild($tcCpfCnpj);
+
+$tcDadosTomador->appendChild($tcIdentificacaoTomador);
+$tcDadosTomador->appendChild($dom->createElement("tc:RazaoSocial", "kk kak"));
+
+$tcEndereco = $dom->createElement("tc:Endereco");
+$tcEndereco->appendChild($dom->createElement("tc:Endereco", "Rua 02 de Julho"));
+$tcEndereco->appendChild($dom->createElement("tc:Numero", 28));
+$tcEndereco->appendChild($dom->createElement("tc:Complemento", 28));
+$tcEndereco->appendChild($dom->createElement("tc:Bairro", 28));
+$tcEndereco->appendChild($dom->createElement("tc:Cidade", 28));
+$tcEndereco->appendChild($dom->createElement("tc:Estado", 28));
+$tcEndereco->appendChild($dom->createElement("tc:Cep", 28));
+
+$tcDadosTomador->appendChild($tcEndereco);
+
+$tcContato = $dom->createElement("tc:Contato");
+$tcContato->appendChild($dom->createElement("tc:Telefone", "6230994110"));
+$tcContato->appendChild($dom->createElement("tc:Email", "wilsonpjunior@gmail.com"));
+$tcDadosTomador->appendChild($tcContato);
+
+$infNfse->appendChild($tcDadosTomador);
+
+$tcIdentificacaoIntermediarioServico = $dom->createElement("tc:IntermediarioServico");
+$tcIdentificacaoIntermediarioServico->appendChild($dom->createElement("tc:RazaoSocial", "oi"));
+$tcCpfCnpj = $dom->createElement("tc:CpfCnpj");
+$tcCpfCnpj->appendChild($dom->createElement("tc:Cnpj", 5920100)); //TODO CNPJ ou CPF
+$tcCpfCnpj->appendChild($dom->createElement("tc:Cpf", 5920100)); //TODO CNPJ ou CPF
+$tcIdentificacaoIntermediarioServico->appendChild($tcCpfCnpj);
+
+$tcIdentificacaoIntermediarioServico->appendChild($dom->createElement("tc:InscricaoMunicipal", "oi"));
+$infNfse->appendChild($tcIdentificacaoIntermediarioServico);
+
+$tcIdentificacaoOrgaoGerador = $dom->createElement("tc:OrgaoGerador");
+$tcIdentificacaoOrgaoGerador->appendChild($dom->createElement("tc:CodigoMunicipio", 5920100)); //TODO CNPJ ou CPF
+$tcIdentificacaoOrgaoGerador->appendChild($dom->createElement("tc:Uf", 5920100)); //TODO CNPJ ou CPF
+$infNfse->appendChild($tcIdentificacaoOrgaoGerador);
+
+$tcDadosConstrucaoCivil = $dom->createElement("tc:ContrucaoCivil");
+$tcDadosConstrucaoCivil->appendChild($dom->createElement("tc:CodigoObra", 5920100)); //TODO CNPJ ou CPF
+$tcDadosConstrucaoCivil->appendChild($dom->createElement("tc:Art", 5920100)); //TODO CNPJ ou CPF
+$infNfse->appendChild($tcDadosConstrucaoCivil);
 
 $tcNfse->appendChild($infNfse);
+
+$Signature = $dom->createElement("Signature");
+$Signature->setAttribute("xmlns", "http://www.w3.org/2000/09/xmldsig#");
+
+$SignedInfo = $dom->createElement("SignedInfo");
+
+$CanonicalizationMethod = $dom->createElement("CanonicalizationMethod");
+$CanonicalizationMethod->setAttribute("Algorithm", "http://www.w3.org/TR/2001/REC-xml-c14n-20010315");
+$SignedInfo->appendChild($CanonicalizationMethod);
+
+$SignatureMethod = $dom->createElement("SignatureMethod");
+$SignatureMethod->setAttribute("Algorithm", "http://www.w3.org/2000/09/xmldsig#rsa-sha1");
+$SignedInfo->appendChild($SignatureMethod);
+
+$Reference = $dom->createElement("Reference");
+$Reference->setAttribute("URI", "http://www.w3.org/TR/2000/REC-xhtml1-20000126/");
+
+$Transforms = $dom->createElement("Transforms");
+
+$Transform = $dom->createElement("Transform");
+$Transform->setAttribute("Algorithm", "http://www.w3.org/2000/09/xmldsig#enveloped-signature");
+$Transforms->appendChild($Transform);
+
+$Reference->appendChild($Transforms);
+
+$DigestMethod = $dom->createElement("DigestMethod");
+$DigestMethod->setAttribute("Algorithm", "http://www.w3.org/2000/09/xmldsig#sha1");
+$Reference->appendChild($DigestMethod);
+
+$Reference->appendChild($dom->createElement("DigestValue", "0gATjt6OsAoeV5ree86qnoa1Wds="));
+$SignedInfo->appendChild($Reference);
+$Signature->appendChild($SignedInfo);
+
+$Signature->appendChild($dom->createElement("SignatureValue"));
+
+$KeyInfo = $dom->createElement("KeyInfo");
+
+$X509Data = $dom->createElement("X509Data");
+$X509Data->appendChild($dom->createElement("X509Certificate"));
+$KeyInfo->appendChild($X509Data);
+
+$Signature->appendChild($KeyInfo);
+
+$tcNfse->appendChild($Signature);
+
+
+
+
 $CompNfse->appendChild($tcNfse);
 $root->appendChild($CompNfse);
 $dom->appendChild($root);

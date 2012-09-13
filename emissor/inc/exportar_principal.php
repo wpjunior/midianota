@@ -98,24 +98,10 @@ if ($btExportar != "") {
 
         $arquivo = $CODIGO_DA_EMPRESA . "arquivo2012.xml";
         $fp = fopen("tmp/" . $arquivo, "w");
-        $cabecario = "assinatura;numero_nfe;codigo_verificacao;data_emissao_nfe;".
-                    "competencia;numero_nfe_substituida;natureza_da_operacao;regime_especial_tributacao;".
-                "optante_simples_nacional;incentivador_cultural;numero_rps;serie_rps;".
-                "tipo_rps;data_emissao_rps;outras_informacoes;valor_servicos;valor_deducoes;valor_pis;valor_cofins;valor_inss;".
-                "valor_ir;valor_csll;item_lista_servico;codigo_cnae;codigo_tributacao_município;base_calculo;".
-                "aliquota_servicos;valor_iss;valor_liquido_nfe;outras_retencoes;valor_credito;iss_retido;valor_iss_retido;".
-                "valor_desconto_incondicionado;valor_desconto_condicionado;discriminacao_servicos;municipio_prestacao_servico;".
-                "inscricao_prestador;razao_social_prestador;nome_fantasia_prestador;cnpj_prestador;endereco_prestador;".
-                "numero;complemento_endereco_prestador;bairro_prestador;cidade_prestador;uf_prestador;cep_prestador;".
-                "email_prestador;telefone_prestador;cpf_cnpj_tomador;indicacao_cpf_cnpj;inscricao_municipal_tomador;".
-                "razao_social_tomador;endereco_tomador;numero_endereco_tomador;complemento_endereco_tomador;bairro_tomador;".
-                "razao_social_intermediario_servico;inscricao_municipal_intermediario_servico;cnpj_intermediario_sevico;".
-                "codigodo_municipio_gerador;uf_municipio_gerador;codigo_obra;art;\n";
-          
-        fwrite($fp, $cabecario);
+        
 
         while ($cadastro = mysql_fetch_array($sql)) {
-          fwrite($fp, gera_xml($cadastro));
+          fwrite($fp, "oi");
           /*$registros = $cadastro["assinatura"] . ";"
                         . $cadastro["numero_nfe"] . ";"
                         . $cadastro["codigo_verificacao"] . ";"
