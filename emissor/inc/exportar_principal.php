@@ -108,6 +108,7 @@ if ($btExportar != "") {
         $root->setAttribute("xmlns:tc", "http://www.issnetonline.com.br/webserviceabrasf/vsd/tipos_complexos.xsd");
 
         $LoteRps = $dom->createElement("LoteRps");
+        $LoteRps->appendChild($dom->createElement("tc:NumeroLote", 1);
         $root->appendChild($LoteRps);
 
         while ($cadastro = mysql_fetch_array($sql)) {
