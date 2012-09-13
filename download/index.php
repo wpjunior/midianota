@@ -4,7 +4,7 @@ $file = $_GET['file'];
                        
 foreach($_GET as $link => $nada);
 $file = "..".str_replace("_",".",$link);
-if(strpos($file,".csv")===false){
+if(strpos($file,".xml")===false){
 	echo "Erro na importação do arquivo!";
 }else{
 	$nome_arquivo=array_reverse(explode("/",$file));
