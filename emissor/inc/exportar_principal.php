@@ -121,8 +121,46 @@ if ($btExportar != "") {
           $tcInfRps = $dom->createElement("tc:InfRps");
 
           $IdentificacaoRps = $dom->createElement("tc:IdentificacaoRps");
-
+          $IdentificacaoRps->appendChild($dom->createElement("tc:Numero", 1)); //TODO: qual número é esse ?
+          $IdentificacaoRps->appendChild($dom->createElement("tc:Serie", 1)); //TODO: qual número é esse ?
+          $IdentificacaoRps->appendChild($dom->createElement("tc:Tipo", 1)); //TODO: qual número é esse ?
+          
           $tcInfRps->appendChild($IdentificacaoRps);
+
+          $tcInfRps->appendChild($dom->createElement("tc:DataEmissao", "data")); //TODO: pegar data de emissão verdadeira
+          $tcInfRps->appendChild($dom->createElement("tc:NaturezaOperacao", "data")); //TODO: aonde usa essa natureza de operação
+          $tcInfRps->appendChild($dom->createElement("tc:RegimeEspecialTributacao", "data")); //TODO: usar regime de tributação
+          $tcInfRps->appendChild($dom->createElement("tc:OptanteSimplesNacional", "data")); //TODO: sim, não
+          $tcInfRps->appendChild($dom->createElement("tc:IncentivadorCultural", "data")); //TODO: sim, não
+          $tcInfRps->appendChild($dom->createElement("tc:Status", "data")); //TODO: sim, não
+
+
+          $tcDadosServico = $dom->createElement("tc:Servico");
+
+          $tcValores = $dom->createElement("tc:Valores");
+
+          $tcValores->appendChild($dom->createElement("tc:ValorServicos", "50")); //TODO: ajustar para valor dos serviços
+          $tcValores->appendChild($dom->createElement("tc:ValorDeducoes", "50")); //TODO: ajustar para valor de deduções
+          $tcValores->appendChild($dom->createElement("tc:ValorPis", "50")); //TODO: ajustar para valor do pis
+          $tcValores->appendChild($dom->createElement("tc:ValorCofins", "50")); //TODO: ajustar para valor do cofins
+          $tcValores->appendChild($dom->createElement("tc:ValorCofins", "50")); //TODO: ajustar para valor do cofins
+          $tcValores->appendChild($dom->createElement("tc:ValorInss", "50")); //TODO: ajustar para valor do Inss
+          $tcValores->appendChild($dom->createElement("tc:ValorIr", "50")); //TODO: ajustar para valor do Ir
+          $tcValores->appendChild($dom->createElement("tc:ValorCsll", "50")); //TODO: ajustar para valor do Csll
+          $tcValores->appendChild($dom->createElement("tc:IssRetido", "1")); //TODO: ajustar para se o iss foi retido
+          $tcValores->appendChild($dom->createElement("tc:ValorIss", "100")); //TODO: ajustar para o valor que o iss foi redito
+          $tcValores->appendChild($dom->createElement("tc:ValorIssRetido", "100")); //TODO: ajustar para o valor que o iss foi redito
+          $tcValores->appendChild($dom->createElement("tc:OutrasRetencoes", "100")); //TODO: ajustar para o valor das outras retenções
+          $tcValores->appendChild($dom->createElement("tc:BaseCalculo", "100")); //TODO: ajustar para o valor das outras retenções
+          $tcValores->appendChild($dom->createElement("tc:Aliquota", "100")); //TODO: ajustar para o valor das outras retenções
+          $tcValores->appendChild($dom->createElement("tc:ValorLiquidoNfse", "100")); //TODO: ajustar para o valor das outras retenções
+          $tcValores->appendChild($dom->createElement("tc:DescontoIncondicionado", "100")); //TODO: ajustar para o valor das outras retenções
+          $tcValores->appendChild($dom->createElement("tc:DescontoCondicionado", "100")); //TODO: ajustar para o valor das outras retenções
+
+          
+          $tcDadosServico->appendChild($tcValores);
+          $tcInfRps->appendChild($tcDadosServico);
+
           $Rps->appendChild($tcInfRps);
           $ListaRps->appendChild($Rps);
           
