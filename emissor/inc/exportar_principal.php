@@ -108,10 +108,24 @@ if ($btExportar != "") {
         $root->setAttribute("xmlns:tc", "http://www.issnetonline.com.br/webserviceabrasf/vsd/tipos_complexos.xsd");
 
         $LoteRps = $dom->createElement("LoteRps");
-        $LoteRps->appendChild($dom->createElement("tc:NumeroLote", 1);
-        $root->appendChild($LoteRps);
+        $LoteRps->appendChild($dom->createElement("tc:NumeroLote", 1); //TODO: incrementar automaticamente
+        $LoteRps->appendChild($dom->createElement("tc:InscricaoMunicipal", 1); //TODO: numero de inscrição municipal ??
+        $LoteRps->appendChild($dom->createElement("tc:QuantidadeRps", 1); //TODO: numero de rps
+
+        $ListaRps = $dom->createElement("tc:ListaRps");
+
+        
 
         while ($cadastro = mysql_fetch_array($sql)) {
+          $Rps = $dom->createElement("tc:Rps");
+          $tcInfRps = $dom->createElement("tc:InfRps");
+
+          $IdentificacaoRps = $dom->createElement("tc:IdentificacaoRps");
+
+          $tcInfRps->appendChild($IdentificacaoRps);
+          $Rps->appendChild($tcInfRps);
+          $ListaRps->appendChild($Rps);
+          
           
           /*$registros = $cadastro["assinatura"] . ";"
                         . $cadastro["numero_nfe"] . ";"
@@ -181,6 +195,10 @@ if ($btExportar != "") {
 
                         fwrite($fp, $registros);*/
         }
+
+        $LoteRps->appendChild($ListaRps);
+
+        $root->appendChild($LoteRps);
 
         $dom->appendChild($root);
         fwrite($fp, $dom->saveXML());
