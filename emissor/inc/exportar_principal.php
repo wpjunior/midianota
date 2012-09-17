@@ -108,9 +108,9 @@ if ($btExportar != "") {
         $root->setAttribute("xmlns:tc", "http://www.issnetonline.com.br/webserviceabrasf/vsd/tipos_complexos.xsd");
 
         $LoteRps = $dom->createElement("LoteRps");
-        $LoteRps->appendChild($dom->createElement("tc:NumeroLote", 1); //TODO: incrementar automaticamente
-        $LoteRps->appendChild($dom->createElement("tc:InscricaoMunicipal", 1); //TODO: numero de inscrição municipal ??
-        $LoteRps->appendChild($dom->createElement("tc:QuantidadeRps", 1); //TODO: numero de rps
+        $LoteRps->appendChild($dom->createElement("tc:NumeroLote", 1)); //TODO: incrementar automaticamente
+        $LoteRps->appendChild($dom->createElement("tc:InscricaoMunicipal", 1)); //TODO: numero de inscrição municipal ??
+        $LoteRps->appendChild($dom->createElement("tc:QuantidadeRps", 1)); //TODO: numero de rps
 
         $ListaRps = $dom->createElement("tc:ListaRps");
 
