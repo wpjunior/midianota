@@ -177,7 +177,7 @@ if ($btExportar != "") {
           $tcIdentificacaoPrestador->appendChild($tcCpfCnpj);
           $tcIdentificacaoPrestador->appendChild($dom->createElement("tc:InscricaoMunicipal", "todo"));
 
-          $tcInfRps($tcIdentificacaoPrestador);
+          $tcInfRps->appendChild($tcIdentificacaoPrestador);
 
           $Rps->appendChild($tcInfRps);
           $ListaRps->appendChild($Rps);
