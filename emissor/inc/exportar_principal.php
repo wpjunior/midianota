@@ -127,7 +127,7 @@ if ($btExportar != "") {
           
           $tcInfRps->appendChild($IdentificacaoRps);
 
-          //$tcInfRps->appendChild($dom->createElement("tc:DataEmissao", $cadastro["data_emissao_nfe"])); //TODO: pegar data de emissão verdadeira
+          $tcInfRps->appendChild($dom->createElement("tc:DataEmissao", $cadastro["data_emissao_nfe"])); //TODO: pegar data de emissão verdadeira
           $tcInfRps->appendChild($dom->createElement("tc:NaturezaOperacao", "data")); //TODO: aonde usa essa natureza de operação
           $tcInfRps->appendChild($dom->createElement("tc:RegimeEspecialTributacao", "data")); //TODO: usar regime de tributação
           $tcInfRps->appendChild($dom->createElement("tc:OptanteSimplesNacional", "data")); //TODO: sim, não
