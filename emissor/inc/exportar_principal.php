@@ -127,7 +127,7 @@ if ($btExportar != "") {
           
           $tcInfRps->appendChild($IdentificacaoRps);
 
-          $tcInfRps->appendChild($dom->createElement("tc:DataEmissao", "data")); //TODO: pegar data de emissão verdadeira
+          $tcInfRps->appendChild($dom->createElement("tc:DataEmissao", $cadastro["data_emissao_nfe"])); //TODO: pegar data de emissão verdadeira
           $tcInfRps->appendChild($dom->createElement("tc:NaturezaOperacao", "data")); //TODO: aonde usa essa natureza de operação
           $tcInfRps->appendChild($dom->createElement("tc:RegimeEspecialTributacao", "data")); //TODO: usar regime de tributação
           $tcInfRps->appendChild($dom->createElement("tc:OptanteSimplesNacional", "data")); //TODO: sim, não
@@ -159,7 +159,25 @@ if ($btExportar != "") {
 
           
           $tcDadosServico->appendChild($tcValores);
+
+          $tcDadosServico->appendChild($dom->createElement("tc:ItemListaServico", "10")); //TODO: ajustar para o valor das outras retenções
+          $tcDadosServico->appendChild($dom->createElement("tc:CodigoCnae", 5920100)); //TODO: ajustar para o valor das outras retenções
+          $tcDadosServico->appendChild($dom->createElement("tc:CodigoTributacaoMunicipio", 5920100)); //TODO: ajustar para o valor das outras retenções
+          $tcDadosServico->appendChild($dom->createElement("tc:Discriminacao", "Servicos referente ao Marnei")); //TODO: ajustar para o valor das outras retenções
+          $tcDadosServico->appendChild($dom->createElement("tc:MunicipioPrestacaoServico", 5920100)); //TODO: ajustar para o valor das outras retenções
+
           $tcInfRps->appendChild($tcDadosServico);
+
+          $tcIdentificacaoPrestador = $dom->createElement("tc:Prestador");
+          
+          $tcCpfCnpj = $dom->createElement("tc:CpfCnpj");
+          $tcCpfCnpj->appendChild($dom->createElement("tc:Cnpj", 5920100)); //TODO CNPJ ou CPF
+          $tcCpfCnpj->appendChild($dom->createElement("tc:Cpf", 5920100)); //TODO CNPJ ou CPF
+
+          $tcIdentificacaoPrestador->appendChild($tcCpfCnpj);
+          $tcIdentificacaoPrestador->appendChild($dom->createElement("tc:InscricaoMunicipal", "todo"));
+
+          $tcInfRps($tcIdentificacaoPrestador);
 
           $Rps->appendChild($tcInfRps);
           $ListaRps->appendChild($Rps);
