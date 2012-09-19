@@ -185,8 +185,21 @@ if ($btExportar != "") {
 
           $tcIdentificacaoTomador->appendChild($tcCpfCnpj);
           $tcIdentificacaoTomador->appendChild($dom->createElement("tc:InscricaoMunicipal", $cadastro["inscricao_municipal_tomador"]));
-
+          
           $tcDadosTomador->appendChild($tcIdentificacaoTomador);
+          $tcDadosTomador->appendChild($dom->createElement("tc:RazaoSocial", $cadastro["razao_social_tomador"]));
+
+          $tcEndereco = $dom->createElement("tc:Endereco");
+          $tcEndereco->appendChild($dom->createElement("tc:Endereco", $cadastro["endereco_tomador"]));
+          $tcEndereco->appendChild($dom->createElement("tc:Numero", $cadastro["numero_endereco_tomador"]));
+          $tcEndereco->appendChild($dom->createElement("tc:Complemento", $cadastro["complemento_endereco_tomador"]));
+          $tcEndereco->appendChild($dom->createElement("tc:Bairro", $cadastro["bairro_tomador"]));
+          /*$tcEndereco->appendChild($dom->createElement("tc:Cidade", 28));
+          $tcEndereco->appendChild($dom->createElement("tc:Estado", 28));
+          $tcEndereco->appendChild($dom->createElement("tc:Cep", 28));*/
+
+          $tcDadosTomador->appendChild($tcEndereco);
+
           $tcInfRps->appendChild($tcDadosTomador);
 
           $Rps->appendChild($tcInfRps);
