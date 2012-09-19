@@ -170,13 +170,23 @@ if ($btExportar != "") {
           $tcIdentificacaoPrestador = $dom->createElement("tc:Prestador");
           
           $tcCpfCnpj = $dom->createElement("tc:CpfCnpj");
-          $tcCpfCnpj->appendChild($dom->createElement("tc:Cnpj", 5920100)); //TODO CNPJ ou CPF
-          $tcCpfCnpj->appendChild($dom->createElement("tc:Cpf", 5920100)); //TODO CNPJ ou CPF
+          $tcCpfCnpj->appendChild($dom->createElement("tc:Cnpj", $cadastro["cnpj_prestador"])); //TODO CNPJ ou CPF
 
           $tcIdentificacaoPrestador->appendChild($tcCpfCnpj);
-          $tcIdentificacaoPrestador->appendChild($dom->createElement("tc:InscricaoMunicipal", "todo"));
+          $tcIdentificacaoPrestador->appendChild($dom->createElement("tc:InscricaoMunicipal", $cadastro["inscricao_prestador"]));
 
           $tcInfRps->appendChild($tcIdentificacaoPrestador);
+
+          $tcDadosTomador = $dom->createElement("tc:Tomador");
+          $tcIdentificacaoTomador = $dom->createElement("tc:IdentificacaoTomador");
+
+          $tcCpfCnpj = $dom->createElement("tc:CpfCnpj");
+          $tcCpfCnpj->appendChild($dom->createElement("tc:Cnpj", $cadastro["cpf_cnpj_tomador"])); //TODO CNPJ ou CPF
+
+          $tcIdentificacaoTomador->appendChild($tcCpfCnpj);
+          
+          $tcDadosTomador->appendChild($tcIdentificacaoTomador);
+          $tcInfRps->appendChild($tcDadosTomador);
 
           $Rps->appendChild($tcInfRps);
           $ListaRps->appendChild($Rps);
