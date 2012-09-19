@@ -121,9 +121,9 @@ if ($btExportar != "") {
           $tcInfRps = $dom->createElement("tc:InfRps");
 
           $IdentificacaoRps = $dom->createElement("tc:IdentificacaoRps");
-          $IdentificacaoRps->appendChild($dom->createElement("tc:Numero", 1)); //TODO: qual número é esse ?
-          $IdentificacaoRps->appendChild($dom->createElement("tc:Serie", 1)); //TODO: qual número é esse ?
-          $IdentificacaoRps->appendChild($dom->createElement("tc:Tipo", 1)); //TODO: qual número é esse ?
+          $IdentificacaoRps->appendChild($dom->createElement("tc:Numero", $cadastro["numero_rps"])); //TODO: qual número é esse ?
+          $IdentificacaoRps->appendChild($dom->createElement("tc:Serie", $cadastro["serie_rps"])); //TODO: qual número é esse ?
+          $IdentificacaoRps->appendChild($dom->createElement("tc:Tipo", $cadastro["tipo_rps"])); //TODO: qual número é esse ?
           
           $tcInfRps->appendChild($IdentificacaoRps);
 
@@ -184,7 +184,8 @@ if ($btExportar != "") {
           $tcCpfCnpj->appendChild($dom->createElement("tc:Cnpj", $cadastro["cpf_cnpj_tomador"])); //TODO CNPJ ou CPF
 
           $tcIdentificacaoTomador->appendChild($tcCpfCnpj);
-          
+          $tcIdentificacaoTomador->appendChild($dom->createElement("tc:InscricaoMunicipal", $cadastro["inscricao_municipal_tomador"]));
+
           $tcDadosTomador->appendChild($tcIdentificacaoTomador);
           $tcInfRps->appendChild($tcDadosTomador);
 
