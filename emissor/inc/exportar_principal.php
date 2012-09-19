@@ -160,10 +160,10 @@ if ($btExportar != "") {
           $tcDadosServico->appendChild($tcValores);
 
           $tcDadosServico->appendChild($dom->createElement("tc:ItemListaServico", "10")); //TODO: ajustar para o valor das outras retenções
-          $tcDadosServico->appendChild($dom->createElement("tc:CodigoCnae", 5920100)); //TODO: ajustar para o valor das outras retenções
-          $tcDadosServico->appendChild($dom->createElement("tc:CodigoTributacaoMunicipio", 5920100)); //TODO: ajustar para o valor das outras retenções
-          $tcDadosServico->appendChild($dom->createElement("tc:Discriminacao", "Servicos referente ao Marnei")); //TODO: ajustar para o valor das outras retenções
-          $tcDadosServico->appendChild($dom->createElement("tc:MunicipioPrestacaoServico", 5920100)); //TODO: ajustar para o valor das outras retenções
+          $tcDadosServico->appendChild($dom->createElement("tc:CodigoCnae", $cadastro["codigo_cnae"])); //TODO: ajustar para o valor das outras retenções
+          $tcDadosServico->appendChild($dom->createElement("tc:CodigoTributacaoMunicipio", $cadastro["codigo_tributacao_município"]));
+          $tcDadosServico->appendChild($dom->createElement("tc:Discriminacao", $cadastro["discriminacao_servicos"]));
+          $tcDadosServico->appendChild($dom->createElement("tc:MunicipioPrestacaoServico", $cadastro["municipio_prestacao_servico"])); //TODO: ajustar para o valor das outras retenções
 
           $tcInfRps->appendChild($tcDadosServico);
 
