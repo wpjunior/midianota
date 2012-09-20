@@ -65,14 +65,14 @@ if ($btExportar != "") {
                 '' as email_prestador,
             '' as telefone_prestador,
 
-            '' as cpf_cnpj_tomador,
+            notas.tomador_cnpjcpf as cpf_cnpj_tomador,
             if( (length(notas.tomador_cnpjcpf) = 14), '1', '2') as indicacao_cpf_cnpj,
-            '' as inscricao_municipal_tomador,
+            notas.tomador_inscrmunicipal as inscricao_municipal_tomador,
             '' as razao_social_tomador,
-            '' as endereco_tomador,
-            '' as numero_endereco_tomador,
-            '' as complemento_endereco_tomador,
-            '' as bairro_tomador,
+            notas.tomador_logradouro as endereco_tomador,
+            notas.tomador_numero as numero_endereco_tomador,
+            notas.tomador_complemento as complemento_endereco_tomador,
+            notas.tomador_bairro as bairro_tomador,
 
 
             '' as razao_social_intermediario_servico,
