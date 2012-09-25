@@ -140,21 +140,21 @@ if ($btExportar != "") {
           $tcValores = $dom->createElement("tc:Valores");
 
           $tcValores->appendChild($dom->createElement("tc:ValorServicos", $cadastro["valor_servicos"])); //TODO: ajustar para valor dos serviços
-          $tcValores->appendChild($dom->createElement("tc:ValorDeducoes", $cadastro["valor_deducoes"])); //TODO: ajustar para valor de deduções
-          $tcValores->appendChild($dom->createElement("tc:ValorPis", $cadastro["valor_pis"])); //TODO: ajustar para valor do pis
+          //$tcValores->appendChild($dom->createElement("tc:ValorDeducoes", $cadastro["valor_deducoes"])); //TODO: ajustar para valor de deduções
+          //$tcValores->appendChild($dom->createElement("tc:ValorPis", $cadastro["valor_pis"])); //TODO: ajustar para valor do pis
           $tcValores->appendChild($dom->createElement("tc:ValorCofins", $cadastro["valor_cofins"])); //TODO: ajustar para valor do cofins
           $tcValores->appendChild($dom->createElement("tc:ValorInss", $cadastro["valor_inss"])); //TODO: ajustar para valor do Inss
-          $tcValores->appendChild($dom->createElement("tc:ValorIr", $cadastro["valor_ir"])); //TODO: ajustar para valor do Ir
-          $tcValores->appendChild($dom->createElement("tc:ValorCsll", $cadastro["valor_csll"])); //TODO: ajustar para valor do Csll
+          //$tcValores->appendChild($dom->createElement("tc:ValorIr", $cadastro["valor_ir"])); //TODO: ajustar para valor do Ir
+          //$tcValores->appendChild($dom->createElement("tc:ValorCsll", $cadastro["valor_csll"])); //TODO: ajustar para valor do Csll
           $tcValores->appendChild($dom->createElement("tc:IssRetido", $cadastro["iss_retido"])); //TODO: ajustar para se o iss foi retido
           $tcValores->appendChild($dom->createElement("tc:ValorIss", $cadastro["valor_iss"])); //TODO: ajustar para o valor que o iss foi redito
           $tcValores->appendChild($dom->createElement("tc:ValorIssRetido", $cadastro["iss_retido"])); //TODO: ajustar para o valor que o iss foi redito
-          $tcValores->appendChild($dom->createElement("tc:OutrasRetencoes", $cadastro["outras_retencoes"])); //TODO: ajustar para o valor das outras retenções
+          //$tcValores->appendChild($dom->createElement("tc:OutrasRetencoes", $cadastro["outras_retencoes"])); //TODO: ajustar para o valor das outras retenções
           $tcValores->appendChild($dom->createElement("tc:BaseCalculo", $cadastro["base_calculo"])); //TODO: ajustar para o valor das outras retenções
-          $tcValores->appendChild($dom->createElement("tc:Aliquota", $cadastro["aliquota_servicos"])); //TODO: ajustar para o valor das outras retenções
-          $tcValores->appendChild($dom->createElement("tc:ValorLiquidoNfse", $cadastro["valor_liquido_nfe"])); //TODO: ajustar para o valor das outras retenções
-          $tcValores->appendChild($dom->createElement("tc:DescontoIncondicionado", $cadastro["valor_desconto_incondicionado"])); //TODO: ajustar para o valor das outras retenções
-          $tcValores->appendChild($dom->createElement("tc:DescontoCondicionado", $cadastro["valor_desconto_condicionado"])); //TODO: ajustar para o valor das outras retenções
+          //$tcValores->appendChild($dom->createElement("tc:Aliquota", $cadastro["aliquota_servicos"])); //TODO: ajustar para o valor das outras retenções
+          //$tcValores->appendChild($dom->createElement("tc:ValorLiquidoNfse", $cadastro["valor_liquido_nfe"])); //TODO: ajustar para o valor das outras retenções
+          //$tcValores->appendChild($dom->createElement("tc:DescontoIncondicionado", $cadastro["valor_desconto_incondicionado"])); //TODO: ajustar para o valor das outras retenções
+          //$tcValores->appendChild($dom->createElement("tc:DescontoCondicionado", $cadastro["valor_desconto_condicionado"])); //TODO: ajustar para o valor das outras retenções
 
           
           $tcDadosServico->appendChild($tcValores);
@@ -181,7 +181,12 @@ if ($btExportar != "") {
           $tcIdentificacaoTomador = $dom->createElement("tc:IdentificacaoTomador");
 
           $tcCpfCnpj = $dom->createElement("tc:CpfCnpj");
-          $tcCpfCnpj->appendChild($dom->createElement("tc:Cnpj", $cadastro["cpf_cnpj_tomador"])); //TODO CNPJ ou CPF
+
+          if (strlen($cadastro["cpf_cnpj_tomador"]) == 14) {
+            $tcCpfCnpj->appendChild($dom->createElement("tc:Cpf", $cadastro["cpf_cnpj_tomador"]));
+          } else {
+            $tcCpfCnpj->appendChild($dom->createElement("tc:Cnpj", $cadastro["cpf_cnpj_tomador"]));
+          }
 
           $tcIdentificacaoTomador->appendChild($tcCpfCnpj);
           $tcIdentificacaoTomador->appendChild($dom->createElement("tc:InscricaoMunicipal", $cadastro["inscricao_municipal_tomador"]));
