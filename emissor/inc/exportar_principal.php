@@ -110,13 +110,15 @@ if ($btExportar != "") {
         $LoteRps = $dom->createElement("LoteRps");
         $LoteRps->appendChild($dom->createElement("tc:NumeroLote", 1)); //TODO: incrementar automaticamente
         $LoteRps->appendChild($dom->createElement("tc:InscricaoMunicipal", 1)); //TODO: numero de inscrição municipal ??
-        $LoteRps->appendChild($dom->createElement("tc:QuantidadeRps", 1)); //TODO: numero de rps
+        
 
         $ListaRps = $dom->createElement("tc:ListaRps");
 
-        
+        $qtde = 0;
 
         while ($cadastro = mysql_fetch_array($sql)) {
+          $qtde++;
+
           $Rps = $dom->createElement("tc:Rps");
           $tcInfRps = $dom->createElement("tc:InfRps");
 
@@ -280,6 +282,7 @@ if ($btExportar != "") {
                         fwrite($fp, $registros);*/
         }
 
+        $LoteRps->appendChild($dom->createElement("tc:QuantidadeRps", $qtde));
         $LoteRps->appendChild($ListaRps);
 
         $root->appendChild($LoteRps);
